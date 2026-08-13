@@ -192,31 +192,47 @@ correct outcome.
 Verified reachable on 13 Aug 2026. If one blocks you, move on rather than
 retrying — note it in your final report.
 
-**Sponsor register (the gate).** The CSV URL changes each update, so resolve it
-from the content API every run:
+> **Read the web with `WebFetch` and `WebSearch`, never with `curl`.** The sandbox
+> proxies egress and blocks direct outbound HTTP to job boards and gov.uk alike.
+> `curl` returning HTTP 000 means the proxy refused it, not that the site is down.
+> Use `Bash` for git and for grepping local files, nothing else.
+
+**Sponsor register (the gate).** The register ships **inside this repo**, already
+filtered, so no network call is needed:
+
+- `register-skilled-worker.txt` — 121,891 organisations licensed for the
+  **Skilled Worker** route. This is the one that matters.
+- `register-other-routes.txt` — 5,330 organisations licensed only for other
+  routes (Global Business Mobility, Temporary Worker). Being in *this* file
+  instead is a red flag, not a pass.
+
+> **Why it is a file and not a download.** The cloud sandbox routes egress
+> through a proxy that blocks `curl` to gov.uk — verified 13 Aug 2026, it returns
+> HTTP 000. `WebFetch` and `WebSearch` work fine, but the register CSV is 10 MB,
+> far too large to pull through them. Do not waste a run rediscovering this.
+
+Check an employer case-insensitively:
 
 ```bash
-CSV=$(curl -s https://www.gov.uk/api/content/government/publications/register-of-licensed-sponsors-workers \
-  | python3 -c "import json,sys;print(json.load(sys.stdin)['details']['attachments'][0]['url'])")
-curl -sL "$CSV" -o /tmp/register.csv
-wc -l /tmp/register.csv   # sanity check: expect ~140,000 rows
-```
-
-Columns are `Organisation Name,Town/City,County,Type & Rating,Route`. Check an
-employer, case-insensitively, and confirm the **Route** column says
-`Skilled Worker` and not only a Global Business Mobility or Temporary Worker
-route:
-
-```bash
-grep -i "acme" /tmp/register.csv
+grep -i "acme" register-skilled-worker.txt
+grep -i "acme" register-other-routes.txt   # only if the first found nothing
 ```
 
 Match on a distinctive fragment of the legal name, not the full string — register
-names carry suffixes and stray whitespace ("Acme Group Ltd " vs "Acme"). Trading
-names often differ from the registered entity, so a miss is weak evidence, not
-proof. Record `Yes — Skilled Worker`, `Licensed, other route only`, or
-`Not found` in the `Sponsor licence` column. **Never drop a strong role purely
-because the name did not match** — record `Not found` and let a human judge.
+names carry suffixes ("Acme Group Ltd" vs "Acme"). Trading names often differ from
+the registered entity, so a miss is weak evidence, not proof. Record
+`Yes — Skilled Worker`, `Licensed, other route only`, `Agency listing — employer
+unknown`, or `Not found` in the `Sponsor licence` column. **Never drop a strong
+role purely because the name did not match** — record `Not found` and let a human
+judge.
+
+**Keeping the register fresh.** It was extracted from the gov.uk publication dated
+**2026-08-13**. gov.uk republishes it roughly weekly. Once a month, check the
+publication date with
+`WebFetch("https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers")`
+and if the file here is more than about six weeks behind, say so in your run
+report so a human can refresh it. Do not try to refresh it yourself — the
+download is blocked from the sandbox.
 
 **Job sources, in order of usefulness:**
 
