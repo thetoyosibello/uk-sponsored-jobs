@@ -189,27 +189,48 @@ because the name did not match** — record `Not found` and let a human judge.
 
 **Job sources, in order of usefulness:**
 
-1. **Reed** — verified working, real listings with links.
-   `https://www.reed.co.uk/jobs/<role>-jobs-in-<location>?keywords=visa%20sponsorship`
-   e.g. `https://www.reed.co.uk/jobs/hr-manager-jobs-in-london?keywords=visa%20sponsorship`
-   Note: `keywords=` is text matching, not a real sponsorship filter, so the
-   results are noisy. Your filter does the work.
-2. **WebSearch** — the broadest net. Query patterns that work:
-   `"HR manager" "visa sponsorship" UK jobs 2026`,
-   `"marketing manager" "skilled worker visa" London vacancy`,
-   `site:jobs.lever.co OR site:boards.greenhouse.io UK "visa sponsorship"`.
-   Company ATS pages (Greenhouse, Lever, Workable, Ashby) are high quality:
-   named employer, real salary, current.
-3. **Company careers pages** of employers you can see on the register in the
+1. **Company ATS pages, found through WebSearch** — the highest-quality source by
+   a distance: named employer, real salary, current, and a stable link. Query
+   patterns that work:
+   `site:boards.greenhouse.io UK "visa sponsorship" HR manager`,
+   `site:jobs.lever.co London "sponsorship" marketing manager`,
+   `site:apply.workable.com UK "skilled worker visa"`,
+   `"we can sponsor" OR "sponsorship available" "HR business partner" UK 2026`.
+   Rotate ATS hosts (Greenhouse, Lever, Workable, Ashby, Teamtailor, Pinpoint).
+2. **Reed** — real listings, but **read this carefully, the obvious URL is a
+   trap**. Adding `?keywords=` to a role slug URL silently *replaces* the role:
+   `/jobs/hr-manager-jobs-in-london?keywords=visa%20sponsorship` returns
+   phlebotomists and care assistants, not HR. Verified 13 Aug 2026.
+   Use the search endpoint and put everything in `keywords`:
+   `https://www.reed.co.uk/jobs/search?keywords=hr+manager+visa+sponsorship&location=london`
+   That form does return genuine HR roles (HR Business Partner, People Partner,
+   Employee Relations Manager). Two known quirks: Reed intermittently serves a
+   "your session has expired" shell that truncates results — retry once, then
+   move on — and it sometimes misreads `location`, so always sanity-check that
+   the locations coming back are real and in the UK.
+   The plain slug URL with **no** query string also works when you want a whole
+   role family: `https://www.reed.co.uk/jobs/hr-manager-jobs-in-london`.
+3. **Glassdoor** has dedicated sponsorship listing pages that are worth trying,
+   e.g. `https://www.glassdoor.co.uk/Job/london-visa-sponsorship-hr-manager-jobs-SRCH_IL.0,6_IC2671300_KO7,34.htm`.
+   It often blocks automated fetches — one attempt, then move on.
+4. **Company careers pages** of employers you can see on the register in the
    right sector — go direct when a search surfaces a promising employer.
-4. **CV-Library, Totaljobs, Jobserve, Otta** — try them; they sometimes block
+5. **CV-Library, Totaljobs, Jobserve, Otta** — try them; they sometimes block
    automated fetches. Do not spend more than one attempt each.
 
-**Known dead ends, do not waste calls:** `findajob.dwp.gov.uk` returns 503 to
-automated fetches. `tarve.co.uk` shows fabricated sample listings on its landing
-page and hides any real board behind a login. `myvisajobs.co.uk` has useful
-occupation-code reference pages but **no live vacancies**. LinkedIn and Indeed
-block automated access.
+**Known dead ends, do not waste calls (all verified 13 Aug 2026):**
+`findajob.dwp.gov.uk` returns 503 to automated fetches. `tarve.co.uk` shows
+*fabricated* sample listings on its landing page (Revolut, DeepMind, Monzo roles
+that do not exist) and hides any real board behind a login — never take rows from
+it. `myvisajobs.co.uk` has useful occupation-code reference pages but **no live
+vacancies**. LinkedIn and Indeed block automated access.
+
+**What the generic "visa sponsorship" keyword pool actually contains.** Verified
+on Reed, 13 Aug 2026: of the first 25 results, the overwhelming majority were
+care assistants, support workers, phlebotomists, trades operatives and two
+Australia-based roles. Almost none were degree-level, and almost none were
+sponsorable under the 2025 rules. **Expect to reject most of what you find.** A
+run that looks at 60 listings and keeps 6 is working correctly, not failing.
 
 ---
 
