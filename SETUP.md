@@ -6,18 +6,26 @@ itself.
 Here is what you are building:
 
 ```
-  Claude routine (runs in the cloud, 07:47 and 16:47 UK, every day)
-        |  searches job boards, checks the gov.uk sponsor register,
-        |  scores each role, throws out the ones that can't be sponsored
-        v
-  GitHub repo: hr.csv + other.csv   <- the routine writes here
-        |
-        v
-  Google Sheet, 2 tabs              <- reads the files, refreshes itself
+  Cloud routine  07:47 + 16:47      Local sweep  08:17 + 17:17
+  runs always, even if the Mac      runs on your Mac, opens and
+  is off. Search results plus       verifies every advert, can use
+  the sponsor-register check.       your logged-in browser.
+        \                                    /
+         \                                  /
+          v                                v
+       GitHub repo: hr.csv + other.csv
+                     |
+                     v
+       Google Sheet, 2 tabs   <- reads the files, refreshes itself
 ```
 
-Nothing in this system can apply for a job, send a message, or spend money. It
-only reads job pages and writes two files.
+Two sweeps write to the same two files. The cloud one is the baseline that never
+misses a day; the local one runs half an hour later and does the deeper work the
+cloud sandbox is not allowed to do (it blocks every website except search).
+Both pull before they push, so they don't overwrite each other.
+
+Nothing in this system can apply for a job, send a message, log in anywhere, or
+spend money. It only reads job pages and writes two files.
 
 ---
 
@@ -138,6 +146,29 @@ change. You never need to touch the routine itself.
 The first thing worth editing is **section 3, D's profile** — it is currently
 generic HR. Fill in D's real seniority, years of experience, CIPD level, sector
 and preferred location and the fit scores get far more accurate.
+
+---
+
+## The local sweep on your Mac
+
+Already installed and scheduled — nothing for you to do. It runs at **08:17 and
+17:17**, half an hour behind the cloud routine so the two never fight over the
+push.
+
+- It only runs when the Mac is **awake**. Asleep at 08:17 means that sweep is
+  skipped; the cloud one still ran, so you never get a totally empty day.
+- Its log is `sweep.log` in this folder. Open it if a day looks thin.
+- To pause it: `launchctl unload ~/Library/LaunchAgents/com.tysitv.sponsored-jobs.plist`
+- To start it again: `launchctl load ~/Library/LaunchAgents/com.tysitv.sponsored-jobs.plist`
+- To run one right now, on demand:
+
+```bash
+bash ~/Downloads/sponsored-jobs/local-sweep.sh
+```
+
+Rules it follows with your browser, in `LOCAL.md`: read only, never apply, never
+submit a form, never log in, never type a credential. If a site is logged out it
+stops and says so rather than trying to sign in.
 
 ---
 
