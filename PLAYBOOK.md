@@ -84,10 +84,18 @@ HR / People professional, UK-based, needs Skilled Worker sponsorship.
   HR transformation / HRIS project roles (2440), org-design consulting (2431).
 - Location: anywhere in the UK. Note the town in `Location`.
 
-> **Tuning note:** this profile is generic HR because D's CV was not available
-> when the routine was built. Replace this section with D's actual seniority,
-> years of experience, CIPD level, sector and location, and the fit scores get
-> much sharper.
+**Manager-first is the standing instruction** (confirmed by the user,
+13 Aug 2026). Sweep both bands, but lead every run with the manager-level titles
+and spend your search budget there. Officer and Advisor roles go in the sheet
+too, always with `Skill level` set to `Medium — TSL/transitional only`, and they
+can never outrank a manager-level role of comparable quality. If a run is going
+to be short, cut the Officer-level searching, not the manager-level searching.
+
+> **Tuning note:** this profile is still generic HR — D's CV was not available
+> when the routine was built, and nothing HR-related exists on the user's disk or
+> in their Drive. Replace this section with D's actual seniority, years of
+> experience, CIPD level, sector and location and the fit scores get much
+> sharper.
 
 ### T — the `other.csv` tab
 
