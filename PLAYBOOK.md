@@ -132,15 +132,38 @@ have enough good rows rather than padding with weak ones.
 
 1. **Read the current state.** Read `hr.csv` and `other.csv`. Collect every value
    already in the `Link` column into a set — that is your dedupe key.
-2. **Search.** Work the sources in §5. Run searches for the role titles in §3,
-   combined with sponsorship wording ("visa sponsorship", "sponsorship
-   available", "skilled worker visa", "we sponsor"). Rotate the role titles you
-   lead with between runs so the sweep does not keep re-finding the same corner
-   of the market.
+2. **Search — and run both strategies, not just the obvious one.**
+
+   **Strategy A, keyword-led (the obvious one, and the weaker one).** Search the
+   role titles in §3 together with explicit *visa* wording: `"visa sponsorship"`,
+   `"skilled worker visa"`, `"Certificate of Sponsorship"`, `"we sponsor visas"`,
+   `"sponsorship available"`. This is what everyone does, and it mostly surfaces
+   care, trades and hospitality spam that fails §2 anyway.
+
+   **Strategy B, register-led (do this every run, it finds the better roles).**
+   Most UK employers who sponsor never say so in the advert, so keyword search
+   cannot see them. Instead work backwards: pull employers from the sponsor
+   register that hold a **Skilled Worker** licence in the right sectors, then
+   search those named employers for the degree-level roles in §3 —
+   `"<employer>" careers HR business partner`, or go straight to their ATS.
+   A licensed employer advertising a Higher-Skilled role is a far stronger lead
+   than an unlicensed one that merely used the word "sponsorship".
+
+   Rotate the role titles and the employers you lead with between runs so the
+   sweep does not keep re-finding the same corner of the market.
 3. **Filter hard.** Drop anything that is: a duplicate link, already in the CSV,
-   an agency listing with no named employer, a role clearly outside §3, closed or
-   expired, or a "sponsorship considered for exceptional candidates" tease with
-   no substance.
+   a role clearly outside §3, closed or expired, a training course rather than a
+   job, based outside the UK, or a "sponsorship considered for exceptional
+   candidates" tease with no substance.
+
+   **Recruitment-agency listings** (Reed, Hays, Michael Page, Morgan Law,
+   Huntress, Lloyd Recruitment and the rest) need their own rule, because on a
+   keyword search they are most of what comes back. The end employer is hidden,
+   so the register cannot be checked and the sponsor is unknown. Do not drop
+   them outright — that threw away every HR result in testing on 13 Aug 2026 —
+   but only keep one when the role is **Higher Skilled** *and* the advertised
+   salary clears the standard going rate. Record `Agency listing — employer
+   unknown` in `Sponsor licence` and cap `Fit` at 3.
 4. **Verify the employer** against the sponsor register (§5).
 5. **Classify** each survivor: occupation code, skill level, salary versus
    threshold.
@@ -190,13 +213,23 @@ because the name did not match** — record `Not found` and let a human judge.
 **Job sources, in order of usefulness:**
 
 1. **Company ATS pages, found through WebSearch** — the highest-quality source by
-   a distance: named employer, real salary, current, and a stable link. Query
-   patterns that work:
+   a distance: named employer, real salary, current, and a stable link. Rotate
+   ATS hosts (Greenhouse, Lever, Workable, Ashby, Teamtailor, Pinpoint):
    `site:boards.greenhouse.io UK "visa sponsorship" HR manager`,
-   `site:jobs.lever.co London "sponsorship" marketing manager`,
    `site:apply.workable.com UK "skilled worker visa"`,
-   `"we can sponsor" OR "sponsorship available" "HR business partner" UK 2026`.
-   Rotate ATS hosts (Greenhouse, Lever, Workable, Ashby, Teamtailor, Pinpoint).
+   `site:jobs.lever.co London "HR business partner"` then check the register.
+
+   > **Never search the bare word "sponsorship" on job boards.** Verified
+   > 13 Aug 2026: it returns *event and brand* sponsorship roles. A search for
+   > London marketing roles with "sponsorship" returned Aera Technology
+   > ("owns global sponsorship strategy") and Match Group ("leads brand
+   > partnerships and sponsorships") — nothing to do with visas. Always say
+   > **visa** sponsorship, or skilled worker visa.
+
+   > And the mirror-image mistake: most UK ATS adverts say **nothing** about
+   > visas even when the employer sponsors routinely. Silence is not a no. That
+   > is precisely why Strategy B in §4 exists — check the employer against the
+   > register rather than waiting for the advert to volunteer it.
 2. **Reed** — real listings, but **read this carefully, the obvious URL is a
    trap**. Adding `?keywords=` to a role slug URL silently *replaces* the role:
    `/jobs/hr-manager-jobs-in-london?keywords=visa%20sponsorship` returns
