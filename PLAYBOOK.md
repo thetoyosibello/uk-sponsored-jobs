@@ -407,13 +407,21 @@ field. Verify the file still parses before committing:
 python3 -c "import csv;rows=list(csv.reader(open('hr.csv')));print(len(rows),{len(r) for r in rows})"
 ```
 
-Every row must have 13 fields. Then commit and push:
+Every row must have 13 fields. Then commit and push — **always pull first**:
 
 ```bash
 git add hr.csv other.csv
 git commit -m "Job sweep $(date -u +%Y-%m-%d\ %H:%M) UTC"
+git pull --rebase origin main
 git push
 ```
+
+> **Why the pull matters.** Two different sweeps write to these files: the cloud
+> routine and the local one on the user's Mac (see `LOCAL.md`). Whichever pushes
+> second will be rejected without a rebase first, and a rejected push means the
+> sheet silently stops updating. If the rebase hits a conflict, it will be in the
+> appended rows — keep **both** sides, since they are different jobs, then
+> re-run the 13-field check before pushing.
 
 If the push fails, say so loudly in your final message with the exact error —
 a silent push failure means the sheet quietly stops updating, which is the worst
