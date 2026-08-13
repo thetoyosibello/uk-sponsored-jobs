@@ -84,6 +84,29 @@ HR / People professional, UK-based, needs Skilled Worker sponsorship.
   HR transformation / HRIS project roles (2440), org-design consulting (2431).
 - Location: anywhere in the UK. Note the town in `Location`.
 
+**NHS: yes, sweep it every run — it is one of the best HR targets available.**
+Confirmed 13 Aug 2026. NHS trusts are licensed sponsors in large numbers, and
+**Band 7 and above** non-clinical roles are generally sponsorable. Two things to
+get right: HR is **non-clinical**, so it goes through the *standard* Skilled
+Worker route, not the Health and Care Worker sub-route — no reduced visa fee, no
+Immigration Health Surcharge exemption, and the full £41,700-or-going-rate test
+applies. And band maps to salary: Band 7 (roughly £47k–£54k) clears the general
+threshold and the 1136 new-entrant rate, Band 8a and above clears the £52,900
+standard rate comfortably. Band 6 and below usually fails on both skill and
+salary. Search `jobs.nhs.uk` and `apps.trac.jobs`, and individual trust careers
+sites, for `HR Business Partner`, `People Partner`, `Workforce Manager`,
+`Employee Relations Manager`, `Head of People`. Put the band in `Why it fits`.
+
+**Civil Service: include only when the advert explicitly says so.** Confirmed
+13 Aug 2026, and it is the mirror image of the NHS. Civil Service nationality
+rules bar many posts outright, anything needing security clearance or British
+citizenship cannot be sponsored at all, and entry-level and administrative posts
+are very unlikely to sponsor given the domestic applicant pool. Some departments
+do sponsor specialist roles, so it is not a blanket no — but **never infer it**.
+Unless the listing on `civilservicejobs.service.gov.uk` states that applicants
+requiring sponsorship may apply, do not add the row. When one does qualify, say
+in `Why it fits` that the advert states sponsorship explicitly.
+
 **Manager-first is the standing instruction** (confirmed by the user,
 13 Aug 2026). Sweep both bands, but lead every run with the manager-level titles
 and spend your search budget there. Officer and Advisor roles go in the sheet
@@ -300,8 +323,27 @@ download is blocked from the sandbox.
 3. **Glassdoor** has dedicated sponsorship listing pages that are worth trying,
    e.g. `https://www.glassdoor.co.uk/Job/london-visa-sponsorship-hr-manager-jobs-SRCH_IL.0,6_IC2671300_KO7,34.htm`.
    It often blocks automated fetches — one attempt, then move on.
+   **ATS mechanics, all verified 13 Aug 2026 — these save whole runs:**
+
+   - **A job ID from a search result is usually dead.** Search indexes lag badly.
+     Both ATS links tested went nowhere: a Capco job ID redirected to the board
+     index, and a Figma one bounced to `?error=true` and then to their careers
+     homepage. **A redirect to a board index, a careers homepage, or an `error`
+     parameter means the vacancy is gone.** Never write that row — you would be
+     sending someone to a job that no longer exists.
+   - **Greenhouse changed host.** `boards.greenhouse.io/...` now 301s to
+     `job-boards.greenhouse.io/...`. Go straight to the new host.
+   - **Fetch the board index, not the job ID.** `job-boards.greenhouse.io/<company>`
+     lists what is genuinely open right now, so it cannot be stale. Use search to
+     find *which licensed employers to look at*, then read their board directly.
+   - **Lever blocks automated fetches** — both job pages and board indexes return
+     403. You can still see Lever roles in WebSearch snippets; you just cannot
+     open them. Treat a Lever hit as a lead to verify elsewhere, not a row.
+
 4. **Company careers pages** of employers you can see on the register in the
-   right sector — go direct when a search surfaces a promising employer.
+   right sector — go direct when a search surfaces a promising employer. This is
+   the natural partner to Strategy B in §4 and, given how stale ATS search hits
+   are, often the fastest route to a row you can actually trust.
 5. **CV-Library, Totaljobs, Jobserve, Otta** — try them; they sometimes block
    automated fetches. Do not spend more than one attempt each.
 
