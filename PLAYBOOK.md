@@ -192,10 +192,40 @@ correct outcome.
 Verified reachable on 13 Aug 2026. If one blocks you, move on rather than
 retrying — note it in your final report.
 
-> **Read the web with `WebFetch` and `WebSearch`, never with `curl`.** The sandbox
-> proxies egress and blocks direct outbound HTTP to job boards and gov.uk alike.
-> `curl` returning HTTP 000 means the proxy refused it, not that the site is down.
-> Use `Bash` for git and for grepping local files, nothing else.
+> ### Read this before you touch the network
+>
+> **In the cloud sandbox, `WebSearch` is the only way out.** Verified by a live
+> run on 13 Aug 2026: the egress proxy returned `EGRESS_BLOCKED` for *every*
+> `WebFetch` attempted — `www.gov.uk`, `www.reed.co.uk`, `boards.greenhouse.io`,
+> even `en.wikipedia.org` — and `curl` gets `403 CONNECT tunnel failed`. Only
+> GitHub, npm and PyPI are reachable directly. This is a network policy, not a
+> transient outage, so **do not burn a run rediscovering it**: try `WebFetch`
+> once at most, and if it comes back `EGRESS_BLOCKED`, switch to the
+> search-only mode below and say so in your report.
+>
+> **Search-only mode.** `WebSearch` still works and returns titles, URLs and
+> snippets. That is enough to run this job properly, just with less detail:
+>
+> - Mine the **title and snippet** for role, employer, location and salary.
+>   Search engines surface a lot of it — `"HR Business Partner - Acme - London -
+>   £48,000"` is a complete row.
+> - Run **several narrow searches** rather than one broad one, since you cannot
+>   open a results page and page through it. Vary role title, city, and phrasing.
+> - **Verify the employer against the register** — `register-skilled-worker.txt`
+>   is in this repo and needs no network at all. In search-only mode this is your
+>   strongest signal, so lean on it harder than usual.
+> - Set `Source` to `WebSearch snippet (page not fetched)` so the user knows the
+>   detail is unverified, and put anything you could not confirm — usually salary
+>   and closing date — as `Not stated` rather than guessing.
+> - Because you cannot read the advert, **you cannot confirm the employer says
+>   they sponsor.** Do not claim they do. The register tells you they *can*.
+>
+> If a future run finds `WebFetch` working, use it — richer and more reliable —
+> and mention in the report that egress opened up, because it means the rest of
+> this section is live again. To make that happen deliberately, the user can
+> widen the allowed domains on the routine's environment at
+> <https://claude.ai/code/routines>; gov.uk, reed.co.uk and the ATS hosts in §5
+> are the ones worth allowing.
 
 **Sponsor register (the gate).** The register ships **inside this repo**, already
 filtered, so no network call is needed:
