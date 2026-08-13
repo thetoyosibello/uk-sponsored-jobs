@@ -158,8 +158,28 @@ highest.
 
 ## 4. Daily procedure
 
-Work through this in order. Budget roughly 25–40 tool calls; stop early once you
-have enough good rows rather than padding with weak ones.
+Work through this in order.
+
+> ### Write early, write often — this is the most important rule here
+>
+> A run that searches beautifully for fifteen minutes and commits nothing is a
+> **failed run**. It happened on 13 Aug 2026: the sweep ran twelve minutes of
+> excellent searching, verified employers against the register, and produced an
+> empty sheet, because it was saving all the writing for the end.
+>
+> So:
+>
+> - **Hard budget: about 20 searches.** When you hit that, stop searching. Not
+>   "one more angle" — stop, and write up what you already have.
+> - **Append and commit in batches as you go**, roughly every 3–5 rows you
+>   score. Do not hold rows in your head until the end. Each commit is safe on
+>   its own, and a run cut short still leaves the user better off than before.
+> - **The first commit should happen within the first third of the run.** If you
+>   have gone a long way with nothing committed, that is the signal to stop
+>   searching and start writing.
+> - Rows that are good enough beat rows that are perfect and unwritten. If a
+>   salary or closing date is unknown, write `Not stated` and move on rather
+>   than running three more searches to pin it down.
 
 1. **Read the current state.** Read `hr.csv` and `other.csv`. Collect every value
    already in the `Link` column into a set — that is your dedupe key.
