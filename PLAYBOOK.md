@@ -446,44 +446,53 @@ actual risk. "Good match for their background" is useless. Write like:
 
 ## 7. Writing the results
 
-Append new rows to the bottom of the correct CSV, and keep the existing rows in
-their existing order. Do not reorder or rewrite rows.
+> ### Newest at the top, and nothing is ever deleted
+>
+> **Insert new rows directly beneath the header**, so the freshest jobs are the
+> first thing the reader sees. Do not append to the bottom.
+>
+> **Never delete a row.** When a vacancy closes, its row stays and its `Status`
+> changes. The user wants the history kept — a closed job they already applied
+> to, or decided against, is still worth having a record of.
 
-> ### The sheet holds live vacancies only
+> ### `Status` is the first column, and you keep it honest
 >
-> This is the point of the whole system: a closed job is worse than no job,
-> because it wastes the reader's time and makes them distrust the rest of the
-> sheet. Verified 14 Aug 2026 — the sheet's highest-scoring row, a Band 8a NHS
-> Employee Relations Manager, had already closed, and a second row pointed at a
-> vacancy that redirected to a board index.
+> A closed job presented as open is the worst failure this system has: it wastes
+> the reader's time and makes them distrust every other row. Verified 14 Aug
+> 2026 — the sheet's highest-scoring row, a Band 8a NHS Employee Relations
+> Manager, had already closed.
 >
-> **1. Prove a job is open before you write it.** Fetch the advert. If it
-> redirects to a board index or a careers homepage, carries an `error` parameter,
-> shows a closing date in the past, or says anything like *"This job is now
-> closed"*, *"vacancy expired"* or *"no longer accepting applications"* — do not
-> write the row. **If you cannot fetch the page at all, you cannot confirm it is
-> open, so do not write the row.** That rule binds hardest in search-only mode:
-> a search snippet is evidence a job once existed, never that it is open today.
+> `Status` takes exactly one of:
 >
-> **2. Prune dead rows every run.** Before searching, take the existing rows,
-> fetch each `Link`, and **delete any row whose advert is closed or gone**. This
-> replaces an earlier instruction to never delete rows, which was wrong and let
-> expired jobs accumulate. Deleting is now required. Say in your report how many
-> you pruned and which.
+> - `Live` — you fetched the advert this run and it is open and accepting
+>   applications.
+> - `Closed YYYY-MM-DD` — you fetched it and it is closed, expired, gone, or it
+>   redirects to a board index or careers homepage. The date is the day you found
+>   it closed.
+> - `Unverified` — you could not fetch the page, so you genuinely do not know.
+>   Honest, and far better than guessing `Live`.
 >
-> If a run has limited budget, prune the oldest rows by `Found` date first — they
-> are the likeliest to have expired — and note which ones you did not get to.
+> **1. Prove a job is open before you write it.** A search snippet is evidence a
+> job once existed, never that it is open today. If you cannot fetch the page,
+> the row is `Unverified` — and in search-only mode it does not belong in these
+> files at all, it goes to `candidates.csv`.
 >
-> A consequence worth knowing: because rows can now disappear, notes typed in the
-> spare columns to the right in Google Sheets can drift out of line with the job
-> they belong to. Anything worth keeping should record the job's link alongside
-> it rather than relying on the row position.
+> **2. Re-check existing rows every run.** Before searching, walk the rows that
+> are currently `Live`, fetch each `Link`, and flip any that have closed to
+> `Closed <today>`. Rows already marked `Closed` are settled — do not re-fetch
+> them, that is wasted budget. If the run is tight, re-check oldest `Found` first
+> and say which ones you did not reach.
+>
+> Changing a row's `Status` is the **only** edit you may make to an existing row.
+> Everything else about it stays exactly as written.
 
-Columns, in order:
+Columns, in order — **14 of them, `Status` first**:
 
-`Found,Role,Employer,Location,Salary,SOC,Skill level,Sponsor licence,Fit,Why it fits,Closes,Link,Source`
+`Status,Found,Role,Employer,Location,Salary,SOC,Skill level,Sponsor licence,Fit,Why it fits,Closes,Link,Source`
 
-- `Found` — today's date, `YYYY-MM-DD`.
+- `Status` — `Live`, `Closed YYYY-MM-DD`, or `Unverified`. See the box above.
+- `Found` — the date you first added it, `YYYY-MM-DD`. This never changes, even
+  when `Status` does.
 - `Salary` — as advertised. If absent, write `Not stated`, and be aware that an
   unstated salary is itself a risk on a sponsored role.
 - `Skill level` — `Higher` or `Medium — TSL/transitional only`.
@@ -496,10 +505,10 @@ CSV hygiene: quote any field containing a comma, and never put a newline inside 
 field. Verify the file still parses before committing:
 
 ```bash
-python3 -c "import csv;rows=list(csv.reader(open('hr.csv')));print(len(rows),{len(r) for r in rows})"
+python3 -c "import csv;rows=list(csv.reader(open('hr.csv')));print(len(rows),{len(r) for r in rows})  # expect {14}"
 ```
 
-Every row must have 13 fields. Then commit and push — **always pull first**:
+Every row must have 14 fields. Then commit and push — **always pull first**:
 
 ```bash
 git add hr.csv other.csv
@@ -513,7 +522,7 @@ git push
 > second will be rejected without a rebase first, and a rejected push means the
 > sheet silently stops updating. If the rebase hits a conflict, it will be in the
 > appended rows — keep **both** sides, since they are different jobs, then
-> re-run the 13-field check before pushing.
+> re-run the 14-field check before pushing.
 
 If the push fails, say so loudly in your final message with the exact error —
 a silent push failure means the sheet quietly stops updating, which is the worst

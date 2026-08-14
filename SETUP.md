@@ -112,13 +112,13 @@ at the last step, twice a day.
 2. Rename the first tab to **HR (D)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/hr.csv?v=2")
+=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/hr.csv?v=3")
 ```
 
 3. Add a second tab, name it **Other (T)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/other.csv?v=2")
+=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/other.csv?v=3")
 ```
 
 You will see just the column headers at first. That is correct — the rows appear
@@ -148,17 +148,27 @@ after the first sweep runs.
 
 ## How you use the sheet day to day
 
-Columns **A to M** are filled by the routine. Do not type in them — anything you
+Columns **A to N** are filled by the sweeps. Do not type in them — anything you
 write there gets wiped on the next refresh.
 
-Columns **N onwards are yours.** Put your own headers in `N1` and `O1`, something
-like **Status** and **Notes**, and track your applications there. New rows are
-always added at the *bottom* of the file and existing rows are never reordered,
-so your notes stay lined up with their job forever.
+**Column A is `Status`**, and it is the first thing to read:
 
-To see the newest jobs first, use **Data → Create a filter view** and sort by
-column A descending. Use a filter view rather than sorting the sheet directly,
-because sorting directly fights with the formula.
+- **`Live`** — a sweep opened the advert this run and it is accepting applications
+- **`Closed 2026-08-14`** — it opened the advert and the job has closed, with the
+  date it found out. The row is kept deliberately so you keep the history
+- **`Unverified`** — nobody could open the page, so its state is genuinely unknown
+
+**Newest jobs arrive at the top**, directly under the header, so closed rows sink
+down the list as new ones push in above them.
+
+To see only what you can still apply for, use **Data → Create a filter view** and
+filter column A to `Live`. Use a filter view rather than sorting or filtering the
+sheet directly, which fights with the formula.
+
+**Your own notes need their own tab.** Rows now move — new ones push in at the
+top and any row's `Status` can change — so anything typed beside a job will not
+stay with it. Keep notes on a separate tab and paste the job's **link** next to
+each one, so you can always tell which job a note belongs to.
 
 Worth knowing about the columns:
 
