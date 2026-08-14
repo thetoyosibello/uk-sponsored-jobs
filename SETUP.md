@@ -124,7 +124,7 @@ at the last step, twice a day.
 You will see just the column headers at first. That is correct — the rows appear
 after the first sweep runs.
 
-> **The `?v=2` on the end is load-bearing. Leave it there.**
+> **The `?v=` number on the end is load-bearing. Leave it there.**
 > `IMPORTDATA` caches hard, keyed on the exact URL. Set up on a plain URL while
 > the CSV still held only its header, the sheet **kept serving that empty result
 > even after six rows had landed in the repo** — verified 14 Aug 2026. Reloading
@@ -132,8 +132,9 @@ after the first sweep runs.
 > Changing the number makes it a URL Google has never seen, which forces a fresh
 > fetch. GitHub ignores the parameter and serves the same file.
 >
-> **If the sheet ever looks frozen: bump the number.** Change `?v=2` to `?v=3` in
-> both tabs and the rows reappear.
+> **If the sheet ever looks frozen: bump the number.** Raise `?v=3` to `?v=4` in
+> both tabs and the rows reappear. Bump it whenever the columns change too, since
+> that is a different shape of data arriving at the same address.
 >
 > Do not try to automate that stamp with `NOW()` — Sheets rejects it outright
 > with *"This function is not allowed to reference a cell with NOW(), RAND(),
@@ -194,9 +195,13 @@ cd ~/Downloads/sponsored-jobs && git add -A && git commit -m "Tune search" && gi
 The routine re-reads the playbook on every run, so the next run picks up your
 change. You never need to touch the routine itself.
 
-The first thing worth editing is **section 3, D's profile** — it is currently
-generic HR. Fill in D's real seniority, years of experience, CIPD level, sector
-and preferred location and the fit scores get far more accurate.
+Section 3 holds both profiles and is the highest-leverage thing to tune: add a
+sector D or T wants, or rule one out, and the next run reflects it.
+
+**Do not edit it while a sweep is running.** On 14 Aug 2026 a mid-run edit was
+caught by the sweep itself, which stopped and asked rather than working from
+rules that were changing underneath it. Correct behaviour, but it cost the run —
+commit your edits between runs instead.
 
 ---
 
