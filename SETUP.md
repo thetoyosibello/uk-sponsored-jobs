@@ -151,9 +151,31 @@ and preferred location and the fit scores get far more accurate.
 
 ## The local sweep on your Mac
 
-Already installed and scheduled — nothing for you to do. It runs at **08:17 and
-17:17**, half an hour behind the cloud routine so the two never fight over the
-push.
+Installed and scheduled at **08:17 and 17:17**, half an hour behind the cloud
+routine so the two never fight over the push.
+
+### One thing you must do first: give it a long-lived login
+
+The first test run failed in eleven seconds with
+`OAuth session expired and could not be refreshed`. A scheduled job cannot open a
+browser to log you in, so it needs a token that does not expire. Run this once,
+in Terminal, and follow the prompts:
+
+```bash
+claude setup-token
+```
+
+Then prove it worked:
+
+```bash
+bash ~/Downloads/sponsored-jobs/local-sweep.sh
+```
+
+That runs a full sweep in the foreground and takes a few minutes. If `sweep.log`
+ends with `exit=0` and rows appeared in the CSVs, the scheduled runs will work
+from then on. **Until you do this, only the cloud routine is actually running** —
+the local job will keep firing twice a day and failing instantly, at no cost, but
+also to no effect.
 
 - It only runs when the Mac is **awake**. Asleep at 08:17 means that sweep is
   skipped; the cloud one still ran, so you never get a totally empty day.
