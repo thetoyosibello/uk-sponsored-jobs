@@ -82,6 +82,30 @@ Check it worked: <https://github.com/tysitv/uk-sponsored-jobs> should now show
 
 ---
 
+## Step 2b — Let the cloud routine write to the repo
+
+Creating the repo is not enough. The Claude GitHub App is installed on *selected
+repositories*, and a brand-new repo is not on that list, so the routine can read
+the files but not push to them. A live run on 14 Aug 2026 found 14 good jobs and
+then lost them all to this:
+
+```
+403 Resource not accessible by integration
+```
+
+Reads worked the whole time, which is what makes this one sneaky — the repo is
+public, so anyone can read it. Only writing is blocked.
+
+To fix it, go to <https://github.com/settings/installations>, click **Configure**
+next to Claude, and under **Repository access** add `uk-sponsored-jobs` to the
+selected repositories. If it is already set to "All repositories", check instead
+that the app has **Contents: Read and write** permission.
+
+Until this is done the cloud routine will do all its work and then throw it away
+at the last step, twice a day.
+
+---
+
 ## Step 3 — Build the live sheet
 
 1. Go to <https://sheets.new> and name it **UK Sponsored Jobs — Live**.
