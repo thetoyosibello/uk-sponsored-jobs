@@ -71,6 +71,21 @@ first and fall back to this — do not use it as your default.
 **There is no longer any excuse for leaving an NHS role `Unverified`.** If
 `fetch-page.sh` itself fails, say so explicitly in your report with the error.
 
+> **An empty or unreadable response is not evidence of anything.** Seen 14 Aug
+> 2026: `fetch-page.sh` returned nothing at all for a Greenhouse advert that was
+> in fact live with a working application form — two sweeps were running at once
+> and were fighting over Chrome. Had that been read as "page gone", a good job
+> would have been wrongly marked `Closed`.
+>
+> So: **only mark `Closed` on positive evidence** — wording like "this job is now
+> closed", an expired notice, or a redirect to a board index or careers homepage.
+> **Only mark `Live` on positive evidence too** — an apply button or application
+> form, or a closing date in the future. Anything else is `Unverified`, and if
+> `WebFetch` and `fetch-page.sh` disagree, believe whichever one actually
+> returned a real page.
+>
+> Never run two sweeps simultaneously, for the same reason.
+
 Other source mechanics worth keeping:
 
 - **Workable** renders client-side, so `WebFetch` returns only metadata. Either
