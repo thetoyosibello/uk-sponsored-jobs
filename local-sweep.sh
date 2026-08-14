@@ -9,11 +9,24 @@ REPO="$HOME/Downloads/sponsored-jobs"
 CLAUDE="$HOME/.local/bin/claude"
 LOG="$REPO/sweep.log"
 
+# Auth for the scheduled run. A launchd job has no logged-in session to fall back
+# on, so it needs CLAUDE_CODE_OAUTH_TOKEN from this file. The file holds a real
+# credential: keep it chmod 600, and keep it out of the repo (it lives in $HOME,
+# not here, so it can never be committed by accident).
+ENV_FILE="$HOME/.sponsored-jobs.env"
+# shellcheck disable=SC1090
+[ -f "$ENV_FILE" ] && . "$ENV_FILE"
+
 exec >>"$LOG" 2>&1
 echo "=============================================================="
 echo "Local sweep starting $(date '+%Y-%m-%d %H:%M:%S %Z')"
 
 cd "$REPO" || { echo "FAIL: no repo at $REPO"; exit 1; }
+
+if [ -z "${CLAUDE_CODE_OAUTH_TOKEN:-}" ]; then
+  echo "FAIL: no CLAUDE_CODE_OAUTH_TOKEN. Create $ENV_FILE (see SETUP.md)."
+  exit 1
+fi
 
 # Start from the shared state, or the cloud routine's rows get clobbered.
 git pull --rebase --quiet origin main || echo "WARN: pull failed, continuing on local state"

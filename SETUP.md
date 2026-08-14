@@ -189,6 +189,20 @@ in Terminal, and follow the prompts:
 claude setup-token
 ```
 
+That prints a token valid for a year. The sweep reads it from
+`~/.sponsored-jobs.env`. Create that file with the command below — it prompts for
+the token without echoing it, so the token never lands in your shell history:
+
+```bash
+read -rs -p "Paste token: " T && printf 'export CLAUDE_CODE_OAUTH_TOKEN=%s\n' "$T" > ~/.sponsored-jobs.env && chmod 600 ~/.sponsored-jobs.env && unset T && echo " saved"
+```
+
+The file lives in your home folder, deliberately not in this repo, so it can never
+be committed and pushed to a public GitHub repo by accident. Treat that token like
+a password: anything holding it can run Claude as you. If you ever paste it
+somewhere it shouldn't be — a chat, a screenshot, a shared doc — run
+`claude setup-token` again to mint a fresh one, which retires the old.
+
 Then prove it worked:
 
 ```bash
