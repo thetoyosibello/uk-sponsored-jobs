@@ -112,34 +112,37 @@ at the last step, twice a day.
 2. Rename the first tab to **HR (D)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/hr.csv?v="&TEXT(NOW(),"yyyymmddhh"))
+=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/hr.csv?v=2")
 ```
 
 3. Add a second tab, name it **Other (T)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/other.csv?v="&TEXT(NOW(),"yyyymmddhh"))
+=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/other.csv?v=2")
 ```
-
-4. Set **File → Settings → Calculation → Recalculation** to
-   **"On change and every hour"**, then reload the tab.
 
 You will see just the column headers at first. That is correct — the rows appear
 after the first sweep runs.
 
-> **Why the `?v=` stamp is on the end, and why you must not remove it.**
-> `IMPORTDATA` caches aggressively, keyed on the exact URL. Set up on a plain URL
-> while the CSV held only its header, the sheet **kept serving that empty result
-> even after six rows had landed in the repo** — verified 14 Aug 2026, and
-> reloading the browser did not shift it, because a reload does not force Google
-> to refetch. The `?v=` stamp changes once an hour, so each hour is a new URL to
-> Google and the cache cannot go stale. GitHub ignores the parameter and serves
-> the same file.
+> **The `?v=2` on the end is load-bearing. Leave it there.**
+> `IMPORTDATA` caches hard, keyed on the exact URL. Set up on a plain URL while
+> the CSV still held only its header, the sheet **kept serving that empty result
+> even after six rows had landed in the repo** — verified 14 Aug 2026. Reloading
+> the browser did not shift it, because a reload does not make Google refetch.
+> Changing the number makes it a URL Google has never seen, which forces a fresh
+> fetch. GitHub ignores the parameter and serves the same file.
 >
-> If the sheet ever looks frozen again, check
+> **If the sheet ever looks frozen: bump the number.** Change `?v=2` to `?v=3` in
+> both tabs and the rows reappear.
+>
+> Do not try to automate that stamp with `NOW()` — Sheets rejects it outright
+> with *"This function is not allowed to reference a cell with NOW(), RAND(),
+> RANDARRAY(), or RANDBETWEEN()"*, and it blocks the indirect version through a
+> helper cell too.
+>
+> Diagnosing a frozen sheet: check
 > <https://github.com/tysitv/uk-sponsored-jobs/commits/main> first. New commits
-> there but nothing new in the sheet means it is this caching problem, not the
-> sweeps.
+> there but nothing new in the sheet means it is this cache, not the sweeps.
 
 ---
 
