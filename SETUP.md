@@ -208,11 +208,18 @@ claude setup-token
 
 That prints a token valid for a year. The sweep reads it from
 `~/.sponsored-jobs.env`. Create that file with the command below — it prompts for
-the token without echoing it, so the token never lands in your shell history:
+the token without echoing it, so the token never lands in your shell history.
+
+**This is zsh syntax**, which is the shell on this Mac. The bash equivalent
+(`read -rs -p "..."`) fails here with `read: -p: no coprocess`, because zsh uses
+`-p` to mean "read from a coprocess" and takes its prompt as `"var?prompt"`:
 
 ```bash
-read -rs -p "Paste token: " T && printf 'export CLAUDE_CODE_OAUTH_TOKEN=%s\n' "$T" > ~/.sponsored-jobs.env && chmod 600 ~/.sponsored-jobs.env && unset T && echo " saved"
+read -rs "T?Paste token: " && printf 'export CLAUDE_CODE_OAUTH_TOKEN=%s\n' "$T" > ~/.sponsored-jobs.env && chmod 600 ~/.sponsored-jobs.env && unset T && echo " saved"
 ```
+
+The terminal will print `Paste token:` and then appear to hang. That is the
+silent prompt working as intended — paste, press enter, and you get ` saved`.
 
 The file lives in your home folder, deliberately not in this repo, so it can never
 be committed and pushed to a public GitHub repo by accident. Treat that token like
