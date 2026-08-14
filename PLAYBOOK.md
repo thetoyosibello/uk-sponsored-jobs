@@ -72,17 +72,49 @@ sponsorable.
 
 ### D — the `hr.csv` tab
 
-HR / People professional, UK-based, needs Skilled Worker sponsorship.
+**Adebola (D)**, UK, needs Skilled Worker sponsorship. **MSc International Human
+Resources Management (Merit, 2024)**, on top of an **LLB (2:1)** and
+**Barrister-at-Law**. Currently **Policy Advisor (shadowing) at Companies House,
+Cardiff** (Mar 2025 to present): auditing people and recruitment policy against
+UK employment legislation, maintaining right-to-work records, equality impact
+assessments. Before that **HR Advisor at Augustsons LLP** (Nov 2022 to Jan 2024)
+and **HR Generalist at Charles Anthony LLP** (Sep 2020 to Nov 2022), both
+professional-services firms: employment contracts, onboarding, right-to-work and
+ID verification, internal compliance audits, HRIS clean-up (100% audit
+compliance, 30% efficiency gain, 18% turnover reduction).
 
-- **Primary targets (Higher Skilled, code 1136):** HR Manager, People Manager,
-  HR Business Partner, Head of People, People Operations Manager, HR Lead,
-  Employee Relations Manager, Reward Manager, Talent Manager.
-- **Secondary (Medium, code 3571, flag the risk):** HR Officer, HR Advisor,
-  HR Coordinator, People Advisor, Recruitment/Talent Acquisition Partner,
-  HR Generalist, Employee Relations Advisor.
-- **Adjacent Higher-Skilled worth including:** People Analytics roles (2434),
-  HR transformation / HRIS project roles (2440), org-design consulting (2431).
-- Location: anywhere in the UK. Note the town in `Location`.
+Certified in **CIPD HR-Inform Right to Work Checks**, **UK Compliance (GDPR, AML,
+KYC)** and **Business Analysis**.
+
+**The differentiator is HR plus compliance plus law.** D is not a generalist
+people person — they are a governance, audit and right-to-work specialist who
+happens to sit in HR, with a barrister's training behind it. Rank accordingly:
+a People Operations Manager role at a regulated employer, or an HR compliance,
+recruitment-governance or workforce-audit role, beats a generic HR Manager
+opening every time. Regulated public sector, NHS, financial services and law
+firms are the natural homes. There is an irony worth using in `Why it fits`:
+right-to-work compliance is literally D's specialism.
+
+- **Primary targets (Higher Skilled, code 1136):** HR Manager, People Operations
+  Manager, HR Compliance Manager, Recruitment Operations Manager, Talent
+  Acquisition Manager, HR Governance / Workforce Compliance Manager, HR Business
+  Partner, Head of People Operations.
+- **Adjacent Higher-Skilled, genuinely strong for D:** people analytics and
+  workforce reporting (2434); HRIS / HR transformation project and programme
+  roles (2440); employment-compliance and policy roles where the law degree
+  counts (2419); org-design and HR consulting (2431).
+- **Secondary (Medium, code 3571, always flag the risk):** HR Advisor, HR
+  Officer, People Advisor, HR Compliance Officer, Recruitment Coordinator, HR
+  Generalist.
+- **The honest gap.** D's current level is Advisor/Officer, which is exactly the
+  Medium-skilled band that stopped being sponsorable in July 2025. Manager-level
+  titles are a step up from where D sits today, and they are also the only band
+  that reliably qualifies. So keep stretching upward — but when a manager role
+  clearly wants five years of managing a team, say so plainly in `Why it fits`
+  rather than scoring it 5.
+- Location: anywhere in the UK. **Cardiff, Wales and remote deserve a specific
+  look** since D is at Companies House in Cardiff, but do not restrict to it —
+  London and the big regional centres carry far more sponsored HR roles.
 
 **NHS: yes, sweep it every run — it is one of the best HR targets available.**
 Confirmed 13 Aug 2026. NHS trusts are licensed sponsors in large numbers, and
