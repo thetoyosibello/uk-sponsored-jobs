@@ -44,26 +44,41 @@ Report how many candidates you promoted and how many you binned.
 
 ## Browser automation
 
-**Known gap, measured 14 Aug 2026: a scheduled `claude -p` run has no browser
-tools.** They exist in an interactive session but not headless, so a scheduled
-sweep cannot route around a 403 that way. NHS Jobs and TRAC both refuse
-`WebFetch` with 403, which matters because NHS is one of the best sources for D.
+A scheduled `claude -p` run has **no browser MCP tools** — they exist in an
+interactive session but not headless. That used to make NHS Jobs and TRAC
+unreachable, which was the single biggest coverage gap for D. It is now solved.
 
-What works instead:
+### `./fetch-page.sh` — use it whenever WebFetch fails
 
-- **Workable** renders client-side, so `WebFetch` on a job page returns only
-  metadata. Its `widget/accounts` JSON API returns the real listing — this
-  worked on 14 Aug 2026 and is the way to verify Workable roles.
+```bash
+./fetch-page.sh "https://beta.jobs.nhs.uk/candidate/jobadvert/C8192-26-0316"
+./fetch-page.sh "<url>" 12000     # optional character limit, default 6000
+```
+
+It drives real Chrome in `--headless=new` with a genuine user agent and prints
+the page as plain text. Verified 14 Aug 2026 on an NHS advert that `WebFetch`,
+`curl` **and** Chrome's old `--headless` all failed to retrieve with a CloudFront
+403 — this returned the full page, including `This job is now closed`,
+`Salary: NHS Band 8a - £57,528 - £64,750` and `Position Type: Permanent`.
+
+Reach for it for **NHS Jobs, TRAC, Lever, Indeed, LinkedIn**, and for anything
+client-rendered that comes back suspiciously empty. It is read-only: it loads a
+URL and prints text, and cannot click, submit or sign in.
+
+Cost note: it launches a browser, so it is slower than `WebFetch`. Try `WebFetch`
+first and fall back to this — do not use it as your default.
+
+**There is no longer any excuse for leaving an NHS role `Unverified`.** If
+`fetch-page.sh` itself fails, say so explicitly in your report with the error.
+
+Other source mechanics worth keeping:
+
+- **Workable** renders client-side, so `WebFetch` returns only metadata. Either
+  use `fetch-page.sh` or its `widget/accounts` JSON API; both work.
 - **Greenhouse** works with plain `WebFetch` on `job-boards.greenhouse.io`.
-- **NHS Jobs / TRAC**: no automated route found yet. A closed NHS advert says
-  *"This job is now closed"* near the top, so if you ever do get the page, that
-  is the string to look for. Until then, keep NHS roles in `candidates.csv` and
-  say in your report that they need a human to eyeball — do **not** promote them
-  unverified. A closed Band 8a role is exactly the failure this system exists to
-  prevent.
 
-If a human is running this interactively and browser tools *are* available, use
-them for NHS Jobs, TRAC, LinkedIn, Indeed and Lever. Rules that hold regardless:
+If browser MCP tools *are* available (an interactive session), they work too.
+Rules that hold regardless of which tool you use:
 
 - **Read only.** Never click Apply, never submit a form, never send a message,
   never accept terms, never change an account setting, never create an account.

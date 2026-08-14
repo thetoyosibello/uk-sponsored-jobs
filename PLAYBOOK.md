@@ -239,6 +239,26 @@ Work through this in order.
    job, based outside the UK, or a "sponsorship considered for exceptional
    candidates" tease with no substance.
 
+   **Contract type is a hard filter, not a detail.** A sponsor licence is no use
+   if the engagement itself cannot carry a visa. Reject outright:
+
+   - **day-rate, hourly-paid, temp, interim and "bank" roles** — an advert
+     quoting `£25–£30 per hour` or `£180 per day` is a temp booking, and the NHS
+     "bank" is casual shift work. None of these sponsor.
+   - **agency-supplied temp assignments**, where the agency is the payer.
+   - **anything under 12 months.** A fixed-term contract *can* be sponsored, but
+     the Certificate of Sponsorship only runs to the end of the contract, so a
+     6-month FTC buys 6 months of visa. Not worth an application.
+
+   Keep **permanent** roles, and **fixed-term of 12 months or more** — for the
+   latter, put the length in `Why it fits` so the reader can judge it.
+
+   The advert usually states this plainly once you can actually read the page.
+   NHS Jobs prints `Position Type: Permanent`; most ATS pages carry an
+   employment-type field. This is another reason `fetch-page.sh` matters: a
+   search snippet almost never tells you whether a role is permanent, and salary
+   quoted per hour or per day is the giveaway that it is not.
+
    **Recruitment-agency listings** (Reed, Hays, Michael Page, Morgan Law,
    Huntress, Lloyd Recruitment and the rest) need their own rule, because on a
    keyword search they are most of what comes back. The end employer is hidden,

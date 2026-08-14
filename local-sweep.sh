@@ -75,7 +75,8 @@ Finish with the run report from section 4 step 8." \
   --allowedTools "WebSearch" "WebFetch" "Read" "Write" "Edit" "Glob" "Grep" \
                  "Bash(git *)" "Bash(grep *)" "Bash(python3 *)" "Bash(wc *)" \
                  "Bash(head *)" "Bash(tail *)" "Bash(cut *)" "Bash(sort *)" \
-                 "Bash(cat *)" "Bash(ls *)"
+                 "Bash(cat *)" "Bash(ls *)" \
+                 "Bash(./fetch-page.sh *)" "Bash(bash fetch-page.sh *)"
 
 STATUS=$?
 echo "Local sweep finished $(date '+%Y-%m-%d %H:%M:%S %Z') exit=$STATUS"
