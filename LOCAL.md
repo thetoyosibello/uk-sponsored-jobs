@@ -26,17 +26,44 @@ So on this machine you must actually open the advert:
   `Why it fits`. This is the whole reason the local sweep exists: rows that are
   verified rather than inferred.
 
+## Your first job each run: work the queue
+
+The cloud sweep cannot open web pages, so it writes unverified finds to
+**`candidates.csv`**. Clearing that queue comes before any searching of your own:
+
+1. For each row in `candidates.csv`, fetch its `Link`.
+2. **Open and still accepting applications** → fill in whatever the advert gives
+   you that the snippet could not (real salary, closing date, whether it says
+   anything about sponsorship), then append it to `hr.csv` or `other.csv` and
+   remove it from `candidates.csv`.
+3. **Closed, expired, or redirects to a board index or careers homepage** →
+   delete it from `candidates.csv` and write nothing.
+4. Then do §7's prune of the live files, then search for new roles yourself.
+
+Report how many candidates you promoted and how many you binned.
+
 ## Browser automation
 
-The user has approved using their logged-in browser for job sites. Use it for
-sources that block plain fetching, in this order of preference:
+**Known gap, measured 14 Aug 2026: a scheduled `claude -p` run has no browser
+tools.** They exist in an interactive session but not headless, so a scheduled
+sweep cannot route around a 403 that way. NHS Jobs and TRAC both refuse
+`WebFetch` with 403, which matters because NHS is one of the best sources for D.
 
-1. Plain `WebFetch` first — cheapest, and it works for a lot.
-2. The browser tools only where fetching fails: **NHS Jobs** (`jobs.nhs.uk`),
-   **TRAC** (`apps.trac.jobs`), **LinkedIn**, **Indeed**, **Lever** boards, which
-   all block automated fetches or need a session.
+What works instead:
 
-Rules that are not negotiable, even with a logged-in browser:
+- **Workable** renders client-side, so `WebFetch` on a job page returns only
+  metadata. Its `widget/accounts` JSON API returns the real listing — this
+  worked on 14 Aug 2026 and is the way to verify Workable roles.
+- **Greenhouse** works with plain `WebFetch` on `job-boards.greenhouse.io`.
+- **NHS Jobs / TRAC**: no automated route found yet. A closed NHS advert says
+  *"This job is now closed"* near the top, so if you ever do get the page, that
+  is the string to look for. Until then, keep NHS roles in `candidates.csv` and
+  say in your report that they need a human to eyeball — do **not** promote them
+  unverified. A closed Band 8a role is exactly the failure this system exists to
+  prevent.
+
+If a human is running this interactively and browser tools *are* available, use
+them for NHS Jobs, TRAC, LinkedIn, Indeed and Lever. Rules that hold regardless:
 
 - **Read only.** Never click Apply, never submit a form, never send a message,
   never accept terms, never change an account setting, never create an account.

@@ -295,6 +295,18 @@ retrying — note it in your final report.
 > - Because you cannot read the advert, **you cannot confirm the employer says
 >   they sponsor.** Do not claim they do. The register tells you they *can*.
 >
+> **Search-only mode does not write to `hr.csv` or `other.csv`. Ever.** Those two
+> files feed the live sheet and, per §7, may only contain vacancies proven open
+> — which needs a page fetch you cannot make. Write your finds to
+> **`candidates.csv`** instead, same 13 columns, same append-and-dedupe rules.
+> That file is not in the sheet; it is a queue.
+>
+> This is the division of labour, and each half plays to its strength: the cloud
+> sweep can search but not read, so it **discovers**; the local sweep can read,
+> so it **verifies and promotes**. A search-only run that adds ten solid
+> candidates has done its job properly, even though the sheet does not move until
+> the local sweep confirms them.
+>
 > If a future run finds `WebFetch` working, use it — richer and more reliable —
 > and mention in the report that egress opened up, because it means the rest of
 > this section is live again. To make that happen deliberately, the user can
@@ -434,10 +446,38 @@ actual risk. "Good match for their background" is useless. Write like:
 
 ## 7. Writing the results
 
-Append to the bottom of the correct CSV. **Never reorder, rewrite or delete
-existing rows** — the user types their own notes in the columns to the right of
-the imported range in Google Sheets, and those notes stay aligned only while row
-order is stable.
+Append new rows to the bottom of the correct CSV, and keep the existing rows in
+their existing order. Do not reorder or rewrite rows.
+
+> ### The sheet holds live vacancies only
+>
+> This is the point of the whole system: a closed job is worse than no job,
+> because it wastes the reader's time and makes them distrust the rest of the
+> sheet. Verified 14 Aug 2026 — the sheet's highest-scoring row, a Band 8a NHS
+> Employee Relations Manager, had already closed, and a second row pointed at a
+> vacancy that redirected to a board index.
+>
+> **1. Prove a job is open before you write it.** Fetch the advert. If it
+> redirects to a board index or a careers homepage, carries an `error` parameter,
+> shows a closing date in the past, or says anything like *"This job is now
+> closed"*, *"vacancy expired"* or *"no longer accepting applications"* — do not
+> write the row. **If you cannot fetch the page at all, you cannot confirm it is
+> open, so do not write the row.** That rule binds hardest in search-only mode:
+> a search snippet is evidence a job once existed, never that it is open today.
+>
+> **2. Prune dead rows every run.** Before searching, take the existing rows,
+> fetch each `Link`, and **delete any row whose advert is closed or gone**. This
+> replaces an earlier instruction to never delete rows, which was wrong and let
+> expired jobs accumulate. Deleting is now required. Say in your report how many
+> you pruned and which.
+>
+> If a run has limited budget, prune the oldest rows by `Found` date first — they
+> are the likeliest to have expired — and note which ones you did not get to.
+>
+> A consequence worth knowing: because rows can now disappear, notes typed in the
+> spare columns to the right in Google Sheets can drift out of line with the job
+> they belong to. Anything worth keeping should record the job's link alongside
+> it rather than relying on the row position.
 
 Columns, in order:
 
