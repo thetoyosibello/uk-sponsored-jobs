@@ -1,0 +1,76 @@
+# GENRE DOCTRINE: SURVIVAL THRILLER
+# The house genre. Chosen because it natively supplies every attention force:
+# a clock that is physically visible, a world that shrinks by construction, a cast
+# that can be taken away one at a time, and a premise that supports engineering
+# (the L4 twist) without contrivance.
+
+version: 1.0.0
+
+premise_test:
+  # A concept is not greenlit unless it answers all six. The ConceptArchitect scores
+  # candidates against this; the CEO kills anything below 5/6.
+  - id: engine
+    q: "Does the situation generate new problems by itself, without the writer intervening?"
+  - id: confinement
+    q: "Is there a physical or social boundary that cannot simply be walked out of?"
+  - id: depleting_quantity
+    q: "Name the thing going to zero, and where it is legible on screen."
+  - id: internal_enemy
+    q: "Is there someone inside the boundary whose interests differ from the group's?"
+  - id: engineerable
+    q: "Could this situation plausibly have been caused on purpose? (Required for L4.)"
+  - id: protagonist_complicity
+    q: "Can the protagonist be revealed as a cause? (Required for L5.)"
+
+structural_requirements:
+  cast_size: [6, 14]
+  note_cast: "Small enough to track, large enough to lose people. Below 6 the deaths run out."
+  attrition_curve: "Non-linear. Lose one early to establish the rules, then hold, then accelerate."
+  first_loss_by_episode: 2
+  boundary_must_shrink: true
+  boundary_shrink_note: "The playable space is smaller in every episode than the last. Literally."
+
+resource_ladder:
+  # The depleting quantity should change hands as the season progresses so the clock
+  # never becomes background. Each entry is a distinct on-screen countdown.
+  - tier: 1
+    resource: "the obvious one (fuel, water, air)"
+    exhausts_by_episode: 4
+  - tier: 2
+    resource: "the one they didn't count (trust, a working plan, daylight)"
+    exhausts_by_episode: 8
+  - tier: 3
+    resource: "the protagonist's own body or conscience"
+    exhausts_by_episode: 12
+
+character_rules:
+  - "Every character wants something incompatible with survival. That is the drama."
+  - "Nobody is stupid. Every fatal decision must be defensible from that character's information."
+  - "The capability gap is the characterisation: what they know to do vs what they can do."
+  - "The most competent character must be wrong about something important."
+  - "The person the audience trusts least should be right at least twice before the L3 twist."
+
+dialogue_rules:
+  - "Under stress, sentences shorten. Track average line length against the tension curve."
+  - "Nobody explains the situation to someone who already knows it."
+  - "The most important information is delivered by the person least equipped to deliver it."
+  - "Silence is a tool. At least one beat per episode carries its weight with no dialogue."
+
+violence_and_standards:
+  # QC-enforced. Platform-safe by construction, not by trimming afterwards.
+  rules:
+    - "Threat is shown; injury is implied. The cut happens before the impact."
+    - "No lingering on suffering. Consequence, not spectacle."
+    - "Deaths land on the reaction shot, not the event."
+    - "No real-world imitable technique presented as instruction."
+    - "No depiction of minors in peril beyond off-screen implication."
+  standards_note: >
+    These are craft constraints as much as compliance ones. Implication out-performs
+    depiction on the same attention metrics — the audience's own imagination generates
+    the image, which is the transportation effect doing the work for free.
+
+look:
+  palette: "Desaturated except for the threat. The danger is the only saturated thing in frame."
+  camera: "Handheld inside the boundary, locked-off outside it. The audience feels which side they are on."
+  lens_note: "Long lenses compress and trap. Wide lenses only when we want them to feel exposed."
+  sound: "The clock is audible before it is visible. Sound leads picture by one beat."

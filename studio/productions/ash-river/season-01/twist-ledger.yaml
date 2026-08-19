@@ -1,0 +1,649 @@
+# ASH RIVER — Season 1 twist ledger
+#
+# Owned by the Twist Master. This file is the fair-play contract in machine-readable
+# form: the Continuity Auditor checks every clue here against the SHOT LIST, so a clue
+# that was planned but never framed does not count.
+#
+# Construction rule: every twist was built backwards. The true_read was decided first,
+# then an innocent surface_read was invented, then the clue was written so that both
+# readings are honest. A clue supporting only the true read is a signpost; one supporting
+# only the surface read is a lie. Fair play lives in the overlap.
+#
+# L1 scene twists are not listed here — they are carried on the beat sheet as
+# `twist_level: 1` and graded by scene coverage, not by clue trail.
+#
+# For episodes not yet written, `beat_id` is an ALLOCATION the Episode Writer must
+# honour, not a description of existing material.
+
+production: ash-river
+season: 1
+
+twists:
+
+  # ---- L2, one per episode: the episode goal was the wrong goal -----------------
+
+  - id: T-E01-L2
+    level: 2
+    episode: 1
+    beat_id: b14
+    reframes: "the episode's goal — getting eleven people out"
+    reveal: "There are twelve people on a bus that boarded eleven."
+    cost: >
+      The cabin stops being safe. Maren has to keep driving with her back to all of
+      them, and every alliance she has built in six minutes becomes provisional.
+    character: Maren Vale
+    character_basis: "her compulsion to count, and her established fear of losing track of one"
+    contradicts_onscreen_fact: false
+
+  - id: T-E02-L2
+    level: 2
+    episode: 2
+    beat_id: b13
+    reframes: "the episode's goal — beating the dusk wind shift"
+    reveal: "The wind shifted an hour ago. They have been driving into it for nine miles."
+    cost: "The nine miles they thought they had gained are nine miles they cannot get back."
+    character: Maren Vale
+    character_basis: "she trusts the forecast she was trained on over what her own eyes report"
+
+  - id: T-E03-L2
+    level: 2
+    episode: 3
+    beat_id: b14
+    reframes: "the episode's goal — raising county"
+    reveal: "County has been down since before they left. There was never anyone to raise."
+    cost: "The only navigation they have is the only thing they cannot trust."
+    character: Gus Trell
+    character_basis: "his faith in procedure keeps him from asking why his handheld is dead"
+
+  - id: T-E04-L2
+    level: 2
+    episode: 4
+    beat_id: b14
+    reframes: "the episode's goal — refuelling"
+    reveal: "The tanks are full. The clean stock was drained three weeks ago."
+    cost: "Tier-1 resource exhausted. From here the bus runs on what it already has."
+    character: Danny Prentice
+    character_basis: "he knows his father's yard, which is exactly why he does not check"
+
+  - id: T-E05-L2
+    level: 2
+    episode: 5
+    beat_id: b13
+    reframes: "the episode's goal — waiting for the escort"
+    reveal: "Waiting is the instruction. Nothing is coming, and the waiting is the point."
+    cost: "Gus. And forty minutes of road they will not get back."
+    character: Gus Trell
+    character_basis: "procedure was written for a fire that behaved"
+
+  - id: T-E06-L2
+    level: 2
+    episode: 6
+    beat_id: b14
+    reframes: "the episode's goal — reaching the fire road"
+    reveal: "The fire road is not an escape. It is where they are being steered."
+    cost: "Every route decision Maren has made was made for her."
+    character: Ines Ruiz
+    character_basis: "she recommends the road she surveyed, because it is the one she trusts"
+
+  - id: T-E07-L2
+    level: 2
+    episode: 7
+    beat_id: b13
+    reframes: "the episode's goal — saving Dell's arm"
+    reveal: >
+      Dell has known about the twelfth passenger since the first mile. He has been
+      waiting six episodes for somebody to ask him a question.
+    cost: "Dell. He is right the third time and it is the time that costs him."
+    character: Dell Prentice
+    character_basis: "he wants to be listened to, and will not volunteer what he knows"
+
+  - id: T-E08-L2
+    level: 2
+    episode: 8
+    beat_id: b12
+    reframes: "the episode's goal — cutting the chain"
+    reveal: "The chain is new. The gate is newer. Neither was there in June."
+    cost: "The last route on the map stops being a route."
+    character: Kit Marsh
+    character_basis: "the one who climbs is the one who sees the manufacturer's date"
+
+  - id: T-E09-L2
+    level: 2
+    episode: 9
+    beat_id: b14
+    reframes: "the episode's goal — getting the boy across the wash"
+    reveal: "Theo is not lost. Theo was placed."
+    cost: "The one clean thing left in the story stops being clean."
+    character: Theo Barrow
+    character_basis: "he has been drawing what is ahead of them, not what is behind"
+
+  - id: T-E10-L2
+    level: 2
+    episode: 10
+    beat_id: b14
+    reframes: "the episode's goal — finding out who is on the radio"
+    reveal: "He wants to be seen. He has wanted it since the first mile."
+    cost: "Danny, the last of the fuel, and the last mile of drivable road."
+    character: Ronan Coyle
+    character_basis: "eleven years of being the person nobody was told about"
+
+  - id: T-E11-L2
+    level: 2
+    episode: 11
+    beat_id: b13
+    reframes: "the episode's goal — reaching the gap"
+    reveal: "The gap is the slot canyon. It has been the destination since the first turn."
+    cost: "Maren's hands. She knows the move and cannot make it."
+    character: Maren Vale
+    character_basis: "she has known the road all along and has been refusing to say so"
+
+  - id: T-E12-L2
+    level: 2
+    episode: 12
+    beat_id: b12
+    reframes: "the episode's goal — bringing all of them through"
+    reveal: "The count was never going to come out even. It never was."
+    cost: "The choice."
+    character: Maren Vale
+    character_basis: "she will trade one for eleven, and has always known it"
+
+  # ---- L3 arc twists: an alliance, an identity, a loyalty ----------------------
+
+  - id: T-L3-A
+    level: 3
+    episode: 3
+    beat_id: b15
+    reframes: "the alliance Maren trusts most"
+    reveal: >
+      There is no Dispatch 9. County comms went down forty minutes before the bus left.
+      She has been taking directions from a private channel the whole time.
+    cost: >
+      The voice that has kept them alive becomes the only thing on the bus nobody can
+      verify — and she keys the mic anyway, because she has nothing else.
+    character: Ronan Coyle
+    character_basis: "he needs to be the only route she has"
+    contradicts_onscreen_fact: false
+
+  - id: T-L3-B
+    level: 3
+    episode: 6
+    beat_id: b15
+    reframes: "the identity of the character the audience distrusted"
+    reveal: >
+      Ines surveyed the ignition line. She also filed the warning, and it was buried.
+      She is on this bus because she believes it is her fault too.
+    cost: >
+      Six episodes of the audience's suspicion were aimed at the wrong person, and the
+      right person is still unaccounted for.
+    character: Ines Ruiz
+    character_basis: "she wants to be believed, which is why she never says it plainly"
+
+  - id: T-L3-C
+    level: 3
+    episode: 9
+    beat_id: b15
+    reframes: "the protective duty"
+    reveal: >
+      Theo's notebook carries Maren's old crew call sign, in a nine-year-old's
+      handwriting. He did not wander onto this bus.
+    cost: "The one relationship Maren has not compromised turns out to be part of the design."
+    character: Theo Barrow
+    character_basis: "he has been trying to ask her something since the first mile"
+
+  - id: T-L3-D
+    level: 3
+    episode: 12
+    beat_id: b10
+    reframes: "the loyalty of the twelfth passenger"
+    reveal: "The twelfth passenger is Coyle. He boarded before the door ever opened."
+    cost: "Every headcount she has taken this season was taken in his presence."
+    character: Ronan Coyle
+    character_basis: "he has to be close enough to see her face when she decides"
+
+  # ---- L4: the premise ---------------------------------------------------------
+
+  - id: T-L4-SEASON
+    level: 4
+    episode: 8
+    beat_id: b14
+    reframes: "the premise"
+    reveal: >
+      The fire was set. The ignition points form a line, not a spread. The north gate was
+      installed three weeks before the season began, and the evacuation route they have
+      been following was issued by the office that lit it. Every obstacle the audience
+      read as bad luck converts, in one beat, into intent.
+    cost: >
+      Tier-2 exhausted — there was never an open road. And it lands hardest on Maren:
+      she has been executing someone else's plan since the first minute, expertly.
+    character: Ronan Coyle
+    character_basis: "eleven years of preparation by a man with access to county systems"
+    contradicts_onscreen_fact: false
+    followed_within_30s_by: "the wind turns — a reframe left to breathe deflates into exposition"
+
+  # ---- L5: the protagonist -----------------------------------------------------
+
+  - id: T-L5-SERIES
+    level: 5
+    episode: 12
+    beat_id: b14
+    reframes: "the protagonist"
+    reveal: >
+      Coyle is the son of one of the three who did not come back from Coldwater. He has
+      not been guiding Maren out. Every turn he gave her took her closer to the same slot
+      canyon, because he needed her to make the identical choice in front of witnesses.
+      And she makes it. He was right about her for eleven years.
+    cost: >
+      Everything. The belief she has protected since Coldwater — that the wind did it —
+      does not survive the episode, and neither does the version of her the audience
+      has been rooting for since the first ninety seconds.
+    character: Maren Vale
+    character_basis: >
+      the wound planted in E01 beat b02: she counts people aloud and always starts at
+      nine, because she is still finishing the count she abandoned eleven years ago.
+    contradicts_onscreen_fact: false
+
+clues:
+
+  # ================= EPISODE 1 — all eleven appear in ep01/shotlist.yaml ==========
+
+  - id: c-e01-l2-01
+    twist_id: T-E01-L2
+    episode: 1
+    beat_id: b02
+    visibility: 0.5
+    plant: "The bus door lever swings before Maren's hand reaches it. She is already climbing."
+    surface_read: "Somebody inside is helping — the obvious kindness in a panic."
+    true_read: "Somebody is already on board."
+
+  - id: c-e01-l2-02
+    twist_id: T-E01-L2
+    episode: 1
+    beat_id: b04
+    visibility: 1.0
+    plant: "Josie's seating chart, held up against the window light. One row is filled in a different pen."
+    surface_read: "A last-minute addition. Children move seats; teachers amend charts."
+    true_read: "The chart was amended by someone other than Josie."
+
+  - id: c-e01-l2-03
+    twist_id: T-E01-L2
+    episode: 1
+    beat_id: b09
+    visibility: 1.5
+    plant: "Dell, over his shoulder: 'Who's the fella in the back with the boots?' Bri's tank alarm cuts him off. Nobody answers."
+    surface_read: "Dell being Dell — loud, at the wrong moment, about nothing."
+    true_read: "Dell is right. It is the first of the two times he is right before E03."
+
+  - id: c-l4-01
+    twist_id: T-L4-SEASON
+    episode: 1
+    beat_id: b07
+    visibility: 0.5
+    plant: "A galvanised county gate across the north cut, chained. Maren, half to herself: 'That wasn't there in June.'"
+    surface_read: "County did some work over the summer. Everyone's tax dollars."
+    true_read: "The alternate route was closed on purpose, three weeks before the fire."
+
+  - id: c-l4-02
+    twist_id: T-L4-SEASON
+    episode: 1
+    beat_id: b11
+    visibility: 1.0
+    plant: "Sam's phone. Ridge footage shot three weeks ago: a row of small fires along the ridge, evenly spaced."
+    surface_read: "Wind-driven spread along the ridge line — that is what a fire looks like."
+    true_read: "Fires do not space themselves evenly. Those are ignition points."
+
+  - id: c-l5-01
+    twist_id: T-L5-SERIES
+    episode: 1
+    beat_id: b02
+    visibility: 0.5
+    plant: "Maren counts the boarding passengers aloud: 'nine — ten — eleven.' She never says one through eight."
+    surface_read: "She is picking up a count she started outside, before we joined the scene."
+    true_read: "She is finishing a count she abandoned eleven years ago. There were eight ahead of her."
+
+  - id: c-l5-02
+    twist_id: T-L5-SERIES
+    episode: 1
+    beat_id: b06
+    visibility: 1.0
+    plant: "Ruth watches Maren's burned hands being wrapped. She opens her mouth. She does not speak. Twice."
+    surface_read: "An old woman in shock, unable to find anything worth saying."
+    true_read: "Ruth taught in this valley in 2015. She knows exactly whose hands those are."
+
+  - id: c-l5-03
+    twist_id: T-L5-SERIES
+    episode: 1
+    beat_id: b15
+    visibility: 1.5
+    plant: "Coyle, on the radio: 'You know this road.' Maren: 'Everybody knows this road.' Coyle, after a beat: 'Not like you do.'"
+    surface_read: "Dispatch making conversation with a driver, keeping her talking, keeping her calm."
+    true_read: "He knows she has driven it once before, in the dark, alone."
+
+  - id: c-l3a-01
+    twist_id: T-L3-A
+    episode: 1
+    beat_id: b05
+    visibility: 0.5
+    plant: "Gus thumbs his handheld. Dead air, no carrier. Behind him the bus radio hisses cleanly and Coyle comes through."
+    surface_read: "Repeaters go down in a fire. The bus has a better antenna."
+    true_read: "County is off the air. Whatever the bus is receiving is not county."
+
+  - id: c-l3a-02
+    twist_id: T-L3-A
+    episode: 1
+    beat_id: b16
+    visibility: 1.5
+    plant: "Coyle asks for a headcount. Maren says 'Eleven.' A pause. 'That's right. Eleven.'"
+    surface_read: "Dispatch confirming against the school manifest. That is the job."
+    true_read: "He is not confirming a number he was given. He is confirming a number he arranged."
+
+  - id: c-l3c-01
+    twist_id: T-L3-C
+    episode: 1
+    beat_id: b04
+    visibility: 0.5
+    plant: "Theo's spiral notebook, held two-handed. The bottom corner is already burned."
+    surface_read: "He grabbed it out of a house that was already going up."
+    true_read: "It was burned before today. It is not his notebook."
+
+  # ================= L4 trail, episodes 2-7 ======================================
+
+  - id: c-l4-03
+    twist_id: T-L4-SEASON
+    episode: 2
+    beat_id: b08
+    visibility: 0.5
+    plant: "The clinic's evacuation notice on the door is dated four days before the fire."
+    surface_read: "Rural clinics run drills. Somebody was organised for once."
+    true_read: "Someone knew the date."
+
+  - id: c-l4-04
+    twist_id: T-L4-SEASON
+    episode: 4
+    beat_id: b06
+    visibility: 1.0
+    plant: "The Prentice yard log: a fuel collection, three weeks ago, signed with an unreadable county initial."
+    surface_read: "County vehicles fuel up out here all the time."
+    true_read: "The clean stock was removed deliberately, on the same date as the gate."
+
+  - id: c-l4-05
+    twist_id: T-L4-SEASON
+    episode: 4
+    beat_id: b12
+    visibility: 0.5
+    plant: "Theo's drawing: a gate with a chain, drawn before they reach one."
+    surface_read: "A child draws what frightens him. They passed a gate an hour ago."
+    true_read: "He is drawing what is ahead, because he was shown the route."
+
+  - id: c-l4-06
+    twist_id: T-L4-SEASON
+    episode: 5
+    beat_id: b09
+    visibility: 1.0
+    plant: "The escort Coyle promises is given a unit number. Gus's book has no such unit."
+    surface_read: "Out-of-county mutual aid. Gus wouldn't have their numbers."
+    true_read: "The unit does not exist."
+
+  - id: c-l4-07
+    twist_id: T-L4-SEASON
+    episode: 6
+    beat_id: b07
+    visibility: 1.5
+    plant: "Ines, reading her own survey aloud: 'Ignition risk, west ridge — recommend fire-break maintenance.' Filed and closed. No action taken."
+    surface_read: "Bureaucratic neglect. The most ordinary story in the world."
+    true_read: "It was not neglected. It was closed."
+
+  - id: c-l4-08
+    twist_id: T-L4-SEASON
+    episode: 7
+    beat_id: b05
+    visibility: 0.5
+    plant: "Two ridges burning at once, with a green corridor untouched between them."
+    surface_read: "Wind channelling. Fire behaves strangely on a ridge."
+    true_read: "The corridor was left. Something is meant to travel down it."
+
+  - id: c-l4-09
+    twist_id: T-L4-SEASON
+    episode: 7
+    beat_id: b14
+    visibility: 1.0
+    plant: "Dell, before he goes: 'That gate's a Harnell. County stopped buying Harnell in '19.'"
+    surface_read: "A mechanic knowing his hardware. It is what he does."
+    true_read: "The gate was not bought by the county."
+
+  # ================= L5 trail, episodes 2-11 =====================================
+
+  - id: c-l5-04
+    twist_id: T-L5-SERIES
+    episode: 2
+    beat_id: b11
+    visibility: 0.5
+    plant: "Maren takes the Coldwater turn without looking at the sign."
+    surface_read: "Forty years in the valley. Everyone drives it blind."
+    true_read: "She has taken that turn once before, at night, and has not forgotten it."
+
+  - id: c-l5-05
+    twist_id: T-L5-SERIES
+    episode: 3
+    beat_id: b09
+    visibility: 1.0
+    plant: "Coyle uses a phrase — 'hold your count' — that is crew radio discipline, not dispatch procedure."
+    surface_read: "Dispatchers pick things up from the crews they work with."
+    true_read: "He learned it at home, from a father who used it."
+
+  - id: c-l5-06
+    twist_id: T-L5-SERIES
+    episode: 4
+    beat_id: b10
+    visibility: 0.5
+    plant: "Maren's hands, unwrapped for the first time. The old scars underneath are the same shape as the new burns."
+    surface_read: "A working life. Everyone out here has hands like that."
+    true_read: "She has held a lever that hot once before."
+
+  - id: c-l5-07
+    twist_id: T-L5-SERIES
+    episode: 5
+    beat_id: b14
+    visibility: 1.5
+    plant: "Ruth, quietly: 'Crew Six.' Maren does not react, and does not ask what she means."
+    surface_read: "An old woman drifting, saying half-remembered things under stress."
+    true_read: "It was Maren's call sign. Not reacting is the reaction."
+
+  - id: c-l5-08
+    twist_id: T-L5-SERIES
+    episode: 6
+    beat_id: b13
+    visibility: 1.0
+    plant: "Asked what happened at Coldwater, Maren gives an account that is accurate and complete, and never says the word 'I'."
+    surface_read: "Professional detachment. This is how people talk about the worst day."
+    true_read: "She has told this version so many times that the grammar has set."
+
+  - id: c-l5-09
+    twist_id: T-L5-SERIES
+    episode: 7
+    beat_id: b11
+    visibility: 0.5
+    plant: "She counts ten and stops. She does not start again from the beginning."
+    surface_read: "Exhaustion. She has been driving for six hours."
+    true_read: "She never starts from the beginning."
+
+  - id: c-l5-10
+    twist_id: T-L5-SERIES
+    episode: 9
+    beat_id: b12
+    visibility: 1.5
+    plant: "Theo: 'My grandad said you'd remember him.' Maren says nothing for four seconds and then says the boy's surname back to him, correctly, for the first time."
+    surface_read: "A child's confusion, and an adult being gentle about it."
+    true_read: "She has known who he is since she read the seating chart."
+
+  - id: c-l5-11
+    twist_id: T-L5-SERIES
+    episode: 10
+    beat_id: b13
+    visibility: 1.0
+    plant: "Coyle walks toward the bus. He does not run, and the fire behind him does not concern him."
+    surface_read: "Shock. People do strange things in a burn-over."
+    true_read: "He knows exactly where the fire is, because he knows where he put it."
+
+  - id: c-l5-12
+    twist_id: T-L5-SERIES
+    episode: 11
+    beat_id: b15
+    visibility: 1.5
+    plant: "Coyle, on the open channel, so all eleven hear it: 'How many are you bringing out, Crew Six?'"
+    surface_read: "A dispatcher asking the only question that matters."
+    true_read: "He is asking her the question he has waited eleven years to ask, by the name she has not used since."
+
+  # ================= L3 trails ===================================================
+
+  - id: c-l3a-03
+    twist_id: T-L3-A
+    episode: 2
+    beat_id: b06
+    visibility: 1.0
+    plant: "Every other frequency on the bus set is silent. Only one channel has a voice on it."
+    surface_read: "A quiet night on the county band. Everyone is busy with the fire."
+    true_read: "There is nobody else on the air at all."
+
+  - id: c-l3a-04
+    twist_id: T-L3-A
+    episode: 2
+    beat_id: b13
+    visibility: 0.5
+    plant: "No ident tone under Coyle's carrier. Every other transmission on the show has one."
+    surface_read: "Nobody notices a sound that isn't there."
+    true_read: "It is not a county repeater."
+
+  - id: c-l3a-05
+    twist_id: T-L3-A
+    episode: 2
+    beat_id: b15
+    visibility: 1.5
+    plant: "Gus: 'Ask him his badge number.' Maren does not ask."
+    surface_read: "She is driving. It is not the moment."
+    true_read: "She does not want an answer she would have to act on."
+
+  - id: c-l3b-01
+    twist_id: T-L3-B
+    episode: 2
+    beat_id: b09
+    visibility: 0.5
+    plant: "Ines knows which culverts flood, unprompted."
+    surface_read: "A county surveyor knows the county. That is the job."
+    true_read: "She surveyed this specific ground, recently, and for a reason."
+
+  - id: c-l3b-02
+    twist_id: T-L3-B
+    episode: 3
+    beat_id: b11
+    visibility: 1.0
+    plant: "Ines will not look at the ridge line when everyone else does."
+    surface_read: "Fear. It is a reasonable thing to be afraid of."
+    true_read: "She recognises the shape of it."
+
+  - id: c-l3b-03
+    twist_id: T-L3-B
+    episode: 4
+    beat_id: b08
+    visibility: 0.5
+    plant: "Her clipboard tube is full of maps of this valley and nowhere else."
+    surface_read: "She was working when the evacuation came. Everyone grabbed their job."
+    true_read: "This valley was the whole assignment."
+
+  - id: c-l3b-04
+    twist_id: T-L3-B
+    episode: 5
+    beat_id: b12
+    visibility: 1.0
+    plant: "She corrects Maren's route once, and is right, and then never volunteers again."
+    surface_read: "She was talked over, and stopped trying. It happens."
+    true_read: "Being right frightened her more than being wrong."
+
+  - id: c-l3b-05
+    twist_id: T-L3-B
+    episode: 5
+    beat_id: b16
+    visibility: 1.5
+    plant: "Dell: 'You people surveyed all this last spring.' Ines: 'I did.' Nobody follows it up."
+    surface_read: "An accusation, deflected. There is a fire on."
+    true_read: "She said it plainly, once, and the audience was looking somewhere else."
+
+  - id: c-l3c-02
+    twist_id: T-L3-C
+    episode: 4
+    beat_id: b12
+    visibility: 1.0
+    plant: "Theo's drawings are of places they have not reached yet."
+    surface_read: "A child draws a road. Roads look like roads."
+    true_read: "He was shown the route before they drove it."
+
+  - id: c-l3c-03
+    twist_id: T-L3-C
+    episode: 5
+    beat_id: b07
+    visibility: 0.5
+    plant: "Bri calls him 'the boy' rather than his name, twice."
+    surface_read: "An exhausted woman on failing oxygen."
+    true_read: "She is not his great-aunt."
+
+  - id: c-l3c-04
+    twist_id: T-L3-C
+    episode: 7
+    beat_id: b09
+    visibility: 1.0
+    plant: "Theo is not on Josie's seating chart, and Josie has not noticed."
+    surface_read: "Charts are wrong. It was a scramble."
+    true_read: "He was never in her class."
+
+  - id: c-l3c-05
+    twist_id: T-L3-C
+    episode: 8
+    beat_id: b10
+    visibility: 1.5
+    plant: "Theo, to Maren: 'You're supposed to count me.'"
+    surface_read: "A frightened child asking to be included."
+    true_read: "He has been told what she does."
+
+  - id: c-l3d-01
+    twist_id: T-L3-D
+    episode: 2
+    beat_id: b04
+    visibility: 0.5
+    plant: "The rear emergency door's latch is unseated. Maren reseats it without comment."
+    surface_read: "Old bus, loose fittings, a driver's reflex."
+    true_read: "It was opened from outside before the route began."
+
+  - id: c-l3d-02
+    twist_id: T-L3-D
+    episode: 5
+    beat_id: b10
+    visibility: 1.0
+    plant: "Coyle's voice arrives a half-second before the radio's speaker crackle, once."
+    surface_read: "A sound mix artefact. Nobody in the bus reacts."
+    true_read: "That transmission did not come from a distant repeater."
+
+  - id: c-l3d-03
+    twist_id: T-L3-D
+    episode: 7
+    beat_id: b15
+    visibility: 0.5
+    plant: "Twelve seats show wear. Eleven are occupied."
+    surface_read: "A school bus. Every seat has been sat in a thousand times."
+    true_read: "One of them has been sat in today."
+
+  - id: c-l3d-04
+    twist_id: T-L3-D
+    episode: 10
+    beat_id: b06
+    visibility: 1.0
+    plant: "Coyle, on the radio, describes the inside of the bus accurately."
+    surface_read: "He has the vehicle schematic. Dispatch would."
+    true_read: "He is describing what he can see."
+
+  - id: c-l3d-05
+    twist_id: T-L3-D
+    episode: 11
+    beat_id: b09
+    visibility: 1.5
+    plant: "Bri, on her last clear breath: 'He's been here the whole time.' Everyone assumes she means the fire."
+    surface_read: "A dying woman being poetic about the thing that is killing her."
+    true_read: "She is being literal, and she is the only one who saw him board."

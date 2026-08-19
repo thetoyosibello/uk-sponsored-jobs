@@ -1,0 +1,432 @@
+{
+  "dry_run": true,
+  "master": {
+    "aspect": "16:9",
+    "runtime_sec": 420.0,
+    "edl": [
+      {
+        "shot": "s01",
+        "beat": "b01",
+        "timeline_in": 0.0,
+        "timeline_out": 6.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s02",
+        "beat": "b01",
+        "timeline_in": 6.0,
+        "timeline_out": 14.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s03",
+        "beat": "b02",
+        "timeline_in": 14.0,
+        "timeline_out": 23.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s04",
+        "beat": "b02",
+        "timeline_in": 23.0,
+        "timeline_out": 30.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s05",
+        "beat": "b02",
+        "timeline_in": 30.0,
+        "timeline_out": 38.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s06",
+        "beat": "b03",
+        "timeline_in": 38.0,
+        "timeline_out": 50.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s07",
+        "beat": "b03",
+        "timeline_in": 50.0,
+        "timeline_out": 60.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s08",
+        "beat": "b04",
+        "timeline_in": 60.0,
+        "timeline_out": 71.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s09",
+        "beat": "b04",
+        "timeline_in": 71.0,
+        "timeline_out": 80.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s10",
+        "beat": "b04",
+        "timeline_in": 80.0,
+        "timeline_out": 90.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s11",
+        "beat": "b05",
+        "timeline_in": 90.0,
+        "timeline_out": 102.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s12",
+        "beat": "b05",
+        "timeline_in": 102.0,
+        "timeline_out": 120.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s13",
+        "beat": "b06",
+        "timeline_in": 120.0,
+        "timeline_out": 134.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s14",
+        "beat": "b06",
+        "timeline_in": 134.0,
+        "timeline_out": 145.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s15",
+        "beat": "b07",
+        "timeline_in": 145.0,
+        "timeline_out": 160.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s16",
+        "beat": "b07",
+        "timeline_in": 160.0,
+        "timeline_out": 172.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s17",
+        "beat": "b08",
+        "timeline_in": 172.0,
+        "timeline_out": 188.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s18",
+        "beat": "b08",
+        "timeline_in": 188.0,
+        "timeline_out": 200.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s19",
+        "beat": "b09",
+        "timeline_in": 200.0,
+        "timeline_out": 214.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s20",
+        "beat": "b09",
+        "timeline_in": 214.0,
+        "timeline_out": 228.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s21",
+        "beat": "b10",
+        "timeline_in": 228.0,
+        "timeline_out": 243.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s22",
+        "beat": "b10",
+        "timeline_in": 243.0,
+        "timeline_out": 255.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s23",
+        "beat": "b11",
+        "timeline_in": 255.0,
+        "timeline_out": 268.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s24",
+        "beat": "b11",
+        "timeline_in": 268.0,
+        "timeline_out": 280.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s25",
+        "beat": "b12",
+        "timeline_in": 280.0,
+        "timeline_out": 300.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s26",
+        "beat": "b13",
+        "timeline_in": 300.0,
+        "timeline_out": 318.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s27",
+        "beat": "b14",
+        "timeline_in": 318.0,
+        "timeline_out": 332.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s28",
+        "beat": "b14",
+        "timeline_in": 332.0,
+        "timeline_out": 350.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s29",
+        "beat": "b15",
+        "timeline_in": 350.0,
+        "timeline_out": 370.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s30",
+        "beat": "b15",
+        "timeline_in": 370.0,
+        "timeline_out": 386.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s31",
+        "beat": "b15",
+        "timeline_in": 386.0,
+        "timeline_out": 402.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s32",
+        "beat": "b16",
+        "timeline_in": 402.0,
+        "timeline_out": 412.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s33",
+        "beat": "b16",
+        "timeline_in": 412.0,
+        "timeline_out": 420.0,
+        "transition": "freeze",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      }
+    ]
+  },
+  "vertical_cut": {
+    "aspect": "9:16",
+    "runtime_sec": 60,
+    "note": "freeze-frame lands 55-58s; ends on the question, never the answer",
+    "segments": [
+      {
+        "role": "hook",
+        "beat": "b01",
+        "source_in": 0
+      },
+      {
+        "role": "spike",
+        "beat": "b15",
+        "source_in": 350
+      },
+      {
+        "role": "button",
+        "beat": "b16",
+        "source_in": 402
+      }
+    ]
+  },
+  "rules": [
+    "enter late, leave early: trim the first and last four seconds of every scene",
+    "cut on motion, never after a completed sentence \u2014 that is an exit point",
+    "the button is frame-accurate and freezes on the unanswered image"
+  ]
+}

@@ -1,2 +1,6 @@
 sweep.log
 launchd.log
+
+# studio
+studio/**/__pycache__/
+studio/**/*.pyc

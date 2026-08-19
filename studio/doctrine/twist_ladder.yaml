@@ -1,0 +1,117 @@
+# THE TWIST LADDER
+# "Plot twists on so many levels" made structural. Not more twists — twists at
+# different SCOPES, each reframing a larger unit of story. This is the studio's
+# signature and the TwistMaster agent is measured against it.
+
+version: 1.2.0
+
+principle: >
+  A twist is not new information. A twist is the moment the audience discovers that
+  information they already had meant something else. Therefore every twist is built
+  backwards: decide the true_read first, then plant clues whose surface_read is
+  innocent. Withholding facts from the audience is a cheat. Letting them misread facts
+  in plain sight is the craft.
+
+levels:
+
+  L1:
+    name: scene_twist
+    scope: scene
+    cadence: every_scene
+    reframes: "the beat"
+    definition: "The scene resolves other than the way it was set up."
+    clues_required: 1
+    clue_spread_min_episodes: 1
+    examples_of_form:
+      - "The thing they were reaching for is already gone."
+      - "The person they were protecting was never in the room."
+      - "The help they called arrives and makes it worse."
+    coverage_required: 1.0
+
+  L2:
+    name: episode_twist
+    scope: episode
+    cadence: every_episode
+    reframes: "the episode's goal"
+    definition: "What they spent the episode trying to achieve was the wrong objective."
+    clues_required: 3
+    clue_spread_min_episodes: 1
+    placement: "60-95% of episode runtime, before the button"
+    must_cost: true
+
+  L3:
+    name: arc_twist
+    scope: 3_episodes
+    cadence: episodes [3, 6, 9, 12]
+    reframes: "an alliance, an identity, or a loyalty"
+    definition: "Someone the audience placed is somewhere else on the board."
+    clues_required: 5
+    clue_spread_min_episodes: 2
+    clue_spread: "across at least 2 prior episodes"
+    must_cost: true
+
+  L4:
+    name: season_twist
+    scope: season
+    cadence: once
+    reframes: "the premise"
+    definition: >
+      The situation was engineered, not accidental. The survival scenario the audience
+      accepted as circumstance is revealed as design — which retroactively converts
+      every earlier obstacle from bad luck into intent.
+    clues_required: 9
+    clue_spread_min_episodes: 5
+    clue_spread: "across at least 5 prior episodes, at least 2 in episode 1"
+    must_cost: true
+    note: "This is the highest-leverage twist. It re-reads the whole season at once."
+
+  L5:
+    name: series_twist
+    scope: series
+    cadence: once
+    reframes: "the protagonist"
+    definition: >
+      The protagonist is complicit in, or the cause of, the thing they are fleeing. The
+      wound planted in Act 1 of Episode 1 is revealed as the origin of the catastrophe.
+    clues_required: 12
+    clue_spread_min_episodes: 8
+    clue_spread: "at least one per episode, seeded from the first 90 seconds of the series"
+    must_cost: true
+    note: >
+      L5 must be decided BEFORE episode 1 is written. It cannot be discovered later
+      without violating forbid_retcon. The wound_shown_before_said rule exists to serve
+      this level.
+
+fair_play_contract:
+  # A twist may only fire if all of these hold. Enforced by ContinuityAuditor.
+  - id: clue_count
+    rule: "Planted clue count >= level's clues_required, all before the twist beat."
+  - id: dual_read
+    rule: "Each clue records surface_read and true_read. Both must be defensible."
+  - id: on_screen
+    rule: "Each clue is visible or audible to the audience, not merely in a bible."
+  - id: no_retcon
+    rule: "The twist contradicts interpretation, never an on-screen fact."
+  - id: character_consistent
+    rule: "Maps to an established desire or fear of the character executing it."
+  - id: cost
+    rule: "Post-twist protagonist position is strictly worse than pre-twist."
+  - id: rule_of_three_shape
+    rule: >
+      Clue 1 reads as incidental detail. Clue 2 reads as setup for something else.
+      Clue 3 is the one they remember afterwards. Do not front-load significance.
+
+dosage:
+  too_few_clues: "Reads as unfair. Audience feels cheated, disengages permanently."
+  too_many_clues: "They guess it. The reveal lands as confirmation, not reversal."
+  target: "Predicted-by rate of 15-25% of audience. Some must call it, or it was unfair."
+  clue_visibility_ladder:
+    - weight: 0.5   # clue 1: peripheral, in frame but not framed
+    - weight: 1.0   # clue 2: framed, but attention is directed elsewhere in the same beat
+    - weight: 1.5   # clue 3: stated aloud, but by a character the audience distrusts
+
+interaction_rules:
+  - "Two twists may not fire in the same beat. The audience can only re-read one thing at a time."
+  - "An L4 or L5 twist must be followed within 30 seconds by a concrete new threat, or the reframe deflates into exposition."
+  - "A lower-level twist must never pre-empt a higher one. If an L2 would reveal the L4, the L2 is rewritten."
+  - "The beat after any twist >= L3 must show a character acting on the new information, not discussing it."

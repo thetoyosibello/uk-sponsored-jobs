@@ -1,0 +1,327 @@
+# ASH RIVER — S01E01 "Headcount"
+#
+# Timestamp skeleton first, dialogue second. This file is what the Retention Engine
+# grades; script.md is its dramatisation. Beats tile 0-420 with no gaps, because a gap
+# is screen time nobody graded.
+#
+# `cost` is the field writers fake. If a beat cannot name what it took away, it is
+# decoration and its seconds belong to a beat that costs something.
+
+production: ash-river
+season: 1
+episode: 1
+title: "Headcount"
+runtime_target_sec: 420
+prior_cliffhanger: null          # series opener — the cold open stands alone
+protective_duty_character: Theo Barrow
+wound_shown_beat: b02            # she counts from nine
+wound_said_beat: null            # never explained in E01, and not for eleven episodes
+logline: >
+  Eleven people, one road out of a burning valley, and a driver who counts them at every
+  stop. On the last count of the day she gets twelve.
+
+beats:
+
+  # ---- SCENE 1: THE DOOR -------------------------------------------------------
+  - id: b01
+    t_start_sec: 0
+    t_end_sec: 14
+    scene: "S1 THE DOOR"
+    action: >
+      A hand slams a bus door lever that is too hot to hold, and holds it anyway. Smoke
+      pours in around the frame. Under it, mid-count, a woman's voice: "—nine. Ten."
+    cost: "The skin of her right palm."
+    loops_opened: [q_out, q_hands]
+    loops_closed: []
+    irony_gap: false
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 6
+    bonding_device: competence_under_pressure
+    dialogue: true
+
+  - id: b02
+    t_start_sec: 14
+    t_end_sec: 38
+    scene: "S1 THE DOOR"
+    action: >
+      Passengers board through smoke. The lever swings before Maren's hand reaches it —
+      somebody inside has pulled it. She counts them past her: nine, ten, eleven. She
+      never says one through eight. Josie counts too, out loud, from one.
+    cost: "Ninety seconds of road, and the last of the daylight on the west side."
+    loops_opened: [q_count]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 6
+    twist_level: 1
+    bonding_device: visible_private_wound
+    clue_id: c-e01-l2-01
+    dialogue: true
+
+  # ---- SCENE 2: RIDGE ROAD -----------------------------------------------------
+  - id: b03
+    t_start_sec: 38
+    t_end_sec: 60
+    scene: "S2 RIDGE ROAD"
+    action: >
+      The bus pulls out. Maren puts Theo in the seat directly behind her without being
+      asked and without explaining. In the mirror, the town goes orange.
+    cost: "Ash River. They are not coming back to it."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: false
+    clock_visible: true
+    hook: escalation
+    options_remaining: 5
+    bonding_device: protective_duty
+    dialogue: true
+
+  - id: b04
+    t_start_sec: 60
+    t_end_sec: 90
+    scene: "S2 RIDGE ROAD"
+    action: >
+      Josie works the aisle with her seating chart against the window light. One row is
+      filled in a different pen. Theo holds a spiral notebook two-handed; the bottom
+      corner is already burned. Dell wants the radio louder. Nobody looks at the chart.
+    cost: "The last clear air in the cabin — the smoke reaches them at the first switchback."
+    loops_opened: [q_theo]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 5
+    twist_level: 1
+    clue_id: c-e01-l2-02
+    dialogue: true
+
+  # ---- SCENE 3: THE VOICE ------------------------------------------------------
+  - id: b05
+    t_start_sec: 90
+    t_end_sec: 120
+    scene: "S3 THE VOICE"
+    action: >
+      Gus thumbs his handheld — dead air, no carrier. Behind him the bus set hisses
+      clean and a calm voice comes through: Dispatch 9. He gives Maren a turn she was
+      not expecting and a reason she cannot argue with.
+    cost: "The route she planned. She takes his."
+    loops_opened: [q_voice]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: reveal
+    options_remaining: 5
+    clue_id: c-l3a-01
+    dialogue: true
+
+  - id: b06
+    t_start_sec: 120
+    t_end_sec: 145
+    scene: "S3 THE VOICE"
+    action: >
+      Ines wraps Maren's hands one-handed while the bus moves. Maren knows she should
+      downshift for the grade and cannot close her fingers on the stick. Ruth watches
+      the wrapping. She opens her mouth twice and says nothing either time.
+    cost: "Her grip. From here she drives with what she has left."
+    loops_opened: [q_road]
+    loops_closed: [q_hands]
+    irony_gap: false
+    clock_visible: false
+    hook: null
+    options_remaining: 4
+    twist_level: 1
+    capability_gap: true
+    clue_id: c-l5-02
+    dialogue: true
+
+  # ---- SCENE 4: THE GATE -------------------------------------------------------
+  - id: b07
+    t_start_sec: 145
+    t_end_sec: 172
+    scene: "S4 THE GATE"
+    action: >
+      The north cut — the short way — is blocked by a galvanised county gate, chained.
+      Maren, half to herself: "That wasn't there in June." Danny says the long way is
+      still open. He is certain, and he is the most competent person on the bus.
+    cost: "Nine miles, and the only route that would have beaten the wind."
+    loops_opened: [q_gate]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 4
+    clue_id: c-l4-01
+    dialogue: true
+
+  - id: b08
+    t_start_sec: 172
+    t_end_sec: 200
+    scene: "S4 THE GATE"
+    action: >
+      Kit gets out to look at the chain — ninety seconds outside, no more. He comes back
+      with nothing useful and a burn on his forearm he does not mention. The fuel gauge
+      is falling faster than the miles.
+    cost: "Kit's arm, and the pretence that anyone can go outside and come back the same."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 3
+    twist_level: 1
+    dialogue: true
+
+  # ---- SCENE 5: THE TANK -------------------------------------------------------
+  - id: b09
+    t_start_sec: 200
+    t_end_sec: 228
+    scene: "S5 THE TANK"
+    action: >
+      Bri's regulator starts to tick. The gauge is in the red and the audience sees it a
+      full beat before she does. Dell, over his shoulder: "Who's the fella in the back
+      with the boots?" The alarm cuts him off. Nobody answers him.
+    cost: "The cabin's composure. From here everyone is listening to a countdown."
+    loops_opened: [q_tank]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 3
+    clue_id: c-e01-l2-03
+    dialogue: true
+
+  - id: b10
+    t_start_sec: 228
+    t_end_sec: 255
+    scene: "S5 THE TANK"
+    action: >
+      Danny gets the regulator seated and buys Bri an hour. In doing it he says the north
+      cut is open — he checked it Tuesday. Everyone hears him say it. Maren commits.
+    cost: "An hour of Bri's oxygen spent to buy an hour, and a decision made on Tuesday's information."
+    loops_opened: [q_northcut]
+    loops_closed: [q_tank]
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 3
+    twist_level: 1
+    dialogue: true
+
+  # ---- SCENE 6: SAM'S PHONE ----------------------------------------------------
+  - id: b11
+    t_start_sec: 255
+    t_end_sec: 280
+    scene: "S6 SAM'S PHONE"
+    action: >
+      Sam has three weeks of ridge footage on his phone. In the oldest clip the gate is
+      not there. In a clip from the same week: a row of small fires along the ridge,
+      evenly spaced.
+    cost: "The idea that this is weather."
+    loops_opened: [q_line]
+    loops_closed: [q_gate]
+    irony_gap: true
+    clock_visible: true
+    hook: reveal
+    options_remaining: 3
+    twist_level: 1
+    clue_id: c-l4-02
+    dialogue: true
+
+  - id: b12
+    t_start_sec: 280
+    t_end_sec: 300
+    scene: "S6 SAM'S PHONE"
+    action: >
+      The phone passes down the bus. Eleven faces lit by a small screen, and the fire
+      outside the windows the only other light. Nobody says anything for twenty seconds.
+    cost: "The last person on the bus who thought this was bad luck stops thinking it."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: false
+    hook: null
+    options_remaining: 3
+    dialogue: false
+
+  # ---- SCENE 7: THE SECOND COUNT ----------------------------------------------
+  - id: b13
+    t_start_sec: 300
+    t_end_sec: 318
+    scene: "S7 THE SECOND COUNT"
+    action: >
+      They reach the north cut and it is open. Danny was right. Taking it means
+      committing away from Carrow with the fuel they have. Maren takes it.
+    cost: "Carrow Gap. It is behind them now."
+    loops_opened: [q_commit]
+    loops_closed: [q_northcut]
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 2
+    dialogue: true
+
+  - id: b14
+    t_start_sec: 318
+    t_end_sec: 350
+    scene: "S7 THE SECOND COUNT"
+    action: >
+      Maren counts the cabin in the mirror out of habit. Nine, ten, eleven — twelve. She
+      counts again. Twelve. Josie's chart has eleven names on it and Josie has been
+      counting all night and getting eleven.
+    cost: >
+      The cabin. She has to keep driving with her back to twelve people, one of whom
+      boarded a bus that took eleven.
+    loops_opened: [q_twelfth]
+    loops_closed: [q_commit]
+    irony_gap: false
+    clock_visible: true
+    hook: reversal
+    options_remaining: 2
+    twist_level: 2
+    dialogue: true
+
+  # ---- SCENE 8: THE CORRIDOR ---------------------------------------------------
+  - id: b15
+    t_start_sec: 350
+    t_end_sec: 402
+    scene: "S8 THE CORRIDOR"
+    action: >
+      Fifty seconds of road between two burning ridges, and a green corridor untouched
+      between them. Maren says nothing to the cabin. On the radio: "You know this road."
+      — "Everybody knows this road." — a beat — "Not like you do." She does not answer
+      that either. She checks the mirror four times and does not look at anyone in it.
+    cost: >
+      The pretence, held since the first minute, that she is just the driver. She knows
+      she should tell them what she counted and she cannot make herself do it.
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 2
+    twist_level: 1
+    capability_gap: true
+    clue_id: c-l5-03
+    dialogue: true
+
+  # ---- SCENE 9: HEADCOUNT ------------------------------------------------------
+  - id: b16
+    t_start_sec: 402
+    t_end_sec: 420
+    scene: "S9 HEADCOUNT"
+    action: >
+      Radio: "Ash River bus, Dispatch 9. Headcount." Maren looks at the mirror. Twelve
+      faces. "Eleven." A pause on the carrier, one second too long. "That's right.
+      Eleven." Freeze on Maren's face, not on the road.
+    cost: "The truth, and the last thing anyone on that bus could have trusted."
+    loops_opened: [q_lie]
+    loops_closed: [q_road]
+    irony_gap: true
+    clock_visible: true
+    hook: question
+    options_remaining: 1
+    twist_level: 1
+    clue_id: c-l3a-02
+    dialogue: true

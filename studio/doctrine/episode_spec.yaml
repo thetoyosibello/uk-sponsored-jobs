@@ -1,0 +1,89 @@
+# EPISODE SPEC
+# Timing is written to the second, not the page. This file defines the container
+# every episode is poured into, and the two release formats we cut from one master.
+
+version: 1.1.0
+
+formats:
+
+  # Primary: episodic release. Assembles into a feature at season end.
+  serial_episode:
+    runtime_target_sec: 420        # 7 minutes
+    runtime_tolerance_sec: 30
+    aspect: "16:9"
+    also_cut: ["vertical_clip"]
+    structure:
+      - id: recap_hook
+        window_sec: [0, 10]
+        purpose: "Resolve the prior cliffhanger. Not a 'previously on' — the actual next moment."
+        required: true
+      - id: cold_open
+        window_sec: [0, 3]
+        purpose: "Destabilising image or line. Threat already in progress."
+        required: true
+        note: "Overlaps recap_hook for episodes 2+. For ep 1, cold_open stands alone."
+      - id: escalation_body
+        window_sec: [10, 400]
+        purpose: "Hook every <=55s. Options narrow. Clock visible. Cost per scene."
+        required: true
+      - id: episode_twist
+        window_sec: [300, 400]
+        purpose: "L2 twist. The episode's goal was the wrong goal."
+        required: true
+      - id: button
+        window_sec: [412, 420]
+        purpose: "Final hook. Ends on a question. Freeze on the unanswered image."
+        required: true
+
+  # Secondary cut, generated from the same master for feed distribution.
+  vertical_clip:
+    runtime_target_sec: 60
+    aspect: "9:16"
+    structure:
+      - id: hook
+        window_sec: [0, 3]
+      - id: friction
+        window_sec: [3, 25]
+      - id: spike
+        window_sec: [25, 52]
+      - id: button
+        window_sec: [55, 58]
+        note: "Retention spikes measured here. Freeze-frame lands 55-58."
+
+  # Season assembly. The episodes are the film.
+  feature_cut:
+    source: "all episodes of a season, recap_hooks trimmed"
+    runtime_target_sec: 5040       # ~84 min from 12 x 7min
+    structure_note: >
+      Episode buttons become act breaks. The L4 season twist must land between 60% and
+      70% of feature runtime so the final act plays under full reframing. The L5 series
+      twist lands in the last 4 minutes and reframes everything the viewer just watched.
+
+season:
+  episodes: 12
+  arc_twist_cadence: 3             # L3 twist every 3 episodes: 3, 6, 9, 12
+  l4_season_twist_episode: 8       # ~66% of season
+  l5_series_twist_episode: 12
+  loop_ledger_must_zero_at: 12
+
+beat_grid:
+  # A beat is the atomic unit the scorer reads. Roughly one per 20-40 seconds.
+  target_beats_per_episode: [12, 20]
+  required_fields:
+    - id
+    - t_start_sec
+    - t_end_sec
+    - scene
+    - action              # what physically happens
+    - cost                # what this beat takes away. Never empty.
+    - loops_opened        # list of question ids
+    - loops_closed        # list of question ids
+    - irony_gap           # true if audience knows more than an on-screen character
+    - clock_visible       # true if a depleting quantity is legible
+    - hook                # null | escalation | reveal | reversal | threat_spike | question
+    - options_remaining   # int, must be non-increasing across the episode
+  optional_fields:
+    - twist_level         # 1-5
+    - capability_gap      # true if protagonist knows the move and cannot do it
+    - bonding_device
+    - clue_id             # planted clue this beat carries
