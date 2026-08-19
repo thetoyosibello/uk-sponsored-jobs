@@ -1,0 +1,133 @@
+# ATTENTION PHYSICS
+# The six forces that hold a viewer. Derived from RESEARCH.md; enforced by
+# pipeline/retention.py. Every threshold is a number the scorer can check against a
+# beat sheet. Amendments must cite either RESEARCH.md or measured telemetry.
+
+version: 1.3.0
+amended: 2026-08-19
+amended_by: doctrine-seed
+basis: RESEARCH.md
+
+# Weights sum to 100. The composite score is the weighted sum of force scores.
+forces:
+
+  open_loop_pressure:
+    weight: 24
+    basis: "Zeigarnik effect. Unfinished tasks occupy working memory."
+    rules:
+      open_loops_min: 3          # never fewer live questions than this, at any beat
+      open_loops_max: 7          # past this the audience stops tracking
+      loop_close_opens_another: true
+      loop_debt_ceiling_episodes: 3   # max episodes a loop may sit without partial payoff
+      season_ledger_must_zero: true   # finale closes or explicitly promotes every loop
+    fail_mode: "Net-negative loop count. Closing faster than opening is a death spiral."
+
+  dramatic_irony_gap:
+    weight: 22
+    basis: "Hitchcock bomb theory; Hasson ISC neural coupling; theory-of-mind studies."
+    rules:
+      irony_gap_coverage_min: 0.55   # fraction of runtime with audience > character knowledge
+      gap_requires_clock: true       # a gap with no time pressure is just exposition
+      surprise_budget_per_episode: 1 # pure-surprise beats allowed
+      default_is_tell_the_audience: true
+    fail_mode: "Symmetric information. Suspense collapses to surprise: 15 seconds, not 15 minutes."
+
+  hook_cadence:
+    weight: 20
+    basis: "Micro-drama retention telemetry; measured spikes at seconds 55-58 of 60."
+    rules:
+      cold_open_max_sec: 3           # threat legible by second 3
+      hook_interval_max_sec: 55      # max gap between hooks
+      resolve_prior_cliffhanger_by_sec: 10
+      button_within_last_sec: 8      # final hook lands in last N seconds
+      end_on_question: true
+      forbid_establishing_open: true
+    fail_mode: "Flat middle. Attention decays on a ~60s cycle regardless of runtime."
+
+  empathy_lock:
+    weight: 14
+    basis: "Cliffhanger efficacy is amplified by attachment; bonding-device research."
+    rules:
+      lock_by_sec: 90                # audience wants a named person to survive
+      bonding_devices_min: 2
+      bonding_devices:
+        - competence_under_pressure
+        - protective_duty
+        - visible_private_wound
+        - undeserved_trouble
+      protective_duty_required: true # someone in the cast who cannot save themselves
+      wound_shown_before_said: true
+    fail_mode: "A countdown over strangers. The clock ticks and nobody cares."
+
+  clock_and_shrinking_world:
+    weight: 12
+    basis: "Ticking-clock craft; options-narrow principle; capability-gap under stress."
+    rules:
+      clock_visible_beat_fraction_min: 0.70
+      options_monotonic_non_increasing: true
+      cost_per_scene_required: true      # every scene takes something away
+      capability_gap_beats_min: 1        # knows the right move, cannot execute it
+      forbid_external_rescue: true       # rescue may only arrive as a new problem
+    fail_mode: "A static situation. Tension needs a quantity going to zero."
+
+  twist_ladder:
+    weight: 8
+    basis: "Surprising-but-inevitable doctrine; rule of three; two-way clues."
+    rules:
+      clues_per_twist_min: 3
+      clue_requires_dual_read: true      # surface_read AND true_read
+      twist_must_cost: true              # a twist that helps the protagonist is a device
+      twist_character_consistent: true
+      forbid_retcon: true                # contradict interpretation, never on-screen fact
+      l1_scene_coverage: 1.0             # every scene resolves other than as set up
+    fail_mode: "Unearned reveal. Too few clues reads as cheating; too many and they guess."
+
+# Composite gates applied by the CEO before any spend.
+gates:
+  script_greenlight:
+    min_composite: 78
+    hard_fails_allowed: 0
+    note: "Below this, rework. Rejecting a script is cheap; rejecting a render is not."
+  render_greenlight:
+    min_composite: 84
+    hard_fails_allowed: 0
+    note: "Higher bar because money and GPU time start here."
+  publish_greenlight:
+    min_composite: 84
+    requires_qc_pass: true
+    requires_packaging_variants: 5
+    note: "A skippable release teaches the algorithm we are skippable. That damage outlives the episode."
+
+# Rules whose violation is fatal regardless of composite score.
+hard_fail_rules:
+  - end_on_question
+  - forbid_establishing_open
+  - forbid_external_rescue
+  - season_ledger_must_zero
+  - clues_per_twist_min
+  - forbid_retcon
+  - open_loops_min
+
+# Anti-patterns. Presence of any of these in a beat sheet is an automatic rework.
+anti_patterns:
+  - id: establishing_shot_open
+    detect: "first beat tagged 'establishing' or 'calm'"
+    why: "Context delivered mid-crisis or not at all."
+  - id: plan_discussion_scene
+    detect: "beat whose action is characters agreeing on a plan"
+    why: "Replace with the scene where the plan fails."
+  - id: competent_calm_protagonist
+    detect: "act 1 with zero capability_gap beats"
+    why: "No gap between what they should do and can do means no tension."
+  - id: free_scene
+    detect: "beat with empty 'cost' field"
+    why: "Every scene takes something away."
+  - id: helpful_twist
+    detect: "twist whose delta improves protagonist position"
+    why: "That is a plot device wearing a twist costume."
+  - id: cavalry
+    detect: "beat resolved by an external rescuer"
+    why: "Rescue is permitted only as a new problem."
+  - id: unpaid_debt
+    detect: "loop open past loop_debt_ceiling_episodes with no partial payoff"
+    why: "Betrayal by non-resolution damages the next production, not just this one."

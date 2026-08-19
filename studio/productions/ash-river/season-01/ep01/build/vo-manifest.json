@@ -1,0 +1,338 @@
+{
+  "dry_run": true,
+  "lines": [
+    {
+      "shot": "s01",
+      "beat": "b01",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "\u2014 nine. Ten.",
+      "direction": "mid-count, off-screen, close. She is not performing calm; she has simply not stopped counting.",
+      "breath": "controlled with effort"
+    },
+    {
+      "shot": "s02",
+      "beat": "b01",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Move. Move, move \u2014",
+      "direction": "flat, procedural. This is a woman doing a job she has done before.",
+      "breath": "short"
+    },
+    {
+      "shot": "s04",
+      "beat": "b02",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Nine. Ten. Eleven.",
+      "direction": "She starts at nine. Do not let the performance flag it. This is the single most important unremarkable moment in the series.\n",
+      "breath": "steady"
+    },
+    {
+      "shot": "s05",
+      "beat": "b02",
+      "character": "Josie Kwan",
+      "voice_profile": "vp-josie-01",
+      "text": "\u2014 nine, ten, eleven. Eleven. That's all of them.",
+      "direction": "audibly counting from one. She is the control group.",
+      "breath": "fast, shallow"
+    },
+    {
+      "shot": "s05",
+      "beat": "b02",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Eleven.",
+      "direction": "agreeing with a number she reached a different way.",
+      "breath": "held"
+    },
+    {
+      "shot": "s10",
+      "beat": "b04",
+      "character": "Dell Prentice",
+      "voice_profile": "vp-dell-01",
+      "text": "Turn that up.",
+      "direction": "too loud for the space. He is always slightly too loud.",
+      "breath": "unaffected"
+    },
+    {
+      "shot": "s10",
+      "beat": "b04",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "There's nothing on it, Dad.",
+      "direction": "patient in a way that is its own kind of dismissal.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s10",
+      "beat": "b04",
+      "character": "Dell Prentice",
+      "voice_profile": "vp-dell-01",
+      "text": "Then turn it up so we can all hear there's nothing on it.",
+      "direction": "he is right, and the room has already stopped listening.",
+      "breath": "unaffected"
+    },
+    {
+      "shot": "s11",
+      "beat": "b05",
+      "character": "Gus Trell",
+      "voice_profile": "vp-gus-01",
+      "text": "Repeater's down.",
+      "direction": "stating a fact that explains nothing, and being satisfied by it.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s12",
+      "beat": "b05",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "Ash River bus, Dispatch nine. You're going to want the Coldwater turn. Not the highway.",
+      "direction": "Close-mic, NO room tone, no strain. He is the only person in this story who is not in danger, and the audience should feel it a full season before they can say why.\n",
+      "breath": "even"
+    },
+    {
+      "shot": "s12",
+      "beat": "b05",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Coldwater adds nine miles.",
+      "direction": "testing him.",
+      "breath": "short"
+    },
+    {
+      "shot": "s12",
+      "beat": "b05",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "The highway adds forty-one, because the highway's gone.",
+      "direction": "not persuading. Informing.",
+      "breath": "even"
+    },
+    {
+      "shot": "s13",
+      "beat": "b06",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "Let me \u2014",
+      "direction": "reaching for the gear stick.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s13",
+      "beat": "b06",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "I've got it.",
+      "direction": "she has not got it, and everyone in the shot knows it.",
+      "breath": "held, then released"
+    },
+    {
+      "shot": "s13",
+      "beat": "b06",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "What was it?",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s13",
+      "beat": "b06",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Door lever.",
+      "direction": "two words, and the subject is closed.",
+      "breath": "flat"
+    },
+    {
+      "shot": "s15",
+      "beat": "b07",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "That wasn't there in June.",
+      "direction": "half to herself. She is not making a point; she is filing something.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s16",
+      "beat": "b07",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "Long way's still open. I ran it Tuesday.",
+      "direction": "certainty, not bravado. He is qualified and he is wrong.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s16",
+      "beat": "b07",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Nine miles.",
+      "direction": "",
+      "breath": "short"
+    },
+    {
+      "shot": "s16",
+      "beat": "b07",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "Nine miles we've got.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s20",
+      "beat": "b09",
+      "character": "Dell Prentice",
+      "voice_profile": "vp-dell-01",
+      "text": "Who's the fella in the back with the boots?",
+      "direction": "Thrown away. Not suspicious \u2014 irritated, the way he says everything. The alarm must start on 'boots' so the line is buried, not delivered.\n",
+      "breath": "unaffected"
+    },
+    {
+      "shot": "s21",
+      "beat": "b10",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "It's the seat, it's not the tank. It's the seat.",
+      "direction": "talking to himself, competent, absorbed.",
+      "breath": "working"
+    },
+    {
+      "shot": "s22",
+      "beat": "b10",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "That's an hour.",
+      "direction": "",
+      "breath": "recovering"
+    },
+    {
+      "shot": "s22",
+      "beat": "b10",
+      "character": "Josie Kwan",
+      "voice_profile": "vp-josie-01",
+      "text": "An hour's fine. An hour's Carrow.",
+      "direction": "",
+      "breath": "fast"
+    },
+    {
+      "shot": "s22",
+      "beat": "b10",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "An hour's Carrow the long way. North cut's open, I checked it Tuesday.",
+      "direction": "'Tuesday' is thrown away. Nobody hears it as a problem, including him. That is the point.\n",
+      "breath": "steady"
+    },
+    {
+      "shot": "s23",
+      "beat": "b11",
+      "character": "Sam Okwuosa",
+      "voice_profile": "vp-sam-01",
+      "text": "No \u2014 go back. Go back further.",
+      "direction": "",
+      "breath": "fast"
+    },
+    {
+      "shot": "s23",
+      "beat": "b11",
+      "character": "Sam Okwuosa",
+      "voice_profile": "vp-sam-01",
+      "text": "That's the gate. That's \u2014 there's no gate.",
+      "direction": "he has found something and does not yet know what it is.",
+      "breath": "shallow"
+    },
+    {
+      "shot": "s26",
+      "beat": "b13",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "Told you.",
+      "direction": "quiet, and enormously relieved. He needed to be right about something.",
+      "breath": "released"
+    },
+    {
+      "shot": "s27",
+      "beat": "b14",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Nine. Ten. Eleven.",
+      "direction": "habit, under her breath.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s27",
+      "beat": "b14",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Twelve.",
+      "direction": "No inflection. She does not react \u2014 she simply produces a number that should not exist, and the flatness is what frightens.\n",
+      "breath": "stops"
+    },
+    {
+      "shot": "s28",
+      "beat": "b14",
+      "character": "Josie Kwan",
+      "voice_profile": "vp-josie-01",
+      "text": "Eleven.",
+      "direction": "to herself, satisfied. She has counted four times tonight and is not wrong.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s30",
+      "beat": "b15",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "You know this road.",
+      "direction": "conversational. Close-mic, no room tone.",
+      "breath": "even"
+    },
+    {
+      "shot": "s30",
+      "beat": "b15",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Everybody knows this road.",
+      "direction": "",
+      "breath": "short"
+    },
+    {
+      "shot": "s30",
+      "beat": "b15",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "Not like you do.",
+      "direction": "One beat of air first. Not pointed, not sly \u2014 certain. He is not fishing.\n",
+      "breath": "even"
+    },
+    {
+      "shot": "s32",
+      "beat": "b16",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "Ash River bus, Dispatch nine. Headcount.",
+      "direction": "routine. It is the most routine line in the episode.",
+      "breath": "even"
+    },
+    {
+      "shot": "s33",
+      "beat": "b16",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Eleven.",
+      "direction": "the lie is flat. She does not sell it, which is how we know it is one.",
+      "breath": "held"
+    },
+    {
+      "shot": "s33",
+      "beat": "b16",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "That's right. Eleven.",
+      "direction": "One full second of dead carrier first. That second is the episode. Then the same calm as every other line.\n",
+      "breath": "even"
+    }
+  ]
+}

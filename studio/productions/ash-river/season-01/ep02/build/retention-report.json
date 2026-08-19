@@ -1,0 +1,122 @@
+{
+  "composite": 100.0,
+  "hard_fails": [],
+  "forces": [
+    {
+      "force": "open_loop_pressure",
+      "score": 100.0,
+      "weight": 24.0,
+      "metrics": {
+        "loop_curve": [
+          2,
+          3,
+          4,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          7
+        ],
+        "live_at_end": [
+          "q_count",
+          "q_line",
+          "q_out",
+          "q_seat",
+          "q_theo",
+          "q_twelfth",
+          "q_voice"
+        ],
+        "min_live": 2,
+        "max_live": 7
+      },
+      "violations": []
+    },
+    {
+      "force": "dramatic_irony_gap",
+      "score": 100.0,
+      "weight": 22.0,
+      "metrics": {
+        "irony_coverage": "77%",
+        "gap_seconds": 324,
+        "surprise_beats": 0
+      },
+      "violations": []
+    },
+    {
+      "force": "hook_cadence",
+      "score": 100.0,
+      "weight": 20.0,
+      "metrics": {
+        "hooks": 14,
+        "largest_gap_sec": 54,
+        "mean_gap_sec": 28,
+        "ends_on": "question"
+      },
+      "violations": []
+    },
+    {
+      "force": "empathy_lock",
+      "score": 100.0,
+      "weight": 14.0,
+      "metrics": {
+        "devices_in_lock_window": [
+          "competence_under_pressure",
+          "visible_private_wound"
+        ],
+        "protective_duty": "Theo Barrow"
+      },
+      "violations": []
+    },
+    {
+      "force": "clock_and_shrinking_world",
+      "score": 100.0,
+      "weight": 12.0,
+      "metrics": {
+        "clock_coverage": "95%",
+        "options_curve": [
+          6,
+          6,
+          6,
+          5,
+          5,
+          5,
+          4,
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "capability_gap_beats": [
+          "b13"
+        ]
+      },
+      "violations": []
+    },
+    {
+      "force": "twist_ladder",
+      "score": 100.0,
+      "weight": 8.0,
+      "metrics": {
+        "scene_twist_coverage": "100%",
+        "twists_this_episode": [
+          "T-E02-L2(L2)"
+        ],
+        "clues_planted_here": 10
+      },
+      "violations": []
+    }
+  ]
+}

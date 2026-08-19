@@ -1,0 +1,396 @@
+{
+  "dry_run": true,
+  "master": {
+    "aspect": "16:9",
+    "runtime_sec": 420.0,
+    "edl": [
+      {
+        "shot": "s01",
+        "beat": "b01",
+        "timeline_in": 0.0,
+        "timeline_out": 10.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s02",
+        "beat": "b02",
+        "timeline_in": 10.0,
+        "timeline_out": 24.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s03",
+        "beat": "b02",
+        "timeline_in": 24.0,
+        "timeline_out": 38.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s04",
+        "beat": "b03",
+        "timeline_in": 38.0,
+        "timeline_out": 52.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s05",
+        "beat": "b03",
+        "timeline_in": 52.0,
+        "timeline_out": 66.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s06",
+        "beat": "b04",
+        "timeline_in": 66.0,
+        "timeline_out": 82.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s07",
+        "beat": "b04",
+        "timeline_in": 82.0,
+        "timeline_out": 96.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s08",
+        "beat": "b05",
+        "timeline_in": 96.0,
+        "timeline_out": 110.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s09",
+        "beat": "b05",
+        "timeline_in": 110.0,
+        "timeline_out": 124.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s10",
+        "beat": "b06",
+        "timeline_in": 124.0,
+        "timeline_out": 138.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s11",
+        "beat": "b06",
+        "timeline_in": 138.0,
+        "timeline_out": 150.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s12",
+        "beat": "b07",
+        "timeline_in": 150.0,
+        "timeline_out": 164.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s13",
+        "beat": "b07",
+        "timeline_in": 164.0,
+        "timeline_out": 178.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s14",
+        "beat": "b08",
+        "timeline_in": 178.0,
+        "timeline_out": 194.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s15",
+        "beat": "b08",
+        "timeline_in": 194.0,
+        "timeline_out": 208.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s16",
+        "beat": "b09",
+        "timeline_in": 208.0,
+        "timeline_out": 222.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s17",
+        "beat": "b09",
+        "timeline_in": 222.0,
+        "timeline_out": 236.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s18",
+        "beat": "b10",
+        "timeline_in": 236.0,
+        "timeline_out": 250.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s19",
+        "beat": "b10",
+        "timeline_in": 250.0,
+        "timeline_out": 262.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s20",
+        "beat": "b11",
+        "timeline_in": 262.0,
+        "timeline_out": 276.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s21",
+        "beat": "b11",
+        "timeline_in": 276.0,
+        "timeline_out": 290.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s22",
+        "beat": "b12",
+        "timeline_in": 290.0,
+        "timeline_out": 312.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s23",
+        "beat": "b13",
+        "timeline_in": 312.0,
+        "timeline_out": 324.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s24",
+        "beat": "b13",
+        "timeline_in": 324.0,
+        "timeline_out": 336.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s25",
+        "beat": "b13",
+        "timeline_in": 336.0,
+        "timeline_out": 348.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s26",
+        "beat": "b14",
+        "timeline_in": 348.0,
+        "timeline_out": 364.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s27",
+        "beat": "b14",
+        "timeline_in": 364.0,
+        "timeline_out": 378.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s28",
+        "beat": "b15",
+        "timeline_in": 378.0,
+        "timeline_out": 392.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": true,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s29",
+        "beat": "b15",
+        "timeline_in": 392.0,
+        "timeline_out": 404.0,
+        "transition": "cut",
+        "audio": {
+          "dialogue": false,
+          "bed": "clock",
+          "duck_under_dialogue": true
+        }
+      },
+      {
+        "shot": "s30",
+        "beat": "b16",
+        "timeline_in": 404.0,
+        "timeline_out": 420.0,
+        "transition": "freeze",
+        "audio": {
+          "dialogue": false,
+          "bed": "silence",
+          "duck_under_dialogue": true
+        }
+      }
+    ]
+  },
+  "vertical_cut": {
+    "aspect": "9:16",
+    "runtime_sec": 60,
+    "note": "freeze-frame lands 55-58s; ends on the question, never the answer",
+    "segments": [
+      {
+        "role": "hook",
+        "beat": "b01",
+        "source_in": 0
+      },
+      {
+        "role": "spike",
+        "beat": "b14",
+        "source_in": 348
+      },
+      {
+        "role": "button",
+        "beat": "b16",
+        "source_in": 404
+      }
+    ]
+  },
+  "rules": [
+    "enter late, leave early: trim the first and last four seconds of every scene",
+    "cut on motion, never after a completed sentence \u2014 that is an exit point",
+    "the button is frame-accurate and freezes on the unanswered image"
+  ]
+}

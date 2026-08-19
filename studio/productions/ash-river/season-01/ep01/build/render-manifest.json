@@ -1,0 +1,515 @@
+{
+  "mode": "dry-run",
+  "credentialled_lanes": [],
+  "policy": "never single-source; every shot records a fallback lane",
+  "consistency_protocol": [
+    "condition on the locked reference set, never re-describe a face in prose",
+    "generate 3 candidates per shot; the identity check picks, not the prettiest frame",
+    "anchor frames: last frame of shot N seeds shot N+1 within a scene",
+    "seeds locked per character per episode and recorded here"
+  ],
+  "shot_count": 33,
+  "total_seconds": 420,
+  "estimated_cost_usd": 155.45,
+  "shots": [
+    {
+      "id": "s01",
+      "beat_id": "b01",
+      "duration_sec": 6.0,
+      "provider": "kling",
+      "fallback": "runway",
+      "prompt": "Extreme close-up, 85mm, locked off. A woman's hand closes around a metal school bus door lever that has discoloured with heat. Smoke moves across the frame from below. Desaturated grey-green grade, the only saturated colour is orange firelight from off-screen low. Grain, no camera shake.\n",
+      "negative_prompt": "text overlay, watermark, clean bright lighting, calm daylight, extra fingers",
+      "character_refs": [],
+      "seed": 350681,
+      "cost_usd": 1.8
+    },
+    {
+      "id": "s02",
+      "beat_id": "b01",
+      "duration_sec": 8.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium shot, handheld, 50mm. A woman in a faded orange work jacket braces a folding school bus door open while people move past her, bent low under smoke. She does not step aside for any of them. Orange rim light from behind camera, everything else desaturated. Evening, heavy particulate air.\n",
+      "negative_prompt": "hero pose, slow motion, clean air, bright key light, watermark",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 15958234,
+      "cost_usd": 2.8
+    },
+    {
+      "id": "s03",
+      "beat_id": "b02",
+      "duration_sec": 9.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Close on a folding bus door lever from inside the vehicle. The lever moves the last of its travel on its own, a fraction before a woman's hand reaches it. Attention in the composition is pulled to the smoke behind her, not to the lever. Handheld, 85mm, desaturated.\n",
+      "negative_prompt": "visible second person, dramatic emphasis on the lever, watermark, text",
+      "character_refs": [],
+      "seed": 1660546,
+      "cost_usd": 3.15
+    },
+    {
+      "id": "s04",
+      "beat_id": "b02",
+      "duration_sec": 7.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium close-up over a woman's shoulder as people pass her in a bus doorway. Her lips move with a count. Handheld, 85mm, desaturated, orange from below.\n",
+      "negative_prompt": "smiling, eye contact with camera, watermark",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 6554918,
+      "cost_usd": 2.45
+    },
+    {
+      "id": "s05",
+      "beat_id": "b02",
+      "duration_sec": 8.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium shot, handheld. A young teacher with a clipboard comes up the steps of a school bus counting under her breath, and stops beside the driver. Two women, one number, two different routes to it. Desaturated, orange spill.\n",
+      "negative_prompt": "watermark, text overlay, bright interior lights",
+      "character_refs": [
+        "refs/josie/face_3q.png",
+        "refs/josie/full.png",
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 989122,
+      "cost_usd": 2.8
+    },
+    {
+      "id": "s06",
+      "beat_id": "b03",
+      "duration_sec": 12.0,
+      "provider": "kling",
+      "fallback": "runway",
+      "prompt": "Wide, locked off, 135mm long lens compressing depth. A school bus pulls away down a valley road; behind it a small town lights up orange one street at a time. Heavy smoke haze. Everything desaturated except the fire.\n",
+      "negative_prompt": "drone move, sweeping camera, watermark, picturesque sunset",
+      "character_refs": [],
+      "seed": 3161178,
+      "cost_usd": 3.6
+    },
+    {
+      "id": "s07",
+      "beat_id": "b03",
+      "duration_sec": 10.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior school bus, moving, handheld 35mm. A driver reaches back flat-handed and moves a boy in a yellow raincoat into the seat directly behind her, without looking at him. Neither speaks. Desaturated interior, orange raking through the windows.\n",
+      "negative_prompt": "eye contact, warmth, smiling, watermark, text",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png",
+        "refs/theo/face_3q.png",
+        "refs/theo/full.png"
+      ],
+      "seed": 2642255,
+      "cost_usd": 3.5
+    },
+    {
+      "id": "s08",
+      "beat_id": "b04",
+      "duration_sec": 11.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Close on a paper seating chart held up against a bus window at night, backlit by orange. Handwritten names in blue ink; one row of the grid is filled in black. The shot is composed so the eye goes to the window and the moving fire beyond it. Handheld, 85mm.\n",
+      "negative_prompt": "legible emphasis on the black ink, push-in, watermark, text overlay",
+      "character_refs": [
+        "refs/josie/face_3q.png",
+        "refs/josie/full.png"
+      ],
+      "seed": 11022080,
+      "cost_usd": 3.85
+    },
+    {
+      "id": "s09",
+      "beat_id": "b04",
+      "duration_sec": 9.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Extreme close-up of a child's spiral notebook held two-handed against a yellow raincoat. The bottom corner is burned \u2014 an old, even, unhurried burn, not fresh scorching. Shallow focus, handheld, desaturated.\n",
+      "negative_prompt": "fresh flame, embers on the paper, watermark, dramatic lighting",
+      "character_refs": [
+        "refs/theo/face_3q.png",
+        "refs/theo/full.png"
+      ],
+      "seed": 3597854,
+      "cost_usd": 3.15
+    },
+    {
+      "id": "s10",
+      "beat_id": "b04",
+      "duration_sec": 10.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior moving bus, handheld 35mm. An older man in a red cap, one arm held against his body, argues over his shoulder with a younger man in turnout trousers. The bus leans hard into a switchback. Smoke reaches the cabin.\n",
+      "negative_prompt": "comedy framing, watermark, text overlay",
+      "character_refs": [
+        "refs/dell/face_3q.png",
+        "refs/dell/full.png",
+        "refs/danny/face_3q.png",
+        "refs/danny/full.png"
+      ],
+      "seed": 8835061,
+      "cost_usd": 3.5
+    },
+    {
+      "id": "s11",
+      "beat_id": "b05",
+      "duration_sec": 12.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium close-up, handheld 85mm. A heavyset off-duty deputy thumbs a handheld radio that produces no sound at all \u2014 not static, nothing. Behind him and out of focus, the bus's dashboard radio glows and hisses. Desaturated, firelight from the windows.\n",
+      "negative_prompt": "visible static bars, on-screen text, watermark",
+      "character_refs": [
+        "refs/gus/face_3q.png",
+        "refs/gus/full.png"
+      ],
+      "seed": 10086926,
+      "cost_usd": 4.2
+    },
+    {
+      "id": "s12",
+      "beat_id": "b05",
+      "duration_sec": 18.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, driver's position, handheld 50mm. A woman drives with wrapped hands while a dashboard radio speaks. She glances at it once. The road forks ahead in the headlights through smoke. Dash instruments visible, fuel needle low.\n",
+      "negative_prompt": "watermark, text overlay, clean windshield, daytime",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 6496672,
+      "cost_usd": 6.3
+    },
+    {
+      "id": "s13",
+      "beat_id": "b06",
+      "duration_sec": 14.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Tight two-shot, handheld 85mm, interior moving bus. A woman in a field vest wraps another woman's palm with gauze, one-handed, bracing against a seat back. The injured hand is kept below frame line; we see the wrapping, not the injury. Desaturated, low light.\n",
+      "negative_prompt": "visible injury detail, blood, medical closeup, watermark, text",
+      "character_refs": [
+        "refs/ines/face_3q.png",
+        "refs/ines/full.png",
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 8592777,
+      "cost_usd": 4.9
+    },
+    {
+      "id": "s14",
+      "beat_id": "b06",
+      "duration_sec": 11.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium close-up, 135mm, the only locked-off shot inside the bus in the episode. An elderly woman sits perfectly still in a moving frame, watching something below the lens. She begins to speak twice and does not. Then she turns to the window.\n",
+      "negative_prompt": "handheld shake, watermark, text overlay, expressive gesture",
+      "character_refs": [
+        "refs/ruth/face_3q.png",
+        "refs/ruth/full.png"
+      ],
+      "seed": 15012626,
+      "cost_usd": 3.85
+    },
+    {
+      "id": "s15",
+      "beat_id": "b07",
+      "duration_sec": 15.0,
+      "provider": "veo",
+      "fallback": "kling",
+      "prompt": "Wide, locked off, 100mm. A galvanised steel farm gate stands chained across a dirt forest road at night, headlights on it. The galvanising is still bright \u2014 the gate is new. Behind it the ridge glows. Desaturated except the glow.\n",
+      "negative_prompt": "rust, weathering, aged metal, signage, watermark, text overlay",
+      "character_refs": [],
+      "seed": 7331115,
+      "cost_usd": 7.5
+    },
+    {
+      "id": "s16",
+      "beat_id": "b07",
+      "duration_sec": 12.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 50mm. A volunteer firefighter stands in the aisle behind the driver's seat, gesturing forward, entirely certain. The driver does not turn round.\n",
+      "negative_prompt": "watermark, text overlay, argument staging, raised fists",
+      "character_refs": [
+        "refs/danny/face_3q.png",
+        "refs/danny/full.png",
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 2251257,
+      "cost_usd": 4.2
+    },
+    {
+      "id": "s17",
+      "beat_id": "b08",
+      "duration_sec": 16.0,
+      "provider": "veo",
+      "fallback": "kling",
+      "prompt": "Wide, LOCKED OFF, 135mm. A teenager works at a chained gate with a tyre iron, small in the lower third of frame. Behind and above him a burning ridge line moves visibly across the duration of the shot. He does not look up.\n",
+      "negative_prompt": "handheld, camera move, close-up, watermark, text overlay",
+      "character_refs": [
+        "refs/kit/face_3q.png",
+        "refs/kit/full.png"
+      ],
+      "seed": 10531066,
+      "cost_usd": 8.0
+    },
+    {
+      "id": "s18",
+      "beat_id": "b08",
+      "duration_sec": 12.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 85mm. A teenager sits down, pulls his sleeve over his forearm and says nothing. Cut to the dashboard: a fuel needle noticeably lower than earlier in the episode, held long enough to read.\n",
+      "negative_prompt": "visible burn detail on skin, grimace, watermark, text overlay",
+      "character_refs": [
+        "refs/kit/face_3q.png",
+        "refs/kit/full.png"
+      ],
+      "seed": 389957,
+      "cost_usd": 4.2
+    },
+    {
+      "id": "s19",
+      "beat_id": "b09",
+      "duration_sec": 14.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Extreme close-up of a green medical oxygen cylinder gauge, needle in the red band, braced between an elderly woman's knees. She is out of focus above it and is not looking down. Handheld, 85mm, desaturated.\n",
+      "negative_prompt": "medical distress, gasping, watermark, text overlay",
+      "character_refs": [
+        "refs/bri/face_3q.png",
+        "refs/bri/full.png"
+      ],
+      "seed": 5808353,
+      "cost_usd": 4.9
+    },
+    {
+      "id": "s20",
+      "beat_id": "b09",
+      "duration_sec": 14.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 50mm. An older man in a red cap speaks over his shoulder toward the back of the bus. Mid-sentence a hard flat alarm starts and every head in frame turns the other way, away from him.\n",
+      "negative_prompt": "reaction shot of a man in boots, visible twelfth passenger, watermark",
+      "character_refs": [
+        "refs/dell/face_3q.png",
+        "refs/dell/full.png"
+      ],
+      "seed": 14970189,
+      "cost_usd": 4.9
+    },
+    {
+      "id": "s21",
+      "beat_id": "b10",
+      "duration_sec": 15.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior moving bus, handheld 35mm, low angle from the aisle. A man kneels working at an oxygen regulator on a cylinder held by a seated elderly woman. Other passengers lean in around the edges of frame. Firelight strobing past the windows.\n",
+      "negative_prompt": "medical emergency staging, panic, watermark, text overlay",
+      "character_refs": [
+        "refs/danny/face_3q.png",
+        "refs/danny/full.png",
+        "refs/bri/face_3q.png",
+        "refs/bri/full.png"
+      ],
+      "seed": 912043,
+      "cost_usd": 5.25
+    },
+    {
+      "id": "s22",
+      "beat_id": "b10",
+      "duration_sec": 12.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 85mm, three-way exchange in a cramped aisle, then a cut to the driver's eyeline in the long rear-view mirror. Desaturated, orange spill.\n",
+      "negative_prompt": "watermark, text overlay, relief celebration",
+      "character_refs": [
+        "refs/danny/face_3q.png",
+        "refs/danny/full.png",
+        "refs/josie/face_3q.png",
+        "refs/josie/full.png",
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 3285427,
+      "cost_usd": 4.2
+    },
+    {
+      "id": "s23",
+      "beat_id": "b11",
+      "duration_sec": 13.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Extreme close-up of a phone screen held in a moving vehicle at night. Daylight footage of a dirt forest road with no gate across it. Then a scrub to evening footage of a distant ridge line carrying six small separate fires at even intervals. Screen glare, handheld, the rest of frame near black.\n",
+      "negative_prompt": "on-screen UI text, watermark, dramatic zoom, red circles or arrows",
+      "character_refs": [
+        "refs/sam/face_3q.png",
+        "refs/sam/full.png"
+      ],
+      "seed": 6266514,
+      "cost_usd": 4.55
+    },
+    {
+      "id": "s24",
+      "beat_id": "b11",
+      "duration_sec": 12.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 50mm. Several passengers lean toward a phone held between them. Nobody speaks. The only light in the frame is the screen and the fire outside.\n",
+      "negative_prompt": "dialogue mouths moving, watermark, text overlay",
+      "character_refs": [],
+      "seed": 261037,
+      "cost_usd": 4.2
+    },
+    {
+      "id": "s25",
+      "beat_id": "b12",
+      "duration_sec": 20.0,
+      "provider": "veo",
+      "fallback": "kling",
+      "prompt": "Wide interior of a school bus at night, handheld 35mm, from the front looking back. A phone passes hand to hand down the aisle. Eleven faces lit from below by a small screen; the windows behind them carry moving orange. No one speaks.\n",
+      "negative_prompt": "score, dialogue, watermark, text overlay, dramatic lighting",
+      "character_refs": [],
+      "seed": 7841680,
+      "cost_usd": 10.0
+    },
+    {
+      "id": "s26",
+      "beat_id": "b13",
+      "duration_sec": 18.0,
+      "provider": "veo",
+      "fallback": "kling",
+      "prompt": "Wide locked-off 100mm from ahead of the vehicle. A school bus turns off a paved road onto an open dirt cut through timber, headlights in smoke. A road sign for Carrow Gap passes out of frame behind it. Compressed depth, desaturated.\n",
+      "negative_prompt": "drone shot, camera move, watermark, text overlay",
+      "character_refs": [],
+      "seed": 7211192,
+      "cost_usd": 9.0
+    },
+    {
+      "id": "s27",
+      "beat_id": "b14",
+      "duration_sec": 14.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Close-up on a long interior rear-view mirror above a bus windscreen, reflecting rows of seated passengers, then a cut to the driver's eyes in the same mirror. Her eyes move down the reflection, stop, and come off the road for the first time in the episode. Handheld, 85mm.\n",
+      "negative_prompt": "visible twelfth face in focus, dramatic zoom, watermark, text overlay",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 3097926,
+      "cost_usd": 4.9
+    },
+    {
+      "id": "s28",
+      "beat_id": "b14",
+      "duration_sec": 18.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Interior bus, handheld 50mm. A teacher marks a clipboard chart, satisfied. Cut to the driver, who is watching her in the mirror and says nothing. She puts both wrapped hands back on the wheel.\n",
+      "negative_prompt": "shocked reaction, gasp, music sting, watermark, text overlay",
+      "character_refs": [
+        "refs/josie/face_3q.png",
+        "refs/josie/full.png",
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 3142875,
+      "cost_usd": 6.3
+    },
+    {
+      "id": "s29",
+      "beat_id": "b15",
+      "duration_sec": 20.0,
+      "provider": "kling",
+      "fallback": "runway",
+      "prompt": "Extreme wide, locked off, 135mm. Two parallel ridge lines burning at night with an untouched dark green corridor between them, a single road running down the centre. A school bus is small in the middle distance. Heavy smoke, deep compression, the only saturated colour is the fire.\n",
+      "negative_prompt": "camera movement, drone, watermark, text overlay, daylight",
+      "character_refs": [],
+      "seed": 13670604,
+      "cost_usd": 6.0
+    },
+    {
+      "id": "s30",
+      "beat_id": "b15",
+      "duration_sec": 16.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Medium close-up of a woman driving at night, handheld 85mm, firelight moving across her face from the side windows. She listens to a radio and does not reply. Held two seconds past comfortable.\n",
+      "negative_prompt": "reaction, tears, tightening jaw, watermark, text overlay",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 2740039,
+      "cost_usd": 5.6
+    },
+    {
+      "id": "s31",
+      "beat_id": "b15",
+      "duration_sec": 16.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Close-up, handheld 85mm. A driver's eyes flick to a rear-view mirror four times over the length of the shot. Each time the reflection is slightly out of focus. She never holds it. Firelight strobing.\n",
+      "negative_prompt": "clear reflection of passengers, watermark, text overlay",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 882358,
+      "cost_usd": 5.6
+    },
+    {
+      "id": "s32",
+      "beat_id": "b16",
+      "duration_sec": 10.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Close on a long bus rear-view mirror at night, rows of seated passengers reflected, firelight from outside. Handheld, 85mm, shallow. The reflection is legible but not countable at speed.\n",
+      "negative_prompt": "an obviously extra figure, dramatic reveal, watermark, text overlay",
+      "character_refs": [],
+      "seed": 2368055,
+      "cost_usd": 3.5
+    },
+    {
+      "id": "s33",
+      "beat_id": "b16",
+      "duration_sec": 8.0,
+      "provider": "runway",
+      "fallback": "veo",
+      "prompt": "Tight close-up on a woman driving at night, firelight on her face. She speaks one word toward a dashboard radio and then holds absolutely still. Final frame freezes on her face, not on the road ahead.\n",
+      "negative_prompt": "cut to black without freeze, title card, watermark, text overlay",
+      "character_refs": [
+        "refs/maren/face_3q.png",
+        "refs/maren/face_profile.png",
+        "refs/maren/full.png"
+      ],
+      "seed": 15239319,
+      "cost_usd": 2.8
+    }
+  ]
+}

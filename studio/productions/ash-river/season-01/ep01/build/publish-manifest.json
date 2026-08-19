@@ -1,0 +1,120 @@
+{
+  "mode": "dry-run",
+  "slug": "ash-river-s01e01",
+  "release_order": [
+    "tiktok/instagram vertical cut",
+    "youtube master"
+  ],
+  "policy": [
+    "never publish an episode whose successor is not already rendered",
+    "cadence is fixed and announced; an unpredictable schedule makes the audience close the open loop by leaving",
+    "the vertical cut ends on the question, never the answer"
+  ],
+  "targets": [
+    {
+      "platform": "youtube",
+      "ready": false,
+      "missing_credentials": [
+        "YOUTUBE_CLIENT_ID",
+        "YOUTUBE_CLIENT_SECRET",
+        "YOUTUBE_REFRESH_TOKEN"
+      ],
+      "asset": "master",
+      "endpoint": "POST https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable",
+      "auth": "OAuth 2.0 per channel",
+      "scopes": [
+        "https://www.googleapis.com/auth/youtube.upload"
+      ],
+      "supports_native_schedule": true,
+      "notes": [
+        "Resumable upload. Set full metadata, chapters and captions at upload time \u2014 editing them after publication costs early ranking.",
+        "Publish the long-form master here; the vertical cut goes out as a Short."
+      ],
+      "payload": {
+        "title": "One road out. Eleven passengers. She counted twelve.",
+        "description": "Ash River has one road out of the valley. The bus took eleven people. On the last count of the night, the driver got twelve.\n\nASH RIVER \u2014 Season 1, Episode 1: Headcount\n\nA work of fiction. All characters, organisations and events are invented.\nContains synthetic media.\n",
+        "tags": [
+          "survival thriller",
+          "wildfire",
+          "series",
+          "ash river"
+        ],
+        "thumbnail": "thumbs/e01_mirror.png",
+        "captions": "ash-river-s01e01.vtt",
+        "synthetic_media_disclosure": true,
+        "privacy_level": "PUBLIC_TO_EVERYONE",
+        "disclose_commercial_content": false
+      }
+    },
+    {
+      "platform": "tiktok",
+      "ready": false,
+      "missing_credentials": [
+        "TIKTOK_CLIENT_KEY",
+        "TIKTOK_CLIENT_SECRET",
+        "TIKTOK_ACCESS_TOKEN"
+      ],
+      "asset": "vertical",
+      "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/video/init/",
+      "auth": "OAuth 2.0 per creator account",
+      "scopes": [
+        "video.publish"
+      ],
+      "supports_native_schedule": false,
+      "notes": [
+        "Three steps: query creator info for available privacy levels, init the publish with PULL_FROM_URL or FILE_UPLOAD, then poll /status/fetch/ for PUBLISH_COMPLETE.",
+        "Requires a PASSED APP AUDIT before posts can be public. Budget weeks, not days.",
+        "No scheduled_publish_time parameter exists \u2014 the API posts immediately or creates a draft, so scheduling is our scheduler's problem.",
+        "Every request must carry a privacy level, commercial-content disclosure and comment settings."
+      ],
+      "payload": {
+        "title": "One road out. Eleven passengers. She counted twelve.",
+        "description": "Ash River has one road out of the valley. The bus took eleven people. On the last count of the night, the driver got twelve.\n\nASH RIVER \u2014 Season 1, Episode 1: Headcount\n\nA work of fiction. All characters, organisations and events are invented.\nContains synthetic media.\n",
+        "tags": [
+          "survival thriller",
+          "wildfire",
+          "series",
+          "ash river"
+        ],
+        "thumbnail": "thumbs/e01_mirror.png",
+        "captions": "ash-river-s01e01.vtt",
+        "synthetic_media_disclosure": true,
+        "privacy_level": "PUBLIC_TO_EVERYONE",
+        "disclose_commercial_content": false
+      }
+    },
+    {
+      "platform": "instagram",
+      "ready": false,
+      "missing_credentials": [
+        "IG_USER_ID",
+        "IG_ACCESS_TOKEN"
+      ],
+      "asset": "vertical",
+      "endpoint": "POST https://graph.facebook.com/v21.0/{ig_user_id}/media",
+      "auth": "OAuth 2.0, Instagram Graph API",
+      "scopes": [
+        "instagram_content_publish"
+      ],
+      "supports_native_schedule": false,
+      "notes": [
+        "Two-step: create a media container, then publish it by container id."
+      ],
+      "payload": {
+        "title": "One road out. Eleven passengers. She counted twelve.",
+        "description": "Ash River has one road out of the valley. The bus took eleven people. On the last count of the night, the driver got twelve.\n\nASH RIVER \u2014 Season 1, Episode 1: Headcount\n\nA work of fiction. All characters, organisations and events are invented.\nContains synthetic media.\n",
+        "tags": [
+          "survival thriller",
+          "wildfire",
+          "series",
+          "ash river"
+        ],
+        "thumbnail": "thumbs/e01_mirror.png",
+        "captions": "ash-river-s01e01.vtt",
+        "synthetic_media_disclosure": true,
+        "privacy_level": "PUBLIC_TO_EVERYONE",
+        "disclose_commercial_content": false
+      }
+    }
+  ]
+}

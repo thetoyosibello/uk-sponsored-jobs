@@ -1,0 +1,326 @@
+# ASH RIVER — S01E02 "The Clinic"
+#
+# Written to the ledger's allocation: the clue slots for c-l3d-01 (b04), c-l3a-03 (b06),
+# c-l4-03 (b08), c-l3b-01 (b09), c-l5-04 (b11), c-l3a-04 (b13) and c-l3a-05 (b15) are
+# commitments made before E01 shipped, and each one has a frame in shotlist.yaml.
+#
+# E01's cliffhanger (q_lie) resolves in the first 10 seconds, and not with an
+# explanation — with the next moment.
+
+production: ash-river
+season: 1
+episode: 2
+title: "The Clinic"
+runtime_target_sec: 420
+prior_cliffhanger: q_lie
+protective_duty_character: Theo Barrow
+wound_shown_beat: b02
+wound_said_beat: null
+logline: >
+  They have until dusk to make the Coldwater turn before the wind shifts. The wind
+  shifted an hour ago, and they have been driving into it for nine miles.
+
+beats:
+
+  # ---- SCENE 1: THE ANSWER -----------------------------------------------------
+  - id: b01
+    t_start_sec: 0
+    t_end_sec: 10
+    scene: "S1 THE ANSWER"
+    action: >
+      Straight off the freeze. Maren keys the mic and says a second sentence she does not
+      have to say — "Say again your unit" — and the carrier goes quiet for two seconds
+      before Coyle answers something else entirely. She does not push it. She drives.
+    cost: "The one chance she had to ask the question while it was still a small question."
+    loops_opened: [q_out, q_twelfth]
+    loops_closed: [q_lie]
+    irony_gap: false
+    clock_visible: true
+    hook: reveal
+    options_remaining: 6
+    dialogue: true
+
+  - id: b02
+    t_start_sec: 10
+    t_end_sec: 38
+    scene: "S1 THE ANSWER"
+    action: >
+      She counts. Nine, ten, eleven — and stops, because she already knows what the next
+      number is and does not say it. Josie comes up the aisle wanting to know why they
+      slowed. Maren gives her a reason about the grade that is true and is not the reason.
+    cost: "Josie's trust, spent quietly, without Josie noticing it has been spent."
+    loops_opened: [q_count]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 6
+    twist_level: 1
+    bonding_device: visible_private_wound
+    dialogue: true
+
+  # ---- SCENE 2: COLDWATER ROAD -------------------------------------------------
+  - id: b03
+    t_start_sec: 38
+    t_end_sec: 66
+    scene: "S2 COLDWATER ROAD"
+    action: >
+      The Coldwater road. Ash comes down on the windscreen — ahead of the bus, steadily,
+      like the beginning of snow. Coyle gives them a time: the wind turns at dusk, they
+      need the junction before it.
+    cost: "Forty minutes of margin, converted into a deadline."
+    loops_opened: [q_voice]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 6
+    clue_id: c-e02-l2-01
+    dialogue: true
+
+  - id: b04
+    t_start_sec: 66
+    t_end_sec: 96
+    scene: "S2 COLDWATER ROAD"
+    action: >
+      Maren walks the aisle for the first time, counting seats by hand because she does
+      not trust the mirror any more. At the back she finds the emergency door latch
+      unseated. She reseats it, says nothing, and goes back to the wheel.
+    cost: "Two minutes off the wheel, and the last of her belief that the bus is sealed."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 5
+    twist_level: 1
+    bonding_device: competence_under_pressure
+    clue_id: c-l3d-01
+    dialogue: false
+
+  # ---- SCENE 3: THE FREQUENCIES ------------------------------------------------
+  - id: b05
+    t_start_sec: 96
+    t_end_sec: 124
+    scene: "S3 THE FREQUENCIES"
+    action: >
+      Sam's footage has spread through the bus and turned into an argument about what a
+      straight line means. Gus wants it stopped. Ines, who has said almost nothing,
+      says the spacing is eleven hundred feet and then will not elaborate.
+    cost: "The cabin splits into people who think it was set and people who need it not to be."
+    loops_opened: [q_line]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: reveal
+    options_remaining: 5
+    dialogue: true
+
+  - id: b06
+    t_start_sec: 124
+    t_end_sec: 150
+    scene: "S3 THE FREQUENCIES"
+    action: >
+      Gus works the bus set through the county bands to prove Ines wrong. Every channel
+      is dead air. One is not. He hands it back without comment and sits down.
+    cost: "Gus stops asking questions out loud, which is worse than him asking them."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 5
+    twist_level: 1
+    clue_id: c-l3a-03
+    dialogue: true
+
+  # ---- SCENE 4: THE FLAG -------------------------------------------------------
+  - id: b07
+    t_start_sec: 150
+    t_end_sec: 178
+    scene: "S4 THE FLAG"
+    action: >
+      The Coldwater junction, ahead of schedule. Nel sees the clinic sign — two miles —
+      and starts asking. There are drugs in there that Bri will need by morning and
+      everyone knows it, which is what makes it an argument instead of a decision.
+    cost: "The schedule. They stop, and stopping is the whole episode."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 4
+    clue_id: c-e02-l2-02
+    dialogue: true
+
+  - id: b08
+    t_start_sec: 178
+    t_end_sec: 208
+    scene: "S4 THE FLAG"
+    action: >
+      The clinic. Locked, dark, and the evacuation notice taped inside the glass is dated
+      four days before the fire. Nel reads it, does not remark on it, and goes in through
+      the side.
+    cost: "Nel goes in alone, because Maren cannot leave the wheel and everyone knows that too."
+    loops_opened: [q_clinic]
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 4
+    twist_level: 1
+    clue_id: c-l4-03
+    dialogue: true
+
+  # ---- SCENE 5: NINETY SECONDS -------------------------------------------------
+  - id: b09
+    t_start_sec: 208
+    t_end_sec: 236
+    scene: "S5 NINETY SECONDS"
+    action: >
+      Ninety seconds. Maren counts it aloud from the step, and the count is the only
+      sound. Ines, watching the ditch line, says the culvert on the north side floods
+      first and they should not park over it. Nobody asks how she knows.
+    cost: "Ninety seconds of fuel at idle, and the pretence that Ines is just a passenger."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: false
+    clock_visible: true
+    hook: escalation
+    options_remaining: 3
+    clue_id: c-l3b-01
+    dialogue: true
+
+  - id: b10
+    t_start_sec: 236
+    t_end_sec: 262
+    scene: "S5 NINETY SECONDS"
+    action: >
+      At eighty seconds Bri says, to nobody, that it has got warmer. Danny tells her
+      that is the fire and goes back to the door. She says it again and nobody hears her
+      the second time either.
+    cost: "The last warning anyone is going to get, spent on the person least likely to be believed."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: reveal
+    options_remaining: 3
+    twist_level: 1
+    clue_id: c-e02-l2-03
+    dialogue: true
+
+  # ---- SCENE 6: NEL ------------------------------------------------------------
+  - id: b11
+    t_start_sec: 262
+    t_end_sec: 290
+    scene: "S6 NEL"
+    action: >
+      At a hundred and ten seconds Maren pulls out. She takes the Coldwater turn without
+      looking at the sign. In the mirror the clinic door is open and there is nobody in it.
+    cost: "Nel. And whatever the rest of them thought this was until now."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: null
+    options_remaining: 3
+    clue_id: c-l5-04
+    dialogue: false
+
+  - id: b12
+    t_start_sec: 290
+    t_end_sec: 312
+    scene: "S6 NEL"
+    action: >
+      Nobody says anything for twenty seconds. Theo turns around in his seat and keeps
+      watching the road behind them long after there is anything to watch. Josie takes
+      out her chart and does not open it.
+    cost: "The rules are established now, and everyone on the bus has learned them at once."
+    loops_opened: [q_theo]
+    loops_closed: [q_clinic]
+    irony_gap: false
+    clock_visible: false
+    hook: reversal
+    options_remaining: 3
+    twist_level: 1
+    dialogue: false
+
+  # ---- SCENE 7: NINE MILES — L2 ------------------------------------------------
+  - id: b13
+    t_start_sec: 312
+    t_end_sec: 348
+    scene: "S7 NINE MILES"
+    action: >
+      Coyle comes back on to say they made the junction in time, and the ash is still
+      falling on the windscreen. Maren watches it for four seconds. Then she puts a hand
+      out of the window and holds it there, and the wind is on the back of her hand.
+      It has been on the back of her hand since the clinic. They have been driving into
+      it for nine miles.
+    cost: >
+      The nine miles they thought they had gained. The deadline they beat was not the
+      deadline, and the person who told them the deadline knew that.
+    loops_opened: [q_wind]
+    loops_closed: []
+    irony_gap: false
+    clock_visible: true
+    hook: reversal
+    options_remaining: 2
+    twist_level: 2
+    capability_gap: true
+    clue_id: c-l3a-04
+    dialogue: true
+
+  - id: b14
+    t_start_sec: 348
+    t_end_sec: 378
+    scene: "S7 NINE MILES"
+    action: >
+      She does not tell them. She turns the bus in a farm gateway in four movements, on a
+      road built for nothing longer than a pickup, with the front left wheel over the
+      culvert Ines told her about. Nobody helps her. Nobody could.
+    cost: "The gateway. Behind them it is the last place on this road wide enough to turn."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: threat_spike
+    options_remaining: 2
+    dialogue: false
+
+  # ---- SCENE 8: THE EMPTY SEAT — THE BUTTON ------------------------------------
+  - id: b15
+    t_start_sec: 378
+    t_end_sec: 404
+    scene: "S8 THE EMPTY SEAT"
+    action: >
+      Gus comes forward and says, quietly, ask him his badge number. Maren has the mic in
+      her hand. She looks at it for a long moment and puts it back in the cradle without
+      keying it.
+    cost: "The second chance to ask. There will not be a third at this price."
+    loops_opened: []
+    loops_closed: []
+    irony_gap: true
+    clock_visible: true
+    hook: escalation
+    options_remaining: 2
+    clue_id: c-l3a-05
+    dialogue: true
+
+  - id: b16
+    t_start_sec: 404
+    t_end_sec: 420
+    scene: "S8 THE EMPTY SEAT"
+    action: >
+      She counts one more time, on the way back to the wheel, by hand, seat by seat.
+      Eleven. She counts again. Eleven. The twelfth seat is empty and warm, and both
+      doors have been shut since Coldwater.
+    cost: "The one explanation she had left — that she miscounted."
+    loops_opened: [q_seat]
+    loops_closed: [q_wind]
+    irony_gap: true
+    clock_visible: true
+    hook: question
+    options_remaining: 2
+    twist_level: 1
+    dialogue: false

@@ -1,0 +1,118 @@
+{
+  "dry_run": true,
+  "rule": "sound leads picture by one beat; never resolve musically at the button",
+  "curve": [
+    {
+      "beat": "b01",
+      "t": 0,
+      "tension": 0.8,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b02",
+      "t": 10,
+      "tension": 0.25,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b03",
+      "t": 38,
+      "tension": 0.6,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b04",
+      "t": 66,
+      "tension": 0.6,
+      "score": "silence",
+      "clock_voice": true
+    },
+    {
+      "beat": "b05",
+      "t": 96,
+      "tension": 0.8,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b06",
+      "t": 124,
+      "tension": 0.75,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b07",
+      "t": 150,
+      "tension": 0.6,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b08",
+      "t": 178,
+      "tension": 0.75,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b09",
+      "t": 208,
+      "tension": 0.6,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b10",
+      "t": 236,
+      "tension": 0.8,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b11",
+      "t": 262,
+      "tension": 0.25,
+      "score": "silence",
+      "clock_voice": true
+    },
+    {
+      "beat": "b12",
+      "t": 290,
+      "tension": 0.9,
+      "score": "silence",
+      "clock_voice": false
+    },
+    {
+      "beat": "b13",
+      "t": 312,
+      "tension": 1.0,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b14",
+      "t": 348,
+      "tension": 0.75,
+      "score": "silence",
+      "clock_voice": true
+    },
+    {
+      "beat": "b15",
+      "t": 378,
+      "tension": 0.6,
+      "score": "bed",
+      "clock_voice": true
+    },
+    {
+      "beat": "b16",
+      "t": 404,
+      "tension": 1.0,
+      "score": "silence",
+      "clock_voice": true
+    }
+  ]
+}

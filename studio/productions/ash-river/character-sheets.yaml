@@ -1,0 +1,171 @@
+# ASH RIVER — character sheets
+# Identity drift is the signature failure of automated production. These reference sets
+# are locked for the season: renders condition on them, never on a prose description.
+# Silhouette and colour are the two channels that survive smoke, dark and motion — which
+# is most of this show.
+
+production: ash-river
+locked: 2026-08-19
+
+characters:
+
+  - name: Maren Vale
+    age: 41
+    role: driver, former wildland fire crew boss
+    colour: faded orange          # the ghost of a nomex crew shirt, worn as a work jacket
+    silhouette: "square shoulders, hair scraped back, always the one standing in a seated frame"
+    register: low-alto, unhurried
+    voice_profile: vp-maren-01
+    desire: "to bring out every person she counted in"
+    fear: "losing track of one"
+    wound: "counts people aloud, and always starts at nine"
+    costume_degradation:
+      e01: "clean work jacket; hands unmarked"
+      e04: "right palm wrapped, sleeve burned through at the cuff"
+      e08: "both hands wrapped, jacket gone"
+      e12: "unable to grip"
+    reference_set: [refs/maren/face_3q.png, refs/maren/face_profile.png, refs/maren/full.png]
+    signature_prop: "a brass headcount clicker she never uses"
+
+  - name: Theo Barrow
+    age: 9
+    role: passenger — the protective duty
+    colour: yellow
+    silhouette: "small, hooded raincoat, notebook held two-handed against the chest"
+    register: light, sparse
+    voice_profile: vp-theo-01
+    desire: "to go back for the thing he left"
+    fear: "being asked what he is drawing"
+    reference_set: [refs/theo/face_3q.png, refs/theo/full.png]
+    signature_prop: "a spiral notebook, corner burned"
+
+  - name: Ines Ruiz
+    age: 36
+    role: county surveyor
+    colour: teal
+    silhouette: "field vest, clipboard tube slung across the back"
+    register: mid, precise
+    voice_profile: vp-ines-01
+    desire: "to be believed"
+    fear: "that the report she filed is the reason it was buried"
+    reference_set: [refs/ines/face_3q.png, refs/ines/full.png]
+
+  - name: Dell Prentice
+    age: 58
+    role: town mechanic
+    colour: red
+    silhouette: "barrel frame, cap, one arm held against the body"
+    register: rough baritone, loud
+    voice_profile: vp-dell-01
+    desire: "to be listened to once"
+    fear: "that his son is better at this than he is"
+    reference_set: [refs/dell/face_3q.png, refs/dell/full.png]
+    note: "the least-trusted character. He is right twice before the E03 arc twist."
+
+  - name: Brianne Ott
+    age: 63
+    role: Theo's great-aunt
+    colour: lavender
+    silhouette: "seated, oxygen line looping to a cylinder braced between the knees"
+    register: thin, breathy
+    voice_profile: vp-bri-01
+    desire: "to not be the reason anyone slows down"
+    fear: "the tank running out before she can say it"
+    reference_set: [refs/bri/face_3q.png, refs/bri/full.png]
+    signature_prop: "green oxygen cylinder — a gauge and a bomb in the same object"
+
+  - name: Sam Okwuosa
+    age: 24
+    role: line cook
+    colour: white
+    silhouette: "lean, phone raised, elbow out"
+    register: quick tenor
+    voice_profile: vp-sam-01
+    desire: "for someone to see this"
+    fear: "that it will not matter"
+    reference_set: [refs/sam/face_3q.png, refs/sam/full.png]
+    signature_prop: "a phone with three weeks of ridge footage on it"
+
+  - name: Ruth Vane
+    age: 71
+    role: retired teacher
+    colour: brown
+    silhouette: "upright, hands folded, the only still figure in a moving frame"
+    register: dry contralto
+    voice_profile: vp-ruth-01
+    desire: "to hear Maren say it out loud"
+    fear: "dying with it unsaid"
+    reference_set: [refs/ruth/face_3q.png, refs/ruth/full.png]
+
+  - name: Kit Marsh
+    age: 17
+    role: passenger
+    colour: navy
+    silhouette: "headphones round the neck, hood up, knees on the seatback"
+    register: flat, young
+    voice_profile: vp-kit-01
+    desire: "to be useful exactly once"
+    fear: "being told to sit down"
+    reference_set: [refs/kit/face_3q.png, refs/kit/full.png]
+
+  - name: Danny Prentice
+    age: 31
+    role: volunteer firefighter
+    colour: forest green
+    silhouette: "turnout trousers, braces down, standing in the aisle"
+    register: warm baritone
+    voice_profile: vp-danny-01
+    desire: "to take the wheel"
+    fear: "that he already knows he is not qualified"
+    reference_set: [refs/danny/face_3q.png, refs/danny/full.png]
+    note: "the most competent character, and wrong about the north cut."
+
+  - name: Nel Alvara
+    age: 45
+    role: nurse
+    colour: pink
+    silhouette: "scrubs, bag on the shoulder, half out of frame toward the door"
+    register: bright mezzo
+    voice_profile: vp-nel-01
+    desire: "to go back for the clinic"
+    fear: "leaving anyone she could have carried"
+    reference_set: [refs/nel/face_3q.png, refs/nel/full.png]
+    note: "first loss, E02. She is the rules being established."
+
+  - name: Gus Trell
+    age: 52
+    role: off-duty deputy
+    colour: slate blue
+    silhouette: "wide stance, hand resting at the belt out of habit"
+    register: clipped bass
+    voice_profile: vp-gus-01
+    desire: "procedure"
+    fear: "that there is no procedure for this"
+    reference_set: [refs/gus/face_3q.png, refs/gus/full.png]
+
+  - name: Josie Kwan
+    age: 29
+    role: teacher
+    colour: mustard
+    silhouette: "clipboard held flat, moving down the aisle against the motion of the bus"
+    register: high, steady
+    voice_profile: vp-josie-01
+    desire: "an accurate count"
+    fear: "that it already is accurate"
+    reference_set: [refs/josie/face_3q.png, refs/josie/full.png]
+    note: "Maren's mirror. She counts too, and starts at one."
+
+  - name: Ronan Coyle
+    age: 34
+    role: "a voice on the radio, call sign Dispatch 9"
+    colour: none
+    silhouette: "unseen until E10 — the absence is the design"
+    register: calm, close-mic, no room tone
+    voice_profile: vp-coyle-01
+    desire: "to watch her make the same choice with witnesses"
+    fear: "that she will not, and he will have been wrong for eleven years"
+    reference_set: [refs/coyle/face_3q.png]
+    note: >
+      Direction: never sounds urgent. The one voice on this show with no strain in it.
+      He is the only person in the story who is not in danger, and the audience should
+      feel that a full season before they can say why.

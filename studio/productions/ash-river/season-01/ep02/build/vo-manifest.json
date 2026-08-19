@@ -1,0 +1,275 @@
+{
+  "dry_run": true,
+  "lines": [
+    {
+      "shot": "s01",
+      "beat": "b01",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Dispatch nine, say again your unit.",
+      "direction": "flat. She is testing him and hiding that she is testing him.",
+      "breath": "held"
+    },
+    {
+      "shot": "s01",
+      "beat": "b01",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "You're going to want to be past the Coldwater junction before dusk, Ash River bus. The wind turns at dusk.",
+      "direction": "close-mic, no room tone. He does not answer the question and does not hurry past it either.",
+      "breath": "even"
+    },
+    {
+      "shot": "s02",
+      "beat": "b02",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Nine. Ten. Eleven.",
+      "direction": "under her breath, then nothing. She already knows the next number.",
+      "breath": "stops"
+    },
+    {
+      "shot": "s03",
+      "beat": "b02",
+      "character": "Josie Kwan",
+      "voice_profile": "vp-josie-01",
+      "text": "Why did we slow down?",
+      "direction": "",
+      "breath": "fast"
+    },
+    {
+      "shot": "s03",
+      "beat": "b02",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Grade's steeper than it looks on that side.",
+      "direction": "true, and not the reason. Do not play it as a lie.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s05",
+      "beat": "b03",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "Junction's eleven miles. You've got about forty minutes of margin. Use it.",
+      "direction": "helpful. Specific. Wrong, and he knows it.",
+      "breath": "even"
+    },
+    {
+      "shot": "s08",
+      "beat": "b05",
+      "character": "Gus Trell",
+      "voice_profile": "vp-gus-01",
+      "text": "It's a fire. Fires do what they want.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s08",
+      "beat": "b05",
+      "character": "Sam Okwuosa",
+      "voice_profile": "vp-sam-01",
+      "text": "Six of them. In a row. In a row, man \u2014",
+      "direction": "",
+      "breath": "fast"
+    },
+    {
+      "shot": "s08",
+      "beat": "b05",
+      "character": "Gus Trell",
+      "voice_profile": "vp-gus-01",
+      "text": "Turn it off.",
+      "direction": "an order, from a man with no authority here.",
+      "breath": "clipped"
+    },
+    {
+      "shot": "s09",
+      "beat": "b05",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "Eleven hundred feet.",
+      "direction": "quiet, precise, and immediately regretted.",
+      "breath": "held"
+    },
+    {
+      "shot": "s09",
+      "beat": "b05",
+      "character": "Dell Prentice",
+      "voice_profile": "vp-dell-01",
+      "text": "What?",
+      "direction": "",
+      "breath": "unaffected"
+    },
+    {
+      "shot": "s09",
+      "beat": "b05",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "The spacing. It's eleven hundred feet.",
+      "direction": "and then nothing. She has said too much and knows it.",
+      "breath": "shallow"
+    },
+    {
+      "shot": "s13",
+      "beat": "b07",
+      "character": "Nel Alvara",
+      "voice_profile": "vp-nel-01",
+      "text": "Two miles.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s13",
+      "beat": "b07",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "No.",
+      "direction": "",
+      "breath": "flat"
+    },
+    {
+      "shot": "s13",
+      "beat": "b07",
+      "character": "Nel Alvara",
+      "voice_profile": "vp-nel-01",
+      "text": "Brianne's got until about six tomorrow morning on what's in that bag. You know that better than I do, because you loaded it.",
+      "direction": "not pleading. Presenting an arithmetic the driver cannot dispute.",
+      "breath": "controlled"
+    },
+    {
+      "shot": "s15",
+      "beat": "b08",
+      "character": "Nel Alvara",
+      "voice_profile": "vp-nel-01",
+      "text": "Side door.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s15",
+      "beat": "b08",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Ninety seconds.",
+      "direction": "",
+      "breath": "flat"
+    },
+    {
+      "shot": "s15",
+      "beat": "b08",
+      "character": "Nel Alvara",
+      "voice_profile": "vp-nel-01",
+      "text": "Ninety seconds.",
+      "direction": "agreeing to a number neither of them believes in.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s16",
+      "beat": "b09",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Twenty. Twenty-five. Thirty.",
+      "direction": "even. This is the count she is good at, and the only one going right.",
+      "breath": "measured"
+    },
+    {
+      "shot": "s17",
+      "beat": "b09",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "Not over the culvert.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s17",
+      "beat": "b09",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "What?",
+      "direction": "",
+      "breath": "short"
+    },
+    {
+      "shot": "s17",
+      "beat": "b09",
+      "character": "Ines Ruiz",
+      "voice_profile": "vp-ines-01",
+      "text": "North side floods first. Don't park over it.",
+      "direction": "specific, local, unhesitating. Nobody asks how she knows.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s18",
+      "beat": "b10",
+      "character": "Brianne Ott",
+      "voice_profile": "vp-bri-01",
+      "text": "It's got warmer.",
+      "direction": "conversational. She is not warning anyone; she is remarking.",
+      "breath": "thin"
+    },
+    {
+      "shot": "s18",
+      "beat": "b10",
+      "character": "Danny Prentice",
+      "voice_profile": "vp-danny-01",
+      "text": "That's the fire, love.",
+      "direction": "kind, dismissive, not turning round.",
+      "breath": "steady"
+    },
+    {
+      "shot": "s18",
+      "beat": "b10",
+      "character": "Brianne Ott",
+      "voice_profile": "vp-bri-01",
+      "text": "It's got warmer.",
+      "direction": "Identical delivery. She is the only one breathing bottled air and the only one whose sense of the outside is uncontaminated. She is right, and being the least credible voice in the cabin is exactly why it costs nothing to ignore her.\n",
+      "breath": "thin"
+    },
+    {
+      "shot": "s19",
+      "beat": "b10",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Seventy. Seventy-five.",
+      "direction": "",
+      "breath": "shortening"
+    },
+    {
+      "shot": "s23",
+      "beat": "b13",
+      "character": "Ronan Coyle",
+      "voice_profile": "vp-coyle-01",
+      "text": "Good work on the junction. You bought yourself twenty minutes there.",
+      "direction": "warm. It is the only warm line he has had, and it is the cruellest.",
+      "breath": "even"
+    },
+    {
+      "shot": "s28",
+      "beat": "b15",
+      "character": "Gus Trell",
+      "voice_profile": "vp-gus-01",
+      "text": "Ask him his badge number.",
+      "direction": "quiet, and correct. He has been right since the frequencies.",
+      "breath": "controlled"
+    },
+    {
+      "shot": "s28",
+      "beat": "b15",
+      "character": "Gus Trell",
+      "voice_profile": "vp-gus-01",
+      "text": "Maren.",
+      "direction": "",
+      "breath": "steady"
+    },
+    {
+      "shot": "s28",
+      "beat": "b15",
+      "character": "Maren Vale",
+      "voice_profile": "vp-maren-01",
+      "text": "Sit down, Gus.",
+      "direction": "She does not want an answer she would then have to act on. Play it as tiredness, not as evasion.\n",
+      "breath": "flat"
+    }
+  ]
+}

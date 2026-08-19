@@ -1,0 +1,96 @@
+# ASH RIVER — Season 1 loop ledger
+#
+# Every question the season opens, when it opens, when it gets a partial payoff, and
+# when it closes. Maintained by the Continuity Auditor; the CEO cannot greenlight the
+# finale while the balance is non-zero.
+#
+# The 3-episode debt ceiling is the rule that matters. Audiences track this balance
+# whether or not they could describe it, and betrayal by non-resolution is the one
+# failure that damages the NEXT production, not just this one.
+
+production: ash-river
+season: 1
+debt_ceiling_episodes: 3
+
+loops:
+
+  - id: q_out
+    question: "Do they get out of the valley?"
+    opened_ep: 1
+    partial_payoff_ep: 4      # they clear the first ridge, and lose the fuel doing it
+    closes_ep: 12
+
+  - id: q_hands
+    question: "What is wrong with Maren's hands?"
+    opened_ep: 1
+    partial_payoff_ep: 1      # answered in-episode: the door lever
+    closes_ep: 1
+
+  - id: q_count
+    question: "Why does she always start counting at nine?"
+    opened_ep: 1
+    partial_payoff_ep: 5      # Ruth says 'Crew Six' and Maren does not react
+    closes_ep: 12             # the L5. This is the longest-held loop in the series.
+    note: "Held eleven episodes. Permitted only because it is paid in partials at 5, 7 and 9."
+
+  - id: q_theo
+    question: "Who is the boy, and what did he leave behind?"
+    opened_ep: 1
+    partial_payoff_ep: 4      # the drawings are of places they have not reached
+    closes_ep: 9
+
+  - id: q_voice
+    question: "Who is on the radio?"
+    opened_ep: 1
+    partial_payoff_ep: 3      # there is no Dispatch 9
+    closes_ep: 10
+
+  - id: q_road
+    question: "Does Maren know this road better than she is saying?"
+    opened_ep: 1
+    partial_payoff_ep: 1      # she does not deny it; closed as a question, reopened as q_lie
+    closes_ep: 1
+
+  - id: q_gate
+    question: "Was the north gate always there?"
+    opened_ep: 1
+    partial_payoff_ep: 1
+    closes_ep: 1              # Sam's footage: three weeks ago it was not
+
+  - id: q_tank
+    question: "Will Bri's oxygen last?"
+    opened_ep: 1
+    partial_payoff_ep: 1      # Danny buys her an hour
+    closes_ep: 11
+
+  - id: q_northcut
+    question: "Is the north cut open?"
+    opened_ep: 1
+    partial_payoff_ep: 1
+    closes_ep: 1              # it is. Danny was right, and it does not help.
+
+  - id: q_commit
+    question: "Was taking the north cut the right call?"
+    opened_ep: 1
+    closes_ep: 1              # made moot by the L2 — the problem is inside the bus
+
+  - id: q_line
+    question: "Why is the fire in a straight line?"
+    opened_ep: 1
+    partial_payoff_ep: 6      # Ines's buried survey
+    closes_ep: 8              # the L4
+
+  - id: q_twelfth
+    question: "Who is the twelfth passenger?"
+    opened_ep: 1
+    partial_payoff_ep: 7      # Dell has known since the first mile
+    closes_ep: 12             # the L3-D
+
+  - id: q_lie
+    question: "Why did Maren lie about the count, and how did he already know?"
+    opened_ep: 1
+    partial_payoff_ep: 3      # there is no Dispatch 9 to lie to
+    closes_ep: 12
+
+promoted_to_season_2: []
+balance_at_finale: 0

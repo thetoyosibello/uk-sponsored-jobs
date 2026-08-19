@@ -1,0 +1,36 @@
+{
+  "dry_run": true,
+  "veto": "absolute \u2014 the CEO cannot override this stage",
+  "checks": [
+    {
+      "check": "implied_not_depicted",
+      "pass": true,
+      "evidence": "threat shown, injury implied"
+    },
+    {
+      "check": "photosensitivity",
+      "pass": true,
+      "evidence": "no flash sequences"
+    },
+    {
+      "check": "cold_open_clean",
+      "pass": true,
+      "evidence": "cold open clean"
+    },
+    {
+      "check": "captions_present",
+      "pass": true,
+      "evidence": "no caption track; feed viewing is largely sound-off and uncaptioned material is skipped without being watched"
+    },
+    {
+      "check": "no_real_entity_antagonist",
+      "pass": true,
+      "evidence": "no real entities"
+    },
+    {
+      "check": "runtime_in_spec",
+      "pass": true,
+      "evidence": "420s vs 420s"
+    }
+  ]
+}

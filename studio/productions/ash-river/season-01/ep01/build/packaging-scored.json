@@ -1,0 +1,127 @@
+{
+  "winner": {
+    "id": "v1",
+    "title": "One road out. Eleven passengers. She counted twelve.",
+    "hook_line": "Ash River has one road out of the valley. The bus took eleven people. On the last count of the night, the driver got twelve.",
+    "thumbnail": "thumbs/e01_mirror.png",
+    "thumbnail_note": "The long rear-view mirror, firelight, rows of faces going soft toward the back. Reads at 120px as: a face, a mirror, orange. Poses the question without a caption.\n",
+    "tags": [
+      "survival thriller",
+      "wildfire",
+      "series",
+      "ash river"
+    ],
+    "scores": {
+      "curiosity_gap": 10,
+      "specificity": 9,
+      "loss_framing": 8,
+      "legibility_at_120px": 8,
+      "honesty": 10
+    },
+    "total": 35.0
+  },
+  "rotation": [
+    {
+      "id": "v2",
+      "title": "The fire is behind them. That's the wrong place for it to be.",
+      "hook_line": "Forty-one miles of switchback, and the fire is following the bus.",
+      "thumbnail": "thumbs/e01_corridor.png",
+      "thumbnail_note": "Two burning ridges, one dark corridor, the bus small in the middle.",
+      "tags": [
+        "survival thriller",
+        "wildfire",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 8,
+        "specificity": 7,
+        "loss_framing": 9,
+        "legibility_at_120px": 6,
+        "honesty": 10
+      },
+      "total": 30.0
+    },
+    {
+      "id": "v3",
+      "title": "She starts every headcount at nine. Nobody asks why.",
+      "hook_line": "Eleven people on the last bus out. The driver counts them at every stop, and always starts at nine.",
+      "thumbnail": "thumbs/e01_hands.png",
+      "thumbnail_note": "Wrapped hands on a bus wheel, orange from the side.",
+      "tags": [
+        "survival thriller",
+        "mystery",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 9,
+        "specificity": 8,
+        "loss_framing": 5,
+        "legibility_at_120px": 7,
+        "honesty": 10
+      },
+      "note": "The strongest long-tail package \u2014 it is the series question \u2014 but it undersells the fire, and episode 1 has to sell the fire. Hold for the season trailer.\n",
+      "total": 29.0
+    },
+    {
+      "id": "v4",
+      "title": "Ninety seconds outside the bus. He came back at eighty.",
+      "hook_line": "Outside the bus, ninety seconds is the limit. Nobody has told the seventeen-year-old why.",
+      "thumbnail": "thumbs/e01_kit.png",
+      "thumbnail_note": "Locked-off wide, a small figure at a chained gate, the ridge above him.",
+      "tags": [
+        "survival thriller",
+        "wildfire",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 7,
+        "specificity": 9,
+        "loss_framing": 8,
+        "legibility_at_120px": 5,
+        "honesty": 9
+      },
+      "total": 26.1
+    },
+    {
+      "id": "v5",
+      "title": "ASH RIVER \u2014 Episode 1: a wildfire survival thriller",
+      "hook_line": "A gripping new survival series. Watch now.",
+      "thumbnail": "thumbs/e01_title.png",
+      "thumbnail_note": "Title treatment over fire.",
+      "tags": [
+        "thriller",
+        "drama"
+      ],
+      "scores": {
+        "curiosity_gap": 1,
+        "specificity": 1,
+        "loss_framing": 0,
+        "legibility_at_120px": 9,
+        "honesty": 10
+      },
+      "note": "Included deliberately as the control. It is the package most automated systems produce by default, and it scores 11 against v1's 35 \u2014 the whole argument for running this stage at all.\n",
+      "total": 11.0
+    },
+    {
+      "id": "v6",
+      "title": "The most shocking survival series ever made \u2014 you won't believe the ending",
+      "hook_line": "Nothing will prepare you for what happens in episode 1.",
+      "thumbnail": "thumbs/e01_scream.png",
+      "thumbnail_note": "Reaction face, maximum contrast, arrow overlay.",
+      "tags": [
+        "shocking",
+        "viral",
+        "must watch"
+      ],
+      "scores": {
+        "curiosity_gap": 6,
+        "specificity": 0,
+        "loss_framing": 2,
+        "legibility_at_120px": 9,
+        "honesty": 2
+      },
+      "note": "Scores 3.4 after the honesty multiplier, against a raw 17. Retained in the file as the worked example of why honesty multiplies rather than adds: the audience punishes bait far harder than it rewards a hook, and the punishment lands on episode 2.\n",
+      "total": 3.4
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+name: studio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: pip install pyyaml
+
+      - name: Can this checkout produce?
+        run: python3 studio.py doctor
+
+      - name: Retention engine and slate tests
+        run: python3 studio.py test
+
+      # The shipping episodes must keep passing their gates. A doctrine amendment that
+      # silently invalidates published material fails here rather than in production.
+      - name: Every written episode still passes its gates
+        run: |
+          set -euo pipefail
+          python3 studio.py status
+          python3 - <<'PY'
+          import subprocess, sys
+          from pathlib import Path
+          sys.path.insert(0, ".")
+          from pipeline.slate import Slate, Stage
+          failed = []
+          for s in Slate(Path(".")).all_status():
+              if s.stage_rank < int(Stage.WRITTEN):
+                  continue
+              r = subprocess.run([sys.executable, "studio.py", "score",
+                                  "--production", s.production,
+                                  "--season", str(s.season),
+                                  "--episode", str(s.episode)],
+                                 capture_output=True, text=True)
+              print(r.stdout)
+              if r.returncode != 0:
+                  failed.append(s.ref)
+          if failed:
+              sys.exit(f"episodes no longer pass the script gate: {failed}")
+          print("all written episodes pass their gates")
+          PY
