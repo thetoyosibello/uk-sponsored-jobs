@@ -21,7 +21,7 @@
       "prompt": "Extreme close-up, 85mm, locked off. A woman's hand closes around a metal school bus door lever that has discoloured with heat. Smoke moves across the frame from below. Desaturated grey-green grade, the only saturated colour is orange firelight from off-screen low. Grain, no camera shake.\n",
       "negative_prompt": "text overlay, watermark, clean bright lighting, calm daylight, extra fingers",
       "character_refs": [],
-      "seed": 10345370,
+      "seed": 350681,
       "cost_usd": 1.8
     },
     {
@@ -37,7 +37,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 390063,
+      "seed": 15958234,
       "cost_usd": 2.8
     },
     {
@@ -49,7 +49,7 @@
       "prompt": "Close on a folding bus door lever from inside the vehicle. The lever moves the last of its travel on its own, a fraction before a woman's hand reaches it. Attention in the composition is pulled to the smoke behind her, not to the lever. Handheld, 85mm, desaturated.\n",
       "negative_prompt": "visible second person, dramatic emphasis on the lever, watermark, text",
       "character_refs": [],
-      "seed": 11882851,
+      "seed": 1660546,
       "cost_usd": 3.15
     },
     {
@@ -65,7 +65,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 5140956,
+      "seed": 6554918,
       "cost_usd": 2.45
     },
     {
@@ -83,7 +83,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 16653260,
+      "seed": 989122,
       "cost_usd": 2.8
     },
     {
@@ -95,7 +95,7 @@
       "prompt": "Wide, locked off, 135mm long lens compressing depth. A school bus pulls away down a valley road; behind it a small town lights up orange one street at a time. Heavy smoke haze. Everything desaturated except the fire.\n",
       "negative_prompt": "drone move, sweeping camera, watermark, picturesque sunset",
       "character_refs": [],
-      "seed": 13509756,
+      "seed": 3161178,
       "cost_usd": 3.6
     },
     {
@@ -113,7 +113,7 @@
         "refs/theo/face_3q.png",
         "refs/theo/full.png"
       ],
-      "seed": 1863782,
+      "seed": 2642255,
       "cost_usd": 3.5
     },
     {
@@ -128,7 +128,7 @@
         "refs/josie/face_3q.png",
         "refs/josie/full.png"
       ],
-      "seed": 1810486,
+      "seed": 11022080,
       "cost_usd": 3.85
     },
     {
@@ -143,7 +143,7 @@
         "refs/theo/face_3q.png",
         "refs/theo/full.png"
       ],
-      "seed": 12810479,
+      "seed": 3597854,
       "cost_usd": 3.15
     },
     {
@@ -160,7 +160,7 @@
         "refs/danny/face_3q.png",
         "refs/danny/full.png"
       ],
-      "seed": 3991018,
+      "seed": 8835061,
       "cost_usd": 3.5
     },
     {
@@ -175,7 +175,7 @@
         "refs/gus/face_3q.png",
         "refs/gus/full.png"
       ],
-      "seed": 10468927,
+      "seed": 10086926,
       "cost_usd": 4.2
     },
     {
@@ -191,7 +191,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 7512336,
+      "seed": 6496672,
       "cost_usd": 6.3
     },
     {
@@ -209,7 +209,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 12505710,
+      "seed": 8592777,
       "cost_usd": 4.9
     },
     {
@@ -224,7 +224,7 @@
         "refs/ruth/face_3q.png",
         "refs/ruth/full.png"
       ],
-      "seed": 16328015,
+      "seed": 15012626,
       "cost_usd": 3.85
     },
     {
@@ -236,7 +236,7 @@
       "prompt": "Wide, locked off, 100mm. A galvanised steel farm gate stands chained across a dirt forest road at night, headlights on it. The galvanising is still bright \u2014 the gate is new. Behind it the ridge glows. Desaturated except the glow.\n",
       "negative_prompt": "rust, weathering, aged metal, signage, watermark, text overlay",
       "character_refs": [],
-      "seed": 9159656,
+      "seed": 7331115,
       "cost_usd": 7.5
     },
     {
@@ -254,7 +254,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 9767741,
+      "seed": 2251257,
       "cost_usd": 4.2
     },
     {
@@ -269,7 +269,7 @@
         "refs/kit/face_3q.png",
         "refs/kit/full.png"
       ],
-      "seed": 4642994,
+      "seed": 10531066,
       "cost_usd": 8.0
     },
     {
@@ -284,7 +284,7 @@
         "refs/kit/face_3q.png",
         "refs/kit/full.png"
       ],
-      "seed": 7186674,
+      "seed": 389957,
       "cost_usd": 4.2
     },
     {
@@ -299,7 +299,7 @@
         "refs/bri/face_3q.png",
         "refs/bri/full.png"
       ],
-      "seed": 572297,
+      "seed": 5808353,
       "cost_usd": 4.9
     },
     {
@@ -314,7 +314,7 @@
         "refs/dell/face_3q.png",
         "refs/dell/full.png"
       ],
-      "seed": 6289435,
+      "seed": 14970189,
       "cost_usd": 4.9
     },
     {
@@ -331,7 +331,7 @@
         "refs/bri/face_3q.png",
         "refs/bri/full.png"
       ],
-      "seed": 4123394,
+      "seed": 912043,
       "cost_usd": 5.25
     },
     {
@@ -351,7 +351,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 7900671,
+      "seed": 3285427,
       "cost_usd": 4.2
     },
     {
@@ -366,7 +366,7 @@
         "refs/sam/face_3q.png",
         "refs/sam/full.png"
       ],
-      "seed": 16497818,
+      "seed": 6266514,
       "cost_usd": 4.55
     },
     {
@@ -378,7 +378,7 @@
       "prompt": "Interior bus, handheld 50mm. Several passengers lean toward a phone held between them. Nobody speaks. The only light in the frame is the screen and the fire outside.\n",
       "negative_prompt": "dialogue mouths moving, watermark, text overlay",
       "character_refs": [],
-      "seed": 12599500,
+      "seed": 261037,
       "cost_usd": 4.2
     },
     {
@@ -390,7 +390,7 @@
       "prompt": "Wide interior of a school bus at night, handheld 35mm, from the front looking back. A phone passes hand to hand down the aisle. Eleven faces lit from below by a small screen; the windows behind them carry moving orange. No one speaks.\n",
       "negative_prompt": "score, dialogue, watermark, text overlay, dramatic lighting",
       "character_refs": [],
-      "seed": 16535934,
+      "seed": 7841680,
       "cost_usd": 10.0
     },
     {
@@ -402,7 +402,7 @@
       "prompt": "Wide locked-off 100mm from ahead of the vehicle. A school bus turns off a paved road onto an open dirt cut through timber, headlights in smoke. A road sign for Carrow Gap passes out of frame behind it. Compressed depth, desaturated.\n",
       "negative_prompt": "drone shot, camera move, watermark, text overlay",
       "character_refs": [],
-      "seed": 1415230,
+      "seed": 7211192,
       "cost_usd": 9.0
     },
     {
@@ -418,7 +418,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 6603282,
+      "seed": 3097926,
       "cost_usd": 4.9
     },
     {
@@ -436,7 +436,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 2598232,
+      "seed": 3142875,
       "cost_usd": 6.3
     },
     {
@@ -448,7 +448,7 @@
       "prompt": "Extreme wide, locked off, 135mm. Two parallel ridge lines burning at night with an untouched dark green corridor between them, a single road running down the centre. A school bus is small in the middle distance. Heavy smoke, deep compression, the only saturated colour is the fire.\n",
       "negative_prompt": "camera movement, drone, watermark, text overlay, daylight",
       "character_refs": [],
-      "seed": 8115686,
+      "seed": 13670604,
       "cost_usd": 6.0
     },
     {
@@ -464,7 +464,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 8680319,
+      "seed": 2740039,
       "cost_usd": 5.6
     },
     {
@@ -480,7 +480,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 10392735,
+      "seed": 882358,
       "cost_usd": 5.6
     },
     {
@@ -492,7 +492,7 @@
       "prompt": "Close on a long bus rear-view mirror at night, rows of seated passengers reflected, firelight from outside. Handheld, 85mm, shallow. The reflection is legible but not countable at speed.\n",
       "negative_prompt": "an obviously extra figure, dramatic reveal, watermark, text overlay",
       "character_refs": [],
-      "seed": 7569916,
+      "seed": 2368055,
       "cost_usd": 3.5
     },
     {
@@ -508,7 +508,7 @@
         "refs/maren/face_profile.png",
         "refs/maren/full.png"
       ],
-      "seed": 5463140,
+      "seed": 15239319,
       "cost_usd": 2.8
     }
   ]

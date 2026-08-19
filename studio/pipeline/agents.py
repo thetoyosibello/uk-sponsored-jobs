@@ -289,13 +289,25 @@ class ContinuityAuditor(Agent):
             if b.t_start_sec < a.t_start_sec:
                 r.block(f"beats out of order: {a.id} then {b.id}")
 
-        # 5. Options may not silently widen between episodes either.
+        # 5. The situation may not re-expand between episodes.
+        #
+        #    `options_remaining` is a WITHIN-episode tension curve: it counts the courses
+        #    of action open to the protagonist in this episode's situation, and it resets
+        #    each episode because each episode poses a new immediate problem. Comparing a
+        #    new episode's opening against the previous episode's *closing* would force
+        #    the count to zero by mid-season and make the field useless.
+        #
+        #    So the cross-episode rule is opening-to-opening: episode N may never start
+        #    with more options than episode N-1 started with. The season-long shrink is
+        #    tracked separately and physically, as the boundary mileage in arc.md.
         prev = ctx.season_dir / f"ep{ep.episode - 1:02d}" / "beatsheet.yaml"
-        if ep.episode > 1 and prev.exists():
-            last = Episode.load(prev).beats[-1].options_remaining
-            if ep.beats and ep.beats[0].options_remaining > last:
-                r.block(f"options widen across the episode boundary "
-                        f"({last} -> {ep.beats[0].options_remaining})")
+        if ep.episode > 1 and prev.exists() and ep.beats:
+            prev_beats = Episode.load(prev).beats
+            if prev_beats and ep.beats[0].options_remaining > prev_beats[0].options_remaining:
+                r.block(f"the situation re-expands across the episode boundary: "
+                        f"E{ep.episode - 1:02d} opened with "
+                        f"{prev_beats[0].options_remaining} options, "
+                        f"E{ep.episode:02d} opens with {ep.beats[0].options_remaining}")
 
         r.note("NOTE: per-character knowledge-state tracking is the human/LLM half of "
                "this role (see agents/07-continuity-auditor.md); the automated pass "

@@ -409,8 +409,14 @@ def test_slate() -> None:
 
         e1 = slate.episode_status("ash-river", 1, 1)
         check("E01 is greenlit", e1.stage == Stage.GREENLIT.label, e1.stage)
-        e2 = slate.episode_status("ash-river", 1, 2)
-        check("E02 is planned", e2.stage == Stage.PLANNED.label, e2.stage)
+        # Assert on shape, not on episode numbers: the slate advances as episodes get
+        # written, and a test that pins E02 breaks every time the studio does its job.
+        season = slate.season_status("ash-river", 1)
+        unwritten = [s for s in season if s.stage == Stage.PLANNED.label]
+        check("unwritten episodes read as planned", bool(unwritten),
+              "every episode is written — extend the arc")
+        check("the last arced episode is unwritten",
+              season[-1].stage == Stage.PLANNED.label, season[-1].stage)
 
         # With no credentials, rendering is unreachable — the studio must find other work
         # rather than burn a scheduled run on a rung it cannot climb.
@@ -418,8 +424,10 @@ def test_slate() -> None:
         check("render stage reports blocked without credentials",
               Stage.GREENLIT.label in blocked, str(blocked))
         d = slate.next_action()
+        first_unwritten = min(s.episode for s in unwritten)
         check("falls through to writing when render is blocked",
-              d.owner == "episode-writer" and d.episode == 2, f"{d.owner} E{d.episode}")
+              d.owner == "episode-writer" and d.episode == first_unwritten,
+              f"{d.owner} E{d.episode}, expected E{first_unwritten}")
 
         # A shipped episode must drop off the slate, or tomorrow's run republishes it.
         (s01 / "release-log.yaml").write_text(

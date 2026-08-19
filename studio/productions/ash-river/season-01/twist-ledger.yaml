@@ -345,6 +345,40 @@ clues:
     surface_read: "He grabbed it out of a house that was already going up."
     true_read: "It was burned before today. It is not his notebook."
 
+  # ================= EPISODE 2 — the L2 trail =====================================
+  # All three read as ordinary fire behaviour. Every one of them is the wind having
+  # already turned, and the audience is looking at the clinic instead.
+
+  - id: c-e02-l2-01
+    twist_id: T-E02-L2
+    episode: 2
+    beat_id: b03
+    visibility: 0.5
+    plant: "Ash falling on the windscreen ahead of the bus, not behind it."
+    surface_read: "There is ash everywhere. That is what a valley on fire looks like."
+    true_read: "Ash falls downwind. It is landing in front of them because they are driving into the wind."
+
+  - id: c-e02-l2-02
+    twist_id: T-E02-L2
+    episode: 2
+    beat_id: b07
+    visibility: 1.0
+    plant: "A mailbox flag at the Coldwater junction, standing out straight toward the bus."
+    surface_read: "Set dressing on an empty road. Nobody in the frame looks at it."
+    true_read: "It is a windsock, and it is pointing the wrong way."
+
+  - id: c-e02-l2-03
+    twist_id: T-E02-L2
+    episode: 2
+    beat_id: b10
+    visibility: 1.5
+    plant: "Bri, on oxygen: 'It's got warmer.' Danny tells her that is the fire and goes back to what he was doing."
+    surface_read: "A frightened elderly woman stating the obvious about a wildfire."
+    true_read: >
+      She is the only person on the bus breathing bottled air, so she is the only one
+      whose sense of the outside temperature is uncontaminated. She is right, and being
+      the least credible person in the cabin is exactly why nobody follows it up.
+
   # ================= L4 trail, episodes 2-7 ======================================
 
   - id: c-l4-03

@@ -1,0 +1,127 @@
+{
+  "winner": {
+    "id": "v1",
+    "title": "They beat the deadline by twenty minutes. The wind turned an hour ago.",
+    "hook_line": "One road, one deadline, and the man giving them the deadline already knew it had passed.",
+    "thumbnail": "thumbs/e02_hand.png",
+    "thumbnail_note": "The bandaged hand out of the window, ash streaming across it the wrong way. At 120px it reads as: a hand, fire, motion. The wrongness is the hook.\n",
+    "tags": [
+      "survival thriller",
+      "wildfire",
+      "series",
+      "ash river"
+    ],
+    "scores": {
+      "curiosity_gap": 9,
+      "specificity": 9,
+      "loss_framing": 9,
+      "legibility_at_120px": 8,
+      "honesty": 10
+    },
+    "total": 35.0
+  },
+  "rotation": [
+    {
+      "id": "v2",
+      "title": "Ninety seconds inside. She counted to a hundred and ten.",
+      "hook_line": "The clinic is two miles off the route. Nobody argues that it isn't worth it.",
+      "thumbnail": "thumbs/e02_doorway.png",
+      "thumbnail_note": "The clinic side door standing open, interior dark, nobody in it.",
+      "tags": [
+        "survival thriller",
+        "wildfire",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 9,
+        "specificity": 10,
+        "loss_framing": 9,
+        "legibility_at_120px": 6,
+        "honesty": 10
+      },
+      "total": 34.0
+    },
+    {
+      "id": "v3",
+      "title": "The seat was empty. It was still warm.",
+      "hook_line": "Eleven passengers. Twelve seats. Both doors shut since Coldwater.",
+      "thumbnail": "thumbs/e02_seat.png",
+      "thumbnail_note": "A palm flat on an empty bus seat, firelight through the window behind.",
+      "tags": [
+        "survival thriller",
+        "mystery",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 10,
+        "specificity": 8,
+        "loss_framing": 6,
+        "legibility_at_120px": 8,
+        "honesty": 10
+      },
+      "note": "The strongest raw hook in the episode and we are not shipping it. It spends the button before anyone presses play, and the button is what carries the audience into E03. Hold it for the E03 package, where it is a recap rather than a spoiler.\n",
+      "total": 32.0
+    },
+    {
+      "id": "v4",
+      "title": "She's the only one breathing bottled air. She's the only one who noticed.",
+      "hook_line": "An elderly woman on oxygen says it's got warmer. Twice. Nobody hears her the second time either.",
+      "thumbnail": "thumbs/e02_bri.png",
+      "thumbnail_note": "Oxygen gauge in the foreground, an unlit face behind it.",
+      "tags": [
+        "survival thriller",
+        "series"
+      ],
+      "scores": {
+        "curiosity_gap": 8,
+        "specificity": 8,
+        "loss_framing": 7,
+        "legibility_at_120px": 5,
+        "honesty": 10
+      },
+      "note": "Best writing of the five. Worst thumbnail. That trade loses in a feed.",
+      "total": 28.0
+    },
+    {
+      "id": "v5",
+      "title": "Ash River Episode 2 \u2014 The Clinic",
+      "hook_line": "The story continues.",
+      "thumbnail": "thumbs/e02_title.png",
+      "thumbnail_note": "Title treatment over fire.",
+      "tags": [
+        "thriller",
+        "drama"
+      ],
+      "scores": {
+        "curiosity_gap": 1,
+        "specificity": 2,
+        "loss_framing": 0,
+        "legibility_at_120px": 9,
+        "honesty": 10
+      },
+      "note": "The control again. Kept in every episode's file as the baseline to beat.",
+      "total": 12.0
+    },
+    {
+      "id": "v6",
+      "title": "You won't believe who was on the bus the whole time",
+      "hook_line": "The twist nobody saw coming.",
+      "thumbnail": "thumbs/e02_shock.png",
+      "thumbnail_note": "High-contrast reaction face with an arrow overlay.",
+      "tags": [
+        "shocking",
+        "viral",
+        "twist"
+      ],
+      "scores": {
+        "curiosity_gap": 7,
+        "specificity": 0,
+        "loss_framing": 1,
+        "legibility_at_120px": 9,
+        "honesty": 1
+      },
+      "note": "Scores 1.7 after the multiplier against a raw 17, and it is worse than it looks: it does not merely over-promise, it burns the L3-D reveal for a day of clicks. The honesty multiplier and the twist ladder happen to punish the same variant here, which is the system working.\n",
+      "total": 1.7
+    }
+  ]
+}

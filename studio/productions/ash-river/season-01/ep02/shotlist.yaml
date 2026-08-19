@@ -1,0 +1,689 @@
+# ASH RIVER — S01E02 "The Clinic" — shot list
+#
+# Ten clue slots were allocated to this episode by the twist ledger before E01 shipped.
+# Every one has a frame here; the Continuity Auditor checks this file, not the script.
+#
+# Camera doctrine: handheld inside the bus, locked-off outside it. Long lenses.
+# Palette: desaturated grey; the fire is the only saturated thing in frame.
+# Standards: threat shown, injury implied. Nel's loss lands on the empty doorway.
+
+production: ash-river
+season: 1
+episode: 2
+aspect: "16:9"
+captions: true
+total_duration_sec: 420
+
+shots:
+
+  - id: s01
+    beat_id: b01
+    t_start_sec: 0
+    duration_sec: 10
+    shot_size: CU
+    lens: 85mm
+    movement: handheld
+    subject: "Maren keys the mic, asks again, is not answered"
+    clock_element: "fuel needle under the mirror"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Tight close-up on a woman driving a school bus at night, firelight on her face,
+      holding a radio handset. She speaks, waits, is answered by something other than
+      what she asked, and puts the handset back. Handheld 85mm, desaturated.
+    negative_prompt: "reaction close-up, dramatic zoom, watermark, text overlay"
+    lines:
+      - character: Maren Vale
+        text: "Dispatch nine, say again your unit."
+        direction: "flat. She is testing him and hiding that she is testing him."
+        breath: "held"
+      - character: Ronan Coyle
+        text: "You're going to want to be past the Coldwater junction before dusk, Ash River bus. The wind turns at dusk."
+        direction: "close-mic, no room tone. He does not answer the question and does not hurry past it either."
+        breath: "even"
+
+  - id: s02
+    beat_id: b02
+    t_start_sec: 10
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "the count, stopping one number early"
+    clock_element: "the mirror and the road running out in it"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Medium close-up of a bus driver's eyes in a long rear-view mirror at night. Her
+      lips move with a count and then stop. Handheld 85mm, firelight, desaturated.
+    negative_prompt: "visible passenger count, dramatic emphasis, watermark, text overlay"
+    lines:
+      - character: Maren Vale
+        text: "Nine. Ten. Eleven."
+        direction: "under her breath, then nothing. She already knows the next number."
+        breath: "stops"
+
+  - id: s03
+    beat_id: b02
+    t_start_sec: 24
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Josie asks why they slowed; Maren gives a true answer that is not the reason"
+    clock_element: "smoke moving past the side windows"
+    character_refs: [Josie Kwan, Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Interior moving bus, handheld 50mm. A young teacher with a clipboard stands at the
+      driver's shoulder, asks something, accepts the answer and moves away down the aisle.
+    negative_prompt: "confrontation staging, watermark, text overlay"
+    lines:
+      - character: Josie Kwan
+        text: "Why did we slow down?"
+        breath: "fast"
+      - character: Maren Vale
+        text: "Grade's steeper than it looks on that side."
+        direction: "true, and not the reason. Do not play it as a lie."
+        breath: "steady"
+
+  - id: s04
+    beat_id: b03
+    t_start_sec: 38
+    duration_sec: 14
+    shot_size: ECU
+    lens: 85mm
+    movement: locked
+    subject: "ash landing on the windscreen — in front of the bus"
+    clock_element: "ash accumulating on the glass between wiper passes"
+    clue_id: c-e02-l2-01
+    provider_hint: motion
+    prompt: >
+      Extreme close-up on a bus windscreen at dusk from inside. Fine grey ash settles
+      steadily onto the glass like the beginning of snow. Wipers clear it and it returns.
+      Locked off, 85mm, desaturated, orange glow low in the background.
+    negative_prompt: "heavy embers, dramatic firestorm, watermark, text overlay"
+    framing_note: >
+      Visibility 0.5. Ash falls downwind. It is landing in FRONT of them, which is the
+      whole L2, and it must read as nothing but weather. Do not hold on it.
+
+  - id: s05
+    beat_id: b03
+    t_start_sec: 52
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Coyle sets the deadline"
+    clock_element: "dash clock and fuel needle in the same frame"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Driver's position, handheld 50mm, dashboard instruments visible with the road
+      ahead through smoke. A radio speaks. She listens and does not reply.
+    negative_prompt: "watermark, text overlay, clean windshield"
+    lines:
+      - character: Ronan Coyle
+        text: "Junction's eleven miles. You've got about forty minutes of margin. Use it."
+        direction: "helpful. Specific. Wrong, and he knows it."
+        breath: "even"
+
+  - id: s06
+    beat_id: b04
+    t_start_sec: 66
+    duration_sec: 16
+    shot_size: MS
+    lens: 35mm
+    movement: handheld
+    subject: "Maren walks the aisle counting seat backs by hand"
+    clock_element: "the aisle darkening toward the back of the bus"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    audio_bed: silence
+    prompt: >
+      Interior moving school bus from behind, handheld 35mm. A woman walks the centre
+      aisle away from camera, one palm touching each seat back in turn. Passengers on
+      either side, faces unlit. No dialogue.
+    negative_prompt: "dialogue, dramatic music sting, watermark, text overlay"
+
+  - id: s07
+    beat_id: b04
+    t_start_sec: 82
+    duration_sec: 14
+    shot_size: ECU
+    lens: 85mm
+    movement: handheld
+    subject: "the rear emergency door latch, unseated"
+    clock_element: "firelight through the rear window behind the latch"
+    clue_id: c-l3d-01
+    provider_hint: consistency
+    prompt: >
+      Extreme close-up of a school bus rear emergency door handle mechanism. The latch
+      sits proud of its keeper — not open, not closed properly. A hand enters frame and
+      presses it home. Handheld 85mm, near dark, orange from behind the glass.
+    negative_prompt: "open door, dramatic reveal, watermark, text overlay"
+    framing_note: >
+      Visibility 0.5. It is a loose fitting on an old bus. It is also the door somebody
+      used. She looks at it one second longer than a person looks at a latch, and that
+      second is the only performance note that matters here.
+
+  - id: s08
+    beat_id: b05
+    t_start_sec: 96
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "the cabin argues about what a straight line means"
+    clock_element: "fire visible through the windows behind the argument"
+    character_refs: [Gus Trell, Sam Okwuosa]
+    provider_hint: consistency
+    prompt: >
+      Interior bus at night, handheld 50mm. A young man holds up a phone toward an
+      off-duty deputy; other passengers lean in from adjacent seats. Firelight through
+      the windows is the only source.
+    negative_prompt: "physical altercation, shouting faces, watermark, text overlay"
+    lines:
+      - character: Gus Trell
+        text: "It's a fire. Fires do what they want."
+        breath: "steady"
+      - character: Sam Okwuosa
+        text: "Six of them. In a row. In a row, man —"
+        breath: "fast"
+      - character: Gus Trell
+        text: "Turn it off."
+        direction: "an order, from a man with no authority here."
+        breath: "clipped"
+
+  - id: s09
+    beat_id: b05
+    t_start_sec: 110
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "Ines says the spacing and then stops talking"
+    clock_element: "the ridge line moving past the window behind her"
+    character_refs: [Ines Ruiz]
+    provider_hint: consistency
+    prompt: >
+      Medium close-up, handheld 85mm, of a woman in a field vest by a bus window. She
+      says one short thing, is looked at by everyone, and turns back to the window.
+    negative_prompt: "defensive gesture, watermark, text overlay"
+    lines:
+      - character: Ines Ruiz
+        text: "Eleven hundred feet."
+        direction: "quiet, precise, and immediately regretted."
+        breath: "held"
+      - character: Dell Prentice
+        text: "What?"
+        breath: "unaffected"
+      - character: Ines Ruiz
+        text: "The spacing. It's eleven hundred feet."
+        direction: "and then nothing. She has said too much and knows it."
+        breath: "shallow"
+
+  - id: s10
+    beat_id: b06
+    t_start_sec: 124
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "Gus walks the county bands — every one dead but one"
+    clock_element: "the dash clock advancing between channel changes"
+    character_refs: [Gus Trell]
+    clue_id: c-l3a-03
+    provider_hint: consistency
+    prompt: >
+      Medium close-up, handheld 85mm. A man works a vehicle radio's channel selector,
+      listening at each stop. His face changes slightly and does not change back.
+    negative_prompt: "on-screen channel numbers, text overlay, watermark"
+    framing_note: >
+      Visibility 1.0. Sound carries it: five channels of true silence, no carrier at all,
+      then one channel with a live hiss. Frame it plainly and give the audience no
+      reaction shot to tell them what it means.
+
+  - id: s11
+    beat_id: b06
+    t_start_sec: 138
+    duration_sec: 12
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Gus puts the handset back and sits down without a word"
+    clock_element: "fuel needle as he passes the dash"
+    character_refs: [Gus Trell]
+    provider_hint: consistency
+    prompt: >
+      Interior bus, handheld 50mm. A heavyset man replaces a radio handset in its cradle,
+      says nothing to anyone, and returns to his seat. Nobody asks him anything.
+    negative_prompt: "explanatory dialogue, meaningful glance to camera, watermark"
+
+  - id: s12
+    beat_id: b07
+    t_start_sec: 150
+    duration_sec: 14
+    shot_size: WS
+    lens: 100mm
+    movement: locked
+    subject: "the junction, the clinic sign, and a mailbox flag standing straight out"
+    clock_element: "the light going out of the sky above the junction"
+    clue_id: c-e02-l2-02
+    provider_hint: cinematic
+    prompt: >
+      Wide locked-off 100mm at a rural road junction at dusk. A school bus stopped at the
+      stop line. A road sign reads COLDWATER CLINIC 2. In the lower corner of frame a
+      mailbox flag stands straight out, pointing toward the bus. Desaturated, smoke haze.
+    negative_prompt: "camera move, emphasis on the mailbox, watermark, text overlay"
+    framing_note: >
+      Visibility 1.0. The flag is a windsock and it is pointing the wrong way. It is in
+      the corner of a composition whose subject is a sign about a clinic. Nobody in the
+      scene looks at it and neither will the audience — the first time.
+
+  - id: s13
+    beat_id: b07
+    t_start_sec: 164
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Nel makes the argument that cannot be refused"
+    character_refs: [Nel Alvara, Maren Vale]
+    clock_element: "dusk light dropping through the windscreen behind them"
+    provider_hint: consistency
+    prompt: >
+      Interior bus, handheld 50mm. A nurse in scrubs stands over the driver's seat making
+      a case. The driver does not turn around.
+    negative_prompt: "raised voices, watermark, text overlay"
+    lines:
+      - character: Nel Alvara
+        text: "Two miles."
+        breath: "steady"
+      - character: Maren Vale
+        text: "No."
+        breath: "flat"
+      - character: Nel Alvara
+        text: "Brianne's got until about six tomorrow morning on what's in that bag. You know that better than I do, because you loaded it."
+        direction: "not pleading. Presenting an arithmetic the driver cannot dispute."
+        breath: "controlled"
+
+  - id: s14
+    beat_id: b08
+    t_start_sec: 178
+    duration_sec: 16
+    shot_size: CU
+    lens: 85mm
+    movement: locked
+    subject: "the evacuation notice, dated four days before the fire"
+    clock_element: "the last daylight on the glass"
+    clue_id: c-l4-03
+    provider_hint: cinematic
+    prompt: >
+      Close-up, locked off, 85mm. A printed evacuation notice taped to the inside of a
+      dark clinic door's glass, reflections of a bus's headlights across it. A date is
+      legible on it. A woman's reflection reads it and moves out of frame.
+    negative_prompt: "push-in, highlighted date, watermark, arrows, circles"
+    framing_note: >
+      Visibility 1.0. The date is readable and nobody remarks on it. Rural clinics run
+      drills; that is the surface read and it is a good one. Somebody knew the date is
+      the other one.
+
+  - id: s15
+    beat_id: b08
+    t_start_sec: 194
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: locked
+    subject: "Nel goes in through the side; the ninety seconds start"
+    clock_element: "Maren's watch as she starts the count"
+    character_refs: [Nel Alvara, Maren Vale]
+    provider_hint: cinematic
+    prompt: >
+      Locked-off wide-medium, 50mm, exterior. A nurse moves along the side of a dark
+      single-storey clinic and in through a side door. The camera does not follow her.
+    negative_prompt: "handheld, following camera, watermark, text overlay"
+    lines:
+      - character: Nel Alvara
+        text: "Side door."
+        breath: "steady"
+      - character: Maren Vale
+        text: "Ninety seconds."
+        breath: "flat"
+      - character: Nel Alvara
+        text: "Ninety seconds."
+        direction: "agreeing to a number neither of them believes in."
+        breath: "steady"
+
+  - id: s16
+    beat_id: b09
+    t_start_sec: 208
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "Maren counting aloud from the step — the only sound"
+    clock_element: "the count itself, spoken"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Medium close-up, handheld 85mm. A woman stands on the bottom step of a stopped
+      school bus at dusk, watching a dark building, counting aloud. Smoke crossing behind
+      her.
+    negative_prompt: "score, music, watermark, text overlay"
+    lines:
+      - character: Maren Vale
+        text: "Twenty. Twenty-five. Thirty."
+        direction: "even. This is the count she is good at, and the only one going right."
+        breath: "measured"
+
+  - id: s17
+    beat_id: b09
+    t_start_sec: 222
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Ines watching the ditch, not the clinic"
+    clock_element: "water beginning to move in the culvert"
+    character_refs: [Ines Ruiz, Maren Vale]
+    clue_id: c-l3b-01
+    provider_hint: consistency
+    prompt: >
+      Exterior beside a stopped bus at dusk, handheld 50mm. A woman in a field vest looks
+      down at a roadside ditch and culvert while everyone else looks at a building. She
+      speaks briefly; the bus moves a few feet.
+    negative_prompt: "watermark, text overlay, explanatory gesture"
+    lines:
+      - character: Ines Ruiz
+        text: "Not over the culvert."
+        breath: "steady"
+      - character: Maren Vale
+        text: "What?"
+        breath: "short"
+      - character: Ines Ruiz
+        text: "North side floods first. Don't park over it."
+        direction: "specific, local, unhesitating. Nobody asks how she knows."
+        breath: "steady"
+    framing_note: "Visibility 0.5. A county surveyor knows the county. She surveyed this ground."
+
+  - id: s18
+    beat_id: b10
+    t_start_sec: 236
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "Bri says it has got warmer. Twice."
+    clock_element: "her oxygen gauge in the lower frame"
+    character_refs: [Brianne Ott, Danny Prentice]
+    clue_id: c-e02-l2-03
+    provider_hint: consistency
+    prompt: >
+      Interior bus, handheld 85mm. An elderly woman with a nasal cannula speaks toward
+      nobody. A man near the door answers without turning round. She speaks again. Nobody
+      turns round the second time either.
+    negative_prompt: "distress, medical emergency staging, watermark, text overlay"
+    lines:
+      - character: Brianne Ott
+        text: "It's got warmer."
+        direction: "conversational. She is not warning anyone; she is remarking."
+        breath: "thin"
+      - character: Danny Prentice
+        text: "That's the fire, love."
+        direction: "kind, dismissive, not turning round."
+        breath: "steady"
+      - character: Brianne Ott
+        text: "It's got warmer."
+        direction: >
+          Identical delivery. She is the only one breathing bottled air and the only one
+          whose sense of the outside is uncontaminated. She is right, and being the least
+          credible voice in the cabin is exactly why it costs nothing to ignore her.
+        breath: "thin"
+    framing_note: "Visibility 1.5 — stated aloud, twice, by the person nobody listens to."
+
+  - id: s19
+    beat_id: b10
+    t_start_sec: 250
+    duration_sec: 12
+    shot_size: CU
+    lens: 85mm
+    movement: handheld
+    subject: "the count passing eighty"
+    clock_element: "the spoken count"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Close-up, handheld 85mm, of a woman on a bus step at dusk, counting, watching a
+      dark doorway that stays dark.
+    negative_prompt: "watermark, text overlay, cutaway to interior"
+    lines:
+      - character: Maren Vale
+        text: "Seventy. Seventy-five."
+        breath: "shortening"
+
+  - id: s20
+    beat_id: b11
+    t_start_sec: 262
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "she pulls out, and takes the turn without looking at the sign"
+    clock_element: "fuel needle and the last of the light together"
+    character_refs: [Maren Vale]
+    clue_id: c-l5-04
+    provider_hint: consistency
+    audio_bed: silence
+    prompt: >
+      Driver's position, handheld 50mm. A woman pulls a school bus away and takes a
+      junction turn. Her eyes do not go to the road sign at any point. No dialogue.
+    negative_prompt: "glance at sign, hesitation, watermark, text overlay"
+    framing_note: >
+      Visibility 0.5. Everyone drives their own valley blind; that is the surface read.
+      She has taken that turn once before, at night, alone.
+
+  - id: s21
+    beat_id: b11
+    t_start_sec: 276
+    duration_sec: 14
+    shot_size: CU
+    lens: 135mm
+    movement: locked
+    subject: "the clinic side door, open, nobody in it"
+    clock_element: "the doorway darkening as they pull away"
+    provider_hint: cinematic
+    prompt: >
+      Locked-off 135mm, receding view through a bus mirror or rear window: a clinic side
+      door standing open, the interior dark, nobody in the doorway. Held steady as it
+      gets smaller.
+    negative_prompt: "figure in the doorway, movement, injury, watermark, text overlay"
+    standards_note: >
+      Nel's loss lands entirely on the empty doorway. No figure, no sound, no impact.
+      Implication does the work and the audience's own imagination supplies the rest.
+
+  - id: s22
+    beat_id: b12
+    t_start_sec: 290
+    duration_sec: 22
+    shot_size: WS
+    lens: 35mm
+    movement: handheld
+    subject: "twenty-two seconds in which nobody says anything"
+    character_refs: [Theo Barrow, Josie Kwan]
+    provider_hint: cinematic
+    audio_bed: silence
+    prompt: >
+      Wide interior of a school bus at night from the front, handheld 35mm. A boy in a
+      yellow raincoat is turned around in his seat watching the road behind. A teacher
+      holds a clipboard closed on her lap. Nobody speaks. Firelight through the rear glass.
+    negative_prompt: "dialogue, crying, score, watermark, text overlay"
+    framing_note: >
+      The episode's silent beat. Drop score and dialogue both. The rules have just been
+      established and everyone learned them at the same moment.
+
+  - id: s23
+    beat_id: b13
+    t_start_sec: 312
+    duration_sec: 12
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Coyle congratulates them on the junction"
+    clock_element: "ash still arriving on the windscreen"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Driver's position at night, handheld 50mm, ash on the windscreen lit by the
+      headlights. A radio speaks warmly. She does not answer.
+    negative_prompt: "watermark, text overlay, relief"
+    lines:
+      - character: Ronan Coyle
+        text: "Good work on the junction. You bought yourself twenty minutes there."
+        direction: "warm. It is the only warm line he has had, and it is the cruellest."
+        breath: "even"
+
+  - id: s24
+    beat_id: b13
+    t_start_sec: 324
+    duration_sec: 12
+    shot_size: ECU
+    lens: 85mm
+    movement: handheld
+    subject: "her hand out of the window — the wind is on the back of it"
+    clock_element: "ash streaming past the hand toward the front of the bus"
+    character_refs: [Maren Vale]
+    clue_id: c-l3a-04
+    provider_hint: motion
+    prompt: >
+      Extreme close-up of a bandaged hand held flat out of a moving vehicle's window at
+      night. Ash and smoke stream across it from front to back. Handheld 85mm, headlight
+      spill, deeply desaturated.
+    negative_prompt: "slow motion, dramatic music sting, watermark, text overlay"
+    framing_note: >
+      This is the L2 landing and it is physical, not spoken. Sound: as the window comes
+      down, the radio carrier is audible with NO ident tone under it. It has never had
+      one. That is clue c-l3a-04 and it fires here because this is the only moment the
+      audience is listening to the radio instead of hearing it.
+
+  - id: s25
+    beat_id: b13
+    t_start_sec: 336
+    duration_sec: 12
+    shot_size: CU
+    lens: 85mm
+    movement: handheld
+    subject: "she winds the window up and says nothing at all"
+    clock_element: "fuel needle below the mirror"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Close-up of a woman at a bus wheel winding a window up, firelight moving on her
+      face. She looks at the radio and does not reach for it. Held two seconds past
+      comfortable.
+    negative_prompt: "tears, tightening jaw, dramatic realisation face, watermark"
+
+  - id: s26
+    beat_id: b14
+    t_start_sec: 348
+    duration_sec: 16
+    shot_size: WS
+    lens: 100mm
+    movement: locked
+    subject: "forty feet of bus turning in a farm gateway, in four movements"
+    clock_element: "the fire glow growing on the side of frame she is turning toward"
+    provider_hint: cinematic
+    audio_bed: silence
+    prompt: >
+      Wide locked-off 100mm at night. A full-length school bus executes a four-point turn
+      in a narrow farm gateway on a single-track road, headlights sweeping smoke, one
+      front wheel out over a roadside culvert. No dialogue.
+    negative_prompt: "camera move, drone, spectators helping, watermark, text overlay"
+
+  - id: s27
+    beat_id: b14
+    t_start_sec: 364
+    duration_sec: 14
+    shot_size: MCU
+    lens: 85mm
+    movement: handheld
+    subject: "her wrapped hands on the wheel doing it alone"
+    clock_element: "wheel and fuel gauge in the same frame"
+    character_refs: [Maren Vale]
+    provider_hint: consistency
+    prompt: >
+      Medium close-up, handheld 85mm, of bandaged hands working a large bus steering
+      wheel through repeated full-lock turns. No other person enters frame.
+    negative_prompt: "helper, passenger guidance, watermark, text overlay"
+
+  - id: s28
+    beat_id: b15
+    t_start_sec: 378
+    duration_sec: 14
+    shot_size: MS
+    lens: 50mm
+    movement: handheld
+    subject: "Gus, crouched in the aisle: ask him his badge number"
+    clock_element: "the road ahead through the windscreen behind them"
+    character_refs: [Gus Trell, Maren Vale]
+    clue_id: c-l3a-05
+    provider_hint: consistency
+    prompt: >
+      Interior bus, handheld 50mm. A man crouches in the aisle beside the driver's seat
+      so the conversation is private. The driver holds a radio handset, looks at it, and
+      replaces it in the cradle without using it.
+    negative_prompt: "confrontation, raised voices, watermark, text overlay"
+    lines:
+      - character: Gus Trell
+        text: "Ask him his badge number."
+        direction: "quiet, and correct. He has been right since the frequencies."
+        breath: "controlled"
+      - character: Gus Trell
+        text: "Maren."
+        breath: "steady"
+      - character: Maren Vale
+        text: "Sit down, Gus."
+        direction: >
+          She does not want an answer she would then have to act on. Play it as tiredness,
+          not as evasion.
+        breath: "flat"
+    framing_note: "Visibility 1.5 — the question is asked out loud and refused on screen."
+
+  - id: s29
+    beat_id: b15
+    t_start_sec: 392
+    duration_sec: 12
+    shot_size: CU
+    lens: 85mm
+    movement: handheld
+    subject: "the handset back in the cradle"
+    clock_element: "dash instruments around the cradle"
+    provider_hint: consistency
+    prompt: >
+      Close-up of a radio handset being placed back into a dashboard cradle, unkeyed. The
+      hand stays on it a moment longer than necessary and then lets go.
+    negative_prompt: "watermark, text overlay, dramatic slam"
+
+  - id: s30
+    beat_id: b16
+    t_start_sec: 404
+    duration_sec: 16
+    shot_size: CU
+    lens: 85mm
+    movement: handheld
+    subject: "eleven, twice — and a palm flat on the warm empty twelfth seat"
+    clock_element: "the aisle going dark toward the back"
+    character_refs: [Maren Vale]
+    transition: freeze
+    provider_hint: consistency
+    audio_bed: silence
+    prompt: >
+      Handheld 85mm following a woman's hand along school bus seat backs in near
+      darkness, counting by touch. The hand stops, goes back, counts again, and then
+      presses flat on one empty seat. Final frame freezes on the hand on the seat.
+    negative_prompt: "cut to her face, figure in the seat, watermark, text overlay"
+    framing_note: >
+      The button. Freeze on the hand, not the face — the audience has already been given
+      her face twice this episode, and the unanswered image here is the seat. Lands
+      inside the last 8 seconds. Do not resolve the score.

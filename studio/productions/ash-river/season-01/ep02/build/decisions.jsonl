@@ -1,0 +1,20 @@
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "market-scout", "verdict": "PASS", "reason": "no demand_brief.yaml \u2014 advisory stage, proceeding on doctrine defaults", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "concept-architect", "verdict": "PASS", "reason": "premise test 6/6", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "story-architect", "verdict": "PASS", "reason": "12-episode arc present", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "twist-master", "verdict": "PASS", "reason": "18 twists, 47 clues, levels [2, 3, 4, 5]", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "episode-writer", "verdict": "PASS", "reason": "16 beats over 420s", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "retention-engineer", "verdict": "PASS", "reason": "composite 100.0/100", "score": 100.0}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "script_greenlight", "verdict": "GREENLIT", "reason": "composite 100.0 >= 78, 0 hard fails", "score": 100.0}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "continuity-auditor", "verdict": "PASS", "reason": "NOTE: per-character knowledge-state tracking is the human/LLM half of this role (see agents/07-continuity-auditor.md); the automated pass covers clue framing, ledger integrity, loop debt and timeline.", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "character-designer", "verdict": "PASS", "reason": "13 characters locked", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "shot-designer", "verdict": "PASS", "reason": "30 shots, 420s", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "render_greenlight", "verdict": "GREENLIT", "reason": "composite 100.0 >= 84, 0 hard fails", "score": 100.0}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "cinematographer", "verdict": "PASS", "reason": "dry-run: 30 shots planned, est. $160.1 \u2014 nothing generated", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "voice-director", "verdict": "PASS", "reason": "30 dialogue lines routed", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "composer", "verdict": "PASS", "reason": "16 cues, 9 peaks", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "editor", "verdict": "PASS", "reason": "30 cuts, 420s master + 60s vertical", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "qc-standards", "verdict": "PASS", "reason": "6/6 checks passed", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "packaging", "verdict": "PASS", "reason": "variant v6 scores 1/10 on honesty; the audience punishes bait harder than it rewards the hook", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "publish_greenlight", "verdict": "GREENLIT", "reason": "composite 100.0 >= 84, 0 hard fails", "score": 100.0}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "distributor", "verdict": "PASS", "reason": "youtube: planned, missing ['YOUTUBE_CLIENT_ID', 'YOUTUBE_CLIENT_SECRET', 'YOUTUBE_REFRESH_TOKEN']", "score": null}
+{"ts": "2026-08-19T10:56:56+00:00", "stage": "audience-analyst", "verdict": "PASS", "reason": "no telemetry yet \u2014 the loop closes after publication", "score": null}
