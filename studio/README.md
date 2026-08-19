@@ -13,25 +13,81 @@ to spend money on material that doesn't.
 ## Quick start
 
 ```bash
-cd studio
+python3 studio.py doctor      # can this checkout produce?
+python3 studio.py status      # where every episode stands
+python3 studio.py next        # the single next action
 
-# Grade a beat sheet against the doctrine and stop.
-python3 run_production.py --score-only --production ash-river --season 1 --episode 1
+# Run one episode through 17 agents and three gates. Renders nothing.
+python3 studio.py run --production ash-river --season 1 --episode 1
 
-# Run the whole pipeline: 17 agents, three gates, all artefacts. Renders nothing.
-python3 run_production.py --production ash-river --season 1 --episode 1
+# Same, but call real generation and publishing providers.
+python3 studio.py run --production ash-river --season 1 --episode 1 --live
 
-# Same run, but call real generation and publishing providers.
-python3 run_production.py --production ash-river --season 1 --episode 1 --live
-
-# Prove the scorer actually catches things.
-python3 tests/test_retention.py
+python3 studio.py score --production ash-river --season 1 --episode 1   # grade and stop
+python3 studio.py test                                                  # 67 checks
 ```
 
-Exit codes: `0` greenlit · `1` rework or held · `2` killed · `3` bad invocation.
+Exit codes are the contract the Routines read:
+`0` done/greenlit · `1` rework or held · `2` needs a human · `3` bad invocation.
 
 Dependencies: Python 3.11+ and PyYAML. `ffmpeg` is only needed to execute the assembly
 script; the plan is emitted either way.
+
+---
+
+## Running itself
+
+The studio is wired to [Claude Routines](routines/README.md) and runs unattended on a
+daily calendar. The thing that makes that possible is `pipeline/slate.py` — **the Slate**.
+
+A Routine fires a fresh session with no memory of any previous run, so state cannot live
+in a conversation. It lives on disk: the Slate reads the production tree, derives every
+episode's rung on the production ladder, and emits one directive.
+
+```
+planned → written → rework → greenlit → rendered → released
+```
+
+| Time (UTC) | Routine | Does |
+|---|---|---|
+| 06:00 daily | Writers' Room | writes or reworks the next episode until it passes the gate |
+| 12:00 daily | Production | renders and assembles the next greenlit episode |
+| 17:00 daily | Release | publishes the next rendered episode, vertical cut first |
+| 08:00 Mondays | Retention Review | maps drop-off cliffs to beats, proposes doctrine amendments |
+
+**The Slate refuses to spin.** If a rung cannot be climbed — no render credentials, no
+publish credentials — it skips that stage and returns work that *can* be done. A studio
+with no API keys quietly writes all twelve episodes, spends nothing, and has a full slate
+ready the moment keys appear.
+
+Priority is deliberately not "lowest rung first". Material already paid for outranks
+material not yet written: a rendered-but-unreleased episode is spent money earning
+nothing. Writing the next episode is the lowest priority that still counts as progress,
+because it is the only move that creates new liabilities.
+
+### Guardrails on unattended operation
+
+The full set is in [`routines/README.md`](routines/README.md). The ones that matter most:
+
+- **Never publish past a QC failure.** Absolute veto; no Routine may reason past it.
+- **Never amend the doctrine unattended.** The Retention Review opens a PR and waits.
+  A system that rewrites its own standards while nobody is watching has no standards.
+- **Never retcon a committed twist.** L4/L5 and their clue trails freeze once E01 ships.
+- **Never exceed [`routines/budget.yaml`](routines/budget.yaml).** A run that cannot
+  afford the whole episode does not start it — a half-rendered episode is worth nothing.
+- **Never take a fourth swing.** Three failed reworks is a kill and a human decision.
+- **Never publish an episode whose successor is not ready.** Loop debt applies to the
+  release schedule, not just the script.
+
+Kill switch: `touch PAUSE`, commit, push. Every Routine no-ops on its next run, and
+`studio.py` itself enforces it so it holds even if a prompt is edited.
+
+### The honest division of labour
+
+The pipeline is deterministic Python; the *writing* is Claude working to the doctrine.
+No scorer can write a good scene, and no model should be trusted to grade its own. The
+machine holds the standard, the model does the work, and the standard is the thing that
+never gets tired at 3am on episode nine.
 
 ---
 
@@ -165,7 +221,8 @@ assembling into an ~84-minute feature.
 > One road out of a burning valley, eleven passengers, and a driver who counts them at
 > every stop. On the last count of the day she gets twelve.
 
-Episode 1, *"Headcount"*, is written, scored and greenlit end to end:
+Episode 1, *"Headcount"*, is written, scored and greenlit end to end; the Routines take
+it from here:
 [beat sheet](productions/ash-river/season-01/ep01/beatsheet.yaml) ·
 [script](productions/ash-river/season-01/ep01/script.md) ·
 [shot list](productions/ash-river/season-01/ep01/shotlist.yaml) ·
@@ -182,7 +239,8 @@ composite 100.0/100   hard fails: 0
 ```
 
 33 shots, ~$155 estimated render, 37 dialogue lines, 6/6 QC checks, publish manifests
-staged for three platforms.
+staged for three platforms. Episodes 2–12 are arced, with every L4 and L5 clue slot
+already allocated in the twist ledger — the Writers' Room fills them one per day.
 
 ---
 

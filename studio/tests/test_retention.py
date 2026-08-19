@@ -18,10 +18,18 @@ from dataclasses import replace
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT.parent))
 
-from studio.pipeline.models import Beat, Clue, Doctrine, Episode, TwistLedger  # noqa: E402
-from studio.pipeline.retention import RetentionEngine  # noqa: E402
+# Works whether the studio is the repository root or still nested under studio/.
+try:
+    from pipeline.models import Beat, Clue, Doctrine, Episode, TwistLedger  # noqa: E402
+    from pipeline.retention import RetentionEngine  # noqa: E402
+    from pipeline import slate as slate_mod  # noqa: E402
+except ImportError:  # pragma: no cover - layout fallback
+    from studio.pipeline.models import Beat, Clue, Doctrine, Episode, TwistLedger  # noqa: E402
+    from studio.pipeline.retention import RetentionEngine  # noqa: E402
+    from studio.pipeline import slate as slate_mod  # noqa: E402
 
 EP01 = ROOT / "productions" / "ash-river" / "season-01" / "ep01" / "beatsheet.yaml"
 LEDGER = ROOT / "productions" / "ash-river" / "season-01" / "twist-ledger.yaml"
@@ -349,7 +357,7 @@ def test_models_reject_bad_input() -> None:
 def test_ceo_halts_a_failing_episode() -> None:
     """End to end: the CEO must stop the line and write an actionable rework order."""
     print("\nceo stage-gate")
-    from studio.pipeline.ceo import GREENLIT, Studio
+    from pipeline.ceo import GREENLIT, Studio
 
     with tempfile.TemporaryDirectory() as tmp:
         sandbox = Path(tmp) / "studio"
@@ -382,6 +390,62 @@ def test_ceo_halts_a_failing_episode() -> None:
               not any(s.agent == "cinematographer" for s in run.stages))
 
 
+def test_slate() -> None:
+    """The Slate is what a cold Routine session relies on. Break it and autonomy dies."""
+    print("\nslate")
+    Slate, Stage = slate_mod.Slate, slate_mod.Stage
+
+    with tempfile.TemporaryDirectory() as tmp:
+        sandbox = Path(tmp) / "studio"
+        shutil.copytree(ROOT, sandbox, ignore=shutil.ignore_patterns("tests", "__pycache__"))
+        slate = Slate(sandbox)
+        s01 = sandbox / "productions" / "ash-river" / "season-01"
+
+        check("finds the production", slate.productions() == ["ash-river"],
+              str(slate.productions()))
+        check("reads the full planned season from the arc",
+              len(slate.season_status("ash-river", 1)) == 12,
+              str(len(slate.season_status("ash-river", 1))))
+
+        e1 = slate.episode_status("ash-river", 1, 1)
+        check("E01 is greenlit", e1.stage == Stage.GREENLIT.label, e1.stage)
+        e2 = slate.episode_status("ash-river", 1, 2)
+        check("E02 is planned", e2.stage == Stage.PLANNED.label, e2.stage)
+
+        # With no credentials, rendering is unreachable — the studio must find other work
+        # rather than burn a scheduled run on a rung it cannot climb.
+        blocked = slate.blocked_stages()
+        check("render stage reports blocked without credentials",
+              Stage.GREENLIT.label in blocked, str(blocked))
+        d = slate.next_action()
+        check("falls through to writing when render is blocked",
+              d.owner == "episode-writer" and d.episode == 2, f"{d.owner} E{d.episode}")
+
+        # A shipped episode must drop off the slate, or tomorrow's run republishes it.
+        (s01 / "release-log.yaml").write_text(
+            "releases:\n  - episode: 1\n    platform: youtube\n"
+            "    published_at: 2026-08-19T17:00:00Z\n", encoding="utf-8")
+        check("release log marks the episode shipped",
+              slate.episode_status("ash-river", 1, 1).stage == Stage.RELEASED.label)
+
+        # Three failed reworks is a CEO decision, not a fourth rewrite.
+        build = s01 / "ep01" / "build"
+        (s01 / "release-log.yaml").unlink()
+        with (build / "decisions.jsonl").open("a", encoding="utf-8") as fh:
+            for _ in range(3):
+                fh.write('{"stage":"script_greenlight","verdict":"REWORK","reason":"x"}\n')
+        d = Slate(sandbox).next_action()
+        check("escalates a burned rework budget to the CEO", d.owner == "ceo",
+              f"{d.owner}: {d.detail}")
+
+        # A corrupt beat sheet must degrade to a finding, never an exception.
+        (s01 / "ep02").mkdir(parents=True, exist_ok=True)
+        (s01 / "ep02" / "beatsheet.yaml").write_text("{{ not yaml", encoding="utf-8")
+        st = Slate(sandbox).episode_status("ash-river", 1, 2)
+        check("survives an unparseable beat sheet", st.stage == Stage.PLANNED.label
+              and any("parse" in b for b in st.blocking), str(st.blocking))
+
+
 def main() -> int:
     print("Retention Engine — breaking the shipping episode one rule at a time")
     test_baseline_passes()
@@ -394,6 +458,7 @@ def main() -> int:
     test_gates_tighten_downstream()
     test_models_reject_bad_input()
     test_ceo_halts_a_failing_episode()
+    test_slate()
     print(f"\n{PASSES} passed, {len(FAILURES)} failed")
     for f in FAILURES:
         print(f"  - {f}")

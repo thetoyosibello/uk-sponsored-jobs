@@ -1,0 +1,39 @@
+# Spend ceiling for unattended runs.
+#
+# The Production Routine reads this before rendering, compares against the render
+# manifest's estimate, and REFUSES rather than truncates. A half-rendered episode is
+# worth nothing, so a run that cannot afford the whole thing does not start it.
+#
+# These are deliberately low. Raise them once a season has shipped and the real
+# cost-per-episode is known rather than estimated.
+
+version: 1
+
+caps:
+  per_episode_usd: 250        # ASH RIVER E01 estimates ~$155 across 33 shots
+  per_day_usd: 400            # one episode plus one re-render, not two episodes
+  per_month_usd: 4000
+
+on_breach: stop_and_report    # never: truncate, downscale, or drop shots
+
+# Re-rendering is not free and is the easiest way to quietly blow a budget.
+reroll_policy:
+  candidates_per_shot: 3      # the identity check picks; this is not optional quality
+  max_full_reroll_per_episode: 4
+  note: >
+    A shot that fails the identity check three times is a reference-set problem, not a
+    luck problem. Stop rerolling and report it — the fix is upstream in
+    character-sheets.yaml, and burning budget on a fourth roll will not find it.
+
+# What counts against the cap.
+counted:
+  - video generation seconds
+  - voice synthesis characters
+  - music and sound generation
+not_counted:
+  - model inference for writing and scoring   # negligible against render cost
+  - storage and bandwidth
+
+alert:
+  at_fraction: 0.8            # report when a run crosses 80% of any cap
+  note: "Reporting at 80% gives a human a day's warning before the studio stops itself."
