@@ -5,7 +5,7 @@
 
 set -uo pipefail
 
-REPO="$HOME/Downloads/sponsored-jobs"
+REPO="$HOME/projects/sponsored-jobs"
 CLAUDE="$HOME/.local/bin/claude"
 LOG="$REPO/sweep.log"
 

@@ -49,7 +49,7 @@ Open Terminal and run these one at a time. Check each one worked before running
 the next.
 
 ```bash
-cd ~/Downloads/sponsored-jobs
+cd ~/projects/sponsored-jobs
 ```
 
 ```bash
@@ -65,19 +65,19 @@ git branch -M main
 ```
 
 ```bash
-git remote add origin https://github.com/tysitv/uk-sponsored-jobs.git
+git remote add origin https://github.com/thetoyosibello/uk-sponsored-jobs.git
 ```
 
 ```bash
 git push -u origin main
 ```
 
-That last one may ask for a username and password. Username is `tysitv`. The
+That last one may ask for a username and password. Username is `thetoyosibello`. The
 password is **not** your GitHub password — it is your Personal Access Token, the
 same one saved in your Keychain from last time. If it goes through without
 asking, the Keychain already handled it.
 
-Check it worked: <https://github.com/tysitv/uk-sponsored-jobs> should now show
+Check it worked: <https://github.com/thetoyosibello/uk-sponsored-jobs> should now show
 `hr.csv`, `other.csv`, `PLAYBOOK.md` and this file.
 
 ---
@@ -112,13 +112,13 @@ at the last step, twice a day.
 2. Rename the first tab to **HR (D)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/hr.csv?v=3")
+=IMPORTDATA("https://raw.githubusercontent.com/thetoyosibello/uk-sponsored-jobs/main/hr.csv?v=3")
 ```
 
 3. Add a second tab, name it **Other (T)**. Click cell **A1** and paste:
 
 ```
-=IMPORTDATA("https://raw.githubusercontent.com/tysitv/uk-sponsored-jobs/main/other.csv?v=3")
+=IMPORTDATA("https://raw.githubusercontent.com/thetoyosibello/uk-sponsored-jobs/main/other.csv?v=3")
 ```
 
 You will see just the column headers at first. That is correct — the rows appear
@@ -142,7 +142,7 @@ after the first sweep runs.
 > helper cell too.
 >
 > Diagnosing a frozen sheet: check
-> <https://github.com/tysitv/uk-sponsored-jobs/commits/main> first. New commits
+> <https://github.com/thetoyosibello/uk-sponsored-jobs/commits/main> first. New commits
 > there but nothing new in the sheet means it is this cache, not the sweeps.
 
 ---
@@ -189,7 +189,7 @@ Worth knowing about the columns:
 Edit **`PLAYBOOK.md`** in this folder, then push it:
 
 ```bash
-cd ~/Downloads/sponsored-jobs && git add -A && git commit -m "Tune search" && git push
+cd ~/projects/sponsored-jobs && git add -A && git commit -m "Tune search" && git push
 ```
 
 The routine re-reads the playbook on every run, so the next run picks up your
@@ -202,6 +202,25 @@ sector D or T wants, or rule one out, and the next run reflects it.
 caught by the sweep itself, which stopped and asked rather than working from
 rules that were changing underneath it. Correct behaviour, but it cost the run —
 commit your edits between runs instead.
+
+---
+
+## Why this repo lives in `~/projects` and must stay there
+
+**Never move it into `~/Downloads`, `~/Desktop` or `~/Documents.`** macOS
+protects those three folders with TCC, and a launchd agent cannot execute a
+script inside them. It does not warn you: the job fires on schedule and dies
+instantly with
+
+```
+/bin/bash: .../local-sweep.sh: Operation not permitted
+```
+
+That is exactly what happened. The sweep ran from `~/Downloads` and every
+scheduled run from 14 Aug to 5 Sep 2026 failed this way — twice a day, silently,
+for three weeks. The sheet froze on 14 August as a result. Granting Full Disk
+Access would also fix it, but keeping the repo in `~/projects` is simpler and
+needs no system settings.
 
 ---
 
@@ -245,7 +264,7 @@ somewhere it shouldn't be — a chat, a screenshot, a shared doc — run
 Then prove it worked:
 
 ```bash
-bash ~/Downloads/sponsored-jobs/local-sweep.sh
+bash ~/projects/sponsored-jobs/local-sweep.sh
 ```
 
 That runs a full sweep in the foreground and takes a few minutes. If `sweep.log`
@@ -262,7 +281,7 @@ also to no effect.
 - To run one right now, on demand:
 
 ```bash
-bash ~/Downloads/sponsored-jobs/local-sweep.sh
+bash ~/projects/sponsored-jobs/local-sweep.sh
 ```
 
 Rules it follows with your browser, in `LOCAL.md`: read only, never apply, never
@@ -275,7 +294,7 @@ stops and says so rather than trying to sign in.
 
 - Runs and logs: <https://claude.ai/code/routines>
 - Every run leaves a commit in the repo, so
-  <https://github.com/tysitv/uk-sponsored-jobs/commits/main> tells you at a
+  <https://github.com/thetoyosibello/uk-sponsored-jobs/commits/main> tells you at a
   glance whether it ran and what it found.
 - If the sheet stops updating, that commit list is the first place to look: no
   new commits means the routine failed, not the sheet.

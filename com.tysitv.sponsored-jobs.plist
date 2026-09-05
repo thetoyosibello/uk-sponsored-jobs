@@ -8,7 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/cryptokyah/Downloads/sponsored-jobs/local-sweep.sh</string>
+        <string>/Users/cryptokyah/projects/sponsored-jobs/local-sweep.sh</string>
     </array>
 
     <!-- 30 minutes after each cloud run, so the two don't collide on the push -->
@@ -29,9 +29,9 @@
     <false/>
 
     <key>StandardOutPath</key>
-    <string>/Users/cryptokyah/Downloads/sponsored-jobs/launchd.log</string>
+    <string>/Users/cryptokyah/projects/sponsored-jobs/launchd.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/cryptokyah/Downloads/sponsored-jobs/launchd.log</string>
+    <string>/Users/cryptokyah/projects/sponsored-jobs/launchd.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>

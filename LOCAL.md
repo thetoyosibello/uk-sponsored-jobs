@@ -31,6 +31,19 @@ So on this machine you must actually open the advert:
 The cloud sweep cannot open web pages, so it writes unverified finds to
 **`candidates.csv`**. Clearing that queue comes before any searching of your own:
 
+> **The queue can be enormous — work it newest-first and cap yourself.** On
+> 5 Sep 2026 it had reached **277 rows**, because the cloud sweep queued finds
+> twice a day for three weeks while this local sweep was dead. Do not try to
+> clear a backlog like that in one run.
+>
+> - Sort by `Found` **descending** and verify the newest first. They are the most
+>   likely to still be open and the most useful to the reader.
+> - Verify at most **40 candidates per run**. Leave the rest queued and say how
+>   many remain.
+> - **Bin, without fetching, anything `Found` more than 21 days ago.** UK job
+>   adverts rarely outlive three weeks, and spending fetches on them starves the
+>   fresh ones. Say how many you dropped on age.
+
 1. For each row in `candidates.csv`, fetch its `Link`.
 2. **Open and still accepting applications** → fill in whatever the advert gives
    you that the snippet could not (real salary, closing date, whether it says

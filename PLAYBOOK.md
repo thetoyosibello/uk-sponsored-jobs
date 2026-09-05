@@ -327,6 +327,31 @@ retrying — note it in your final report.
 > candidates has done its job properly, even though the sheet does not move until
 > the local sweep confirms them.
 >
+> ### The stale-sheet override
+>
+> That division has one dangerous failure mode, and it has already happened: if
+> the local sweep stops running, **nothing reaches the sheet at all**. Between
+> 14 Aug and 5 Sep 2026 the local sweep was dead, the cloud sweep ran over forty
+> times, and the sheet did not move once while the queue swelled to 277 rows.
+>
+> So, in search-only mode, **check how stale the live files are** before you
+> finish:
+>
+> ```bash
+> git log -1 --format=%cd --date=short -- hr.csv other.csv
+> ```
+>
+> If that date is **more than 3 days ago**, the local sweep is not running, and a
+> frozen sheet is now the bigger problem. Promote your best few finds — no more
+> than **5 per run**, highest `Fit` first — straight into `hr.csv` and
+> `other.csv` with `Status` set to `Unverified`, and say clearly in your report
+> that you did so and why.
+>
+> An `Unverified` row the reader can see and judge beats a sheet that silently
+> stopped updating three weeks ago. This override is a fallback, not the norm:
+> the moment the local sweep runs again, it re-checks those rows and sets a real
+> status.
+>
 > If a future run finds `WebFetch` working, use it — richer and more reliable —
 > and mention in the report that egress opened up, because it means the rest of
 > this section is live again. To make that happen deliberately, the user can
