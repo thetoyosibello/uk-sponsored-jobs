@@ -239,6 +239,15 @@ Work through this in order.
    job, based outside the UK, or a "sponsorship considered for exceptional
    candidates" tease with no substance.
 
+   **Check the job is actually in the UK.** Obvious, and still the third-commonest
+   waste of a verification fetch: on 5 Sep 2026 three candidates survived every
+   other filter and turned out to be Chicago and New York roles — one asked about
+   H-1B status. Global employers list every office on one board, and a search
+   snippet rarely shows the city. Treat a **USD or EUR salary, a US state or a
+   non-UK city, or any mention of H-1B, green card or work authorization** as
+   disqualifying. This whole system is about the UK Skilled Worker route; a US
+   role cannot be sponsored under it at any salary.
+
    **Contract type is a hard filter, not a detail.** A sponsor licence is no use
    if the engagement itself cannot carry a visa. Reject outright:
 
