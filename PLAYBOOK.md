@@ -55,6 +55,13 @@ Occupation codes that matter here (standard rate / new-entrant rate):
 | 2419 | Legal professionals n.e.c. | Higher | check page |
 | 3554 | Advertising and marketing associate professionals | **Medium** | £33,400 / £26,300 |
 | 3520 | Legal associate professionals | **Medium** | £33,400 / £26,400 |
+| 2133 | IT business analysts, architects and systems designers | Higher | £54,900 / £42,400 |
+| 2139 | IT professionals not elsewhere classified | Higher | £52,300 / £38,700 |
+| 2131 | IT project managers | Higher | £58,200 / £42,600 |
+| 2132 | IT managers | Higher | £55,000 / £43,000 |
+| 2134 | Programmers and software development professionals | Higher | £54,700 / £40,000 |
+| 3131 | IT operations technicians | **Medium** | £35,200 / £27,700 |
+| 3133 | Database administrators and web content technicians | **Medium** | £34,600 / £29,200 |
 
 Authoritative pages, re-check if a rate looks wrong:
 - Going rates: <https://www.gov.uk/government/publications/skilled-worker-visa-going-rates-for-eligible-occupations/skilled-worker-visa-going-rates-for-eligible-occupation-codes>
@@ -176,6 +183,47 @@ highest.
   Legal-tech / contract-automation roles (2419, 2412); Research and insight
   roles (2434); Marketing Operations, Revenue Operations, CRM Manager,
   Content Strategy Manager, AI content / automation specialist roles.
+- **Automation — sweep this every run, it is a first-class track for T, not a
+  footnote.** T builds and ships automation for real clients: n8n workflows, a
+  Vapi voice agent, Airtable and HubSpot pipelines, an inbox-triage system for a
+  live client, plus prior work as an AI trainer. That is deliverable experience,
+  not a hobby. The codes that carry these roles are **Higher Skilled** and pay
+  well above the general threshold:
+
+  | Code | Occupation | Going rate (standard / new entrant) |
+  |---|---|---|
+  | 2133 | IT business analysts, architects and systems designers | £54,900 / £42,400 |
+  | 2139 | IT professionals not elsewhere classified | £52,300 / £38,700 |
+  | 2131 | IT project managers | £58,200 / £42,600 |
+  | 2132 | IT managers | £55,000 / £43,000 |
+  | 2431 | Management consultants and business analysts | £50,200 / £36,000 |
+
+  **2133 is usually the right code** for a business-facing automation role, and
+  **2139** for anything badged AI. Titles to search: Automation Specialist,
+  Business Automation Analyst, Workflow Automation Analyst, Process Automation
+  Consultant, AI Automation Engineer, AI Solutions Consultant, Solutions
+  Consultant, Implementation Consultant, Systems Analyst, Business Systems
+  Analyst, Marketing Automation Manager, MarTech Manager, CRM Automation
+  Manager, RevOps / Revenue Operations Manager, Sales Operations Analyst,
+  Integration Specialist, No-Code / Low-Code Developer, Intelligent Automation
+  Analyst, RPA Analyst, Forward Deployed Engineer, AI Enablement Lead.
+
+  Named tools are the highest-signal search terms, because adverts asking for
+  them want exactly what T has: **n8n, Zapier, Make, Workato, Tray.io, Power
+  Automate, HubSpot Operations Hub, Airtable, Retool, Vapi, LangChain, OpenAI or
+  Anthropic API**. A job asking for n8n or Make is a far better lead than a
+  generic "Marketing Manager".
+
+  Two honest limits. T is **not a software engineer** — skip 2134 programmer and
+  developer roles unless they explicitly want low-code or automation-platform
+  work. And skip the **3131/3132/3133** IT support and database codes entirely:
+  they are Medium Skilled *and* the wrong work.
+
+  The strongest angle is the intersection nobody else has: **automation plus
+  commercial-law literacy**. Legal-tech implementation, contract-automation,
+  compliance-automation and legal-operations roles let T use both at once, and
+  those sit under 2133, 2139 or 2419. Say so in `Why it fits` when it applies.
+
 - **Secondary (Medium, flag the risk):** Marketing Executive, Digital Marketing
   Executive, Content Marketing Executive (3554); Paralegal, Legal Assistant,
   Contracts Administrator (3520).
@@ -412,7 +460,11 @@ download is blocked from the sandbox.
    ATS hosts (Greenhouse, Lever, Workable, Ashby, Teamtailor, Pinpoint):
    `site:boards.greenhouse.io UK "visa sponsorship" HR manager`,
    `site:apply.workable.com UK "skilled worker visa"`,
-   `site:jobs.lever.co London "HR business partner"` then check the register.
+   `site:jobs.lever.co London "HR business partner"` then check the register,
+   and for T's automation track, tool-named queries such as
+   `site:job-boards.greenhouse.io UK "n8n" OR "Zapier" OR "Make.com"`,
+   `"automation specialist" OR "solutions consultant" London "visa sponsorship"`,
+   `site:apply.workable.com UK "marketing automation" OR "RevOps" manager`.
 
    > **Never search the bare word "sponsorship" on job boards.** Verified
    > 13 Aug 2026: it returns *event and brand* sponsorship roles. A search for
